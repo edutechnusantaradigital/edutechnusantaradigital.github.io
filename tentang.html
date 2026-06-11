@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Edutech Nusantara Digital</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#067cc2', 
+                        secondary: '#3f8e25', 
+                        dark: '#000000', 
+                        light: '#ffffff',
+                        primaryDark: '#045281', 
+                        secondaryDark: '#285b17',
+                        bgDark: '#0f172a',
+                        cardDark: '#1e293b'
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+        }
+        p, span, li {
+            font-weight: 500;
+        }
+
+        /* Glassmorphism Header */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .menu-open-header {
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom: transparent !important;
+        }
+
+        /* Fullscreen Menu */
+        #menu-overlay {
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+        }
+        .menu-open {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* Floating Element Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Preloader Styles */
+        #preloader {
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .preloader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Language Toggle Display */
+        .lang-en { display: none; }
+        .lang-active-en .lang-id { display: none; }
+        .lang-active-en .lang-en { display: inline-block; }
+        .lang-active-en p.lang-en, .lang-active-en div.lang-en, .lang-active-en h1.lang-en, .lang-active-en h2.lang-en, .lang-active-en li.lang-en { display: block; }
+    </style>
+</head>
+<body class="antialiased text-dark bg-light dark:bg-bgDark dark:text-gray-100 overflow-x-hidden">
+
+    <!-- 0. PRELOADER -->
+    <div id="preloader" class="fixed inset-0 bg-[#ffffff] dark:bg-bgDark z-[9999] flex items-center justify-center">
+        <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" 
+             onerror="this.src='https://ui-avatars.com/api/?name=EN&background=067cc2&color=fff&rounded=true'"
+             alt="Loading..." 
+             class="w-24 h-24 animate-pulse">
+    </div>
+
+    <!-- 1. HEADER & NAVIGATION (SAMA DENGAN BERANDA) -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-[60] glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex-shrink-0 flex items-center gap-3 group" data-aos="fade-right">
+                    <img class="h-10 w-auto transition-transform group-hover:scale-110 duration-300" 
+                         src="https://edutechnusantaradigital.github.io/assets/images/logo.png" 
+                         onerror="this.src='https://ui-avatars.com/api/?name=EN&background=067cc2&color=fff&rounded=true'"
+                         alt="Logo Edutech Nusantara Digital">
+                    <span class="font-heading text-lg md:text-xl tracking-tight transition-colors">
+                        <span class="text-primary dark:text-white">Edutech</span>
+                        <span class="hidden sm:inline text-secondary dark:text-white">Nusantara</span>
+                        <span class="hidden lg:inline text-dark dark:text-white">Digital</span>
+                    </span>
+                </a>
+
+                <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
+                    <button id="lang-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">
+                        ID
+                    </button>
+                    <button id="theme-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white">
+                        <i class="ph ph-moon text-2xl" id="theme-icon"></i>
+                    </button>
+                    <button id="menu-btn" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]">
+                        <i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center">
+        <nav class="flex flex-col text-center gap-8">
+            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
+                <span class="lang-id">Beranda</span><span class="lang-en">Home</span>
+            </a>
+            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1">
+                <span class="lang-id">Tentang</span><span class="lang-en">About</span>
+            </a>
+            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
+                <span class="lang-id">Layanan</span><span class="lang-en">Services</span>
+            </a>
+            <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
+                <span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span>
+            </a>
+            <a href="/berita" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
+                <span class="lang-id">Berita</span><span class="lang-en">News</span>
+            </a>
+            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
+                <span class="lang-id">Kontak</span><span class="lang-en">Contact</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- MAIN CONTENT: TENTANG KAMI -->
+    <main class="pt-28 pb-10 overflow-hidden">
+        
+        <!-- HEADER PAGE TENTANG -->
+        <section class="relative py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-64 bg-primary/5 dark:bg-primaryDark/10 rounded-full blur-3xl -z-10"></div>
+            
+            <h1 data-aos="fade-down" class="text-4xl md:text-5xl lg:text-6xl mb-6">
+                <span class="lang-id">Mengenal Lebih Dekat <br class="hidden md:block"/> <span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span></span>
+                <span class="lang-en">Get to Know <br class="hidden md:block"/> <span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span></span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-dark/70 dark:text-gray-400 max-w-2xl mx-auto">
+                <span class="lang-id">Mitra strategis Anda dalam mewujudkan institusi pendidikan yang profesional, transparan, dan terdigitalisasi secara penuh.</span>
+                <span class="lang-en">Your strategic partner in creating professional, transparent, and fully digitalized educational institutions.</span>
+            </p>
+        </section>
+
+        <!-- PROFIL PERUSAHAAN (OTORITAS & KEPERCAYAAN) -->
+        <section class="py-16 bg-white dark:bg-cardDark/30 border-y border-gray-100 dark:border-gray-800 transition-colors relative">
+            <div class="absolute right-0 top-0 w-64 h-64 bg-secondary/5 dark:bg-secondaryDark/10 rounded-bl-full -z-10"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    
+                    <!-- Ilustrasi / Visual -->
+                    <div class="w-full lg:w-1/2" data-aos="fade-right">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+                            <div class="absolute inset-0 bg-primary/20 dark:bg-primaryDark/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                            <!-- Mockup/Image Placeholder -> We use an elegant abstract gradient/pattern to denote authority -->
+                            <div class="aspect-video lg:aspect-square bg-gradient-to-br from-primary to-secondary flex flex-col items-center justify-center p-8 text-white relative">
+                                <i class="ph-fill ph-buildings text-8xl mb-4 opacity-90"></i>
+                                <h3 class="text-2xl font-heading text-center">Membangun Otoritas <br> Pendidikan Nusantara</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teks Profil -->
+                    <div class="w-full lg:w-1/2" data-aos="fade-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 text-sm mb-6 font-bold uppercase tracking-widest">
+                            <i class="ph-fill ph-info"></i> Profil Perusahaan
+                        </div>
+                        <h2 class="text-3xl md:text-4xl mb-6">
+                            <span class="lang-id">Lebih Dari Sekadar <span class="text-secondary dark:text-green-400">Website</span></span>
+                            <span class="lang-en">More Than Just a <span class="text-secondary dark:text-green-400">Website</span></span>
+                        </h2>
+                        <div class="space-y-6 text-dark/70 dark:text-gray-300 text-lg leading-relaxed">
+                            <p class="lang-id">
+                                <strong>EduTech Nusantara Digital</strong> merupakan perusahaan yang bergerak di bidang digitalisasi, tata kelola, dan penguatan kelembagaan pendidikan dengan fokus pada Pondok Pesantren, Madrasah, Sekolah, Yayasan Pendidikan, dan Perguruan Tinggi.
+                            </p>
+                            <p class="lang-en">
+                                <strong>EduTech Nusantara Digital</strong> is a company engaged in the digitalization, governance, and institutional strengthening of education, with a focus on Boarding Schools, Madrasahs, Schools, Educational Foundations, and Universities.
+                            </p>
+                            
+                            <p class="lang-id">
+                                Kami menyadari bahwa di era transformasi digital, lembaga pendidikan dituntut tidak hanya memiliki bangunan fisik, tetapi juga <strong>identitas digital yang profesional, sistem tata kelola (SOP) yang terstandar</strong>, serta kemampuan menyampaikan informasi secara transparan.
+                            </p>
+                            <p class="lang-en">
+                                We realize that in the era of digital transformation, educational institutions are required to not only have physical buildings but also a <strong>professional digital identity, standardized governance systems (SOPs)</strong>, and the ability to convey information transparently.
+                            </p>
+
+                            <p class="lang-id">
+                                Kami hadir sebagai konsultan dan mitra strategis melalui layanan terintegrasi: pembuatan website resmi, penyusunan SOP, digital branding, pengembangan sistem informasi pendidikan, hingga pendampingan kelembagaan.
+                            </p>
+                            <p class="lang-en">
+                                We serve as consultants and strategic partners through integrated services: official website development, SOP drafting, digital branding, development of educational information systems, and institutional mentoring.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- VISI & MISI -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 dark:bg-primaryDark/20 rounded-full blur-3xl -translate-y-1/2 -z-10"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+                    
+                    <!-- Visi Card -->
+                    <div class="md:col-span-5 bg-primary dark:bg-cardDark text-white rounded-3xl p-10 lg:p-12 shadow-xl flex flex-col justify-center relative overflow-hidden group" data-aos="zoom-in-up">
+                        <i class="ph-fill ph-target text-9xl absolute -bottom-4 -right-4 text-white/10 group-hover:scale-110 transition-transform duration-500"></i>
+                        <h3 class="text-3xl font-heading mb-6 relative z-10">
+                            <span class="lang-id">Visi Kami</span><span class="lang-en">Our Vision</span>
+                        </h3>
+                        <p class="text-xl md:text-2xl font-bold leading-relaxed relative z-10 text-white/90">
+                            <span class="lang-id">"Menjadi mitra digitalisasi pendidikan terpercaya di Indonesia."</span>
+                            <span class="lang-en">"To become the trusted educational digitalization partner in Indonesia."</span>
+                        </p>
+                    </div>
+
+                    <!-- Misi List -->
+                    <div class="md:col-span-7 bg-white dark:bg-cardDark/50 rounded-3xl p-10 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-800" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="text-3xl font-heading mb-8 text-dark dark:text-white">
+                            <span class="lang-id">Misi Kami</span><span class="lang-en">Our Mission</span>
+                        </h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4 group">
+                                <div class="w-12 h-12 bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-green-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                                    <i class="ph-fill ph-globe text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1 dark:text-gray-200">
+                                        <span class="lang-id">Identitas Digital</span><span class="lang-en">Digital Identity</span>
+                                    </h4>
+                                    <p class="text-dark/70 dark:text-gray-400">
+                                        <span class="lang-id">Membangun identitas digital lembaga pendidikan yang profesional dan mudah diakses publik.</span>
+                                        <span class="lang-en">Building a professional digital identity for educational institutions that is easily accessible to the public.</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4 group">
+                                <div class="w-12 h-12 bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <i class="ph-fill ph-files text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1 dark:text-gray-200">
+                                        <span class="lang-id">Tata Kelola & SOP</span><span class="lang-en">Governance & SOP</span>
+                                    </h4>
+                                    <p class="text-dark/70 dark:text-gray-400">
+                                        <span class="lang-id">Menyusun tata kelola berbasis SOP yang terstandar, transparan, dan aman bagi lingkungan pendidikan.</span>
+                                        <span class="lang-en">Developing standardized, transparent, and secure SOP-based governance for the educational environment.</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4 group">
+                                <div class="w-12 h-12 bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-green-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                                    <i class="ph-fill ph-rocket-launch text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1 dark:text-gray-200">
+                                        <span class="lang-id">Transformasi Digital</span><span class="lang-en">Digital Transformation</span>
+                                    </h4>
+                                    <p class="text-dark/70 dark:text-gray-400">
+                                        <span class="lang-id">Mendukung dan mendampingi transformasi digital pesantren dan sekolah di seluruh penjuru Nusantara.</span>
+                                        <span class="lang-en">Supporting and mentoring the digital transformation of boarding schools and schools across the archipelago.</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NILAI UTAMA (CORE VALUES) -->
+        <section class="py-20 bg-gray-50 dark:bg-black border-y border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div data-aos="fade-up" class="mb-16">
+                    <h2 class="text-3xl md:text-4xl mb-4">
+                        <span class="lang-id">Nilai Utama <span class="text-primary dark:text-blue-400">Perusahaan</span></span>
+                        <span class="lang-en">Our Core <span class="text-primary dark:text-blue-400">Values</span></span>
+                    </h2>
+                    <p class="text-dark/60 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                        <span class="lang-id">Prinsip dasar yang memandu setiap langkah kami dalam memberikan layanan terbaik untuk Anda.</span>
+                        <span class="lang-en">The core principles that guide every step we take in providing the best service for you.</span>
+                    </p>
+                </div>
+
+                <!-- 5 Values Grid -->
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+                    
+                    <!-- 1 -->
+                    <div data-aos="zoom-in" data-aos-delay="0" class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white dark:bg-cardDark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30">
+                            <i class="ph ph-laptop text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-heading mb-3 dark:text-white">
+                            <span class="lang-id">Digitalisasi</span><span class="lang-en">Digitalization</span>
+                        </h4>
+                        <p class="text-sm text-dark/70 dark:text-gray-400 leading-relaxed">
+                            <span class="lang-id">Membantu lembaga pendidikan bertransformasi menuju era digital dengan teknologi modern.</span>
+                            <span class="lang-en">Helping educational institutions transform into the digital era with modern technology.</span>
+                        </p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div data-aos="zoom-in" data-aos-delay="100" class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white dark:bg-cardDark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto bg-secondary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-secondary/30">
+                            <i class="ph ph-clipboard-text text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-heading mb-3 dark:text-white">
+                            <span class="lang-id">Tata Kelola</span><span class="lang-en">Governance</span>
+                        </h4>
+                        <p class="text-sm text-dark/70 dark:text-gray-400 leading-relaxed">
+                            <span class="lang-id">Menyusun SOP dan sistem kerja kelembagaan yang terstruktur, jelas, dan terukur.</span>
+                            <span class="lang-en">Developing structured, clear, and measurable SOPs and institutional working systems.</span>
+                        </p>
+                    </div>
+
+                    <!-- 3 -->
+                    <div data-aos="zoom-in" data-aos-delay="200" class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white dark:bg-cardDark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30">
+                            <i class="ph ph-eye text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-heading mb-3 dark:text-white">
+                            <span class="lang-id">Transparansi</span><span class="lang-en">Transparency</span>
+                        </h4>
+                        <p class="text-sm text-dark/70 dark:text-gray-400 leading-relaxed">
+                            <span class="lang-id">Memudahkan publik dan wali murid memperoleh informasi resmi lembaga secara terbuka.</span>
+                            <span class="lang-en">Making it easier for the public and guardians to access official institutional information openly.</span>
+                        </p>
+                    </div>
+
+                    <!-- 4 -->
+                    <div data-aos="zoom-in" data-aos-delay="300" class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white dark:bg-cardDark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto bg-secondary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-secondary/30">
+                            <i class="ph ph-shield-check text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-heading mb-3 dark:text-white">
+                            <span class="lang-id">Profesionalisme</span><span class="lang-en">Professionalism</span>
+                        </h4>
+                        <p class="text-sm text-dark/70 dark:text-gray-400 leading-relaxed">
+                            <span class="lang-id">Meningkatkan citra institusi, keamanan operasional, dan kepercayaan masyarakat luas.</span>
+                            <span class="lang-en">Enhancing institutional image, operational security, and broad public trust.</span>
+                        </p>
+                    </div>
+
+                    <!-- 5 -->
+                    <div data-aos="zoom-in" data-aos-delay="400" class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white dark:bg-cardDark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30">
+                            <i class="ph ph-arrows-clockwise text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-heading mb-3 dark:text-white">
+                            <span class="lang-id">Keberlanjutan</span><span class="lang-en">Sustainability</span>
+                        </h4>
+                        <p class="text-sm text-dark/70 dark:text-gray-400 leading-relaxed">
+                            <span class="lang-id">Memberikan layanan pendampingan dan maintenance jangka panjang yang andal.</span>
+                            <span class="lang-en">Providing reliable, long-term mentoring and maintenance services.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6. FOOTER MINIMALIS REVISI (SAMA DENGAN BERANDA) -->
+    <footer class="bg-white dark:bg-bgDark py-10 transition-colors border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            
+            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" 
+                 src="https://edutechnusantaradigital.github.io/assets/images/logo.png" 
+                 onerror="this.src='https://ui-avatars.com/api/?name=EN&background=067cc2&color=fff&rounded=true'"
+                 alt="Logo Edutech" data-aos="fade-up" data-aos-delay="0">
+            
+            <p class="text-dark/70 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                <span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span>
+                <span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span>
+            </p>
+
+            <p class="text-dark/40 dark:text-gray-500 text-xs md:text-sm font-medium tracking-wide" data-aos="fade-up" data-aos-delay="200">
+                © 2026 Edutech Nusantara Digital
+            </p>
+        </div>
+    </footer>
+
+    <!-- 7. FLOATING CTA BUTTON (WhatsApp) -->
+    <a href="https://wa.me/6287850934303" target="_blank" class="fixed bottom-6 right-6 z-[65] floating-element group">
+        <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
+        <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800">
+            <i class="ph-fill ph-whatsapp-logo text-4xl"></i>
+        </div>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 0. Theme Init for Preloader (Check Dark Mode before preloader finishes) ---
+            const htmlTag = document.documentElement;
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                htmlTag.classList.add('dark');
+            }
+
+            // --- 1. Preloader Logic ---
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('preloader-hidden');
+                
+                setTimeout(() => {
+                    AOS.init({
+                        duration: 800,
+                        easing: 'ease-out-cubic',
+                        once: true,
+                        offset: 50,
+                    });
+                    preloader.style.display = 'none';
+                }, 500); 
+            }, 1000); // 1 Detik Delay
+
+            // --- 2. Menu Toggle Logic ---
+            const menuBtn = document.getElementById('menu-btn');
+            const menuIcon = document.getElementById('menu-icon');
+            const menuOverlay = document.getElementById('menu-overlay');
+            const header = document.getElementById('main-header');
+            let isMenuOpen = false;
+
+            const toggleMenu = () => {
+                isMenuOpen = !isMenuOpen;
+                if(isMenuOpen) {
+                    menuOverlay.classList.add('menu-open');
+                    header.classList.add('menu-open-header');
+                    menuIcon.classList.replace('ph-list', 'ph-x');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    menuOverlay.classList.remove('menu-open');
+                    header.classList.remove('menu-open-header');
+                    menuIcon.classList.replace('ph-x', 'ph-list');
+                    document.body.style.overflow = 'auto';
+                }
+            };
+
+            menuBtn.addEventListener('click', toggleMenu);
+
+            document.querySelectorAll('.menu-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if(isMenuOpen) toggleMenu();
+                });
+            });
+
+            // --- 3. Dark/Light Mode Logic ---
+            const themeBtn = document.getElementById('theme-btn');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (htmlTag.classList.contains('dark')) {
+                themeIcon.classList.replace('ph-moon', 'ph-sun');
+            }
+
+            themeBtn.addEventListener('click', () => {
+                htmlTag.classList.toggle('dark');
+                if(htmlTag.classList.contains('dark')) {
+                    themeIcon.classList.replace('ph-moon', 'ph-sun');
+                } else {
+                    themeIcon.classList.replace('ph-sun', 'ph-moon');
+                }
+            });
+
+            // --- 4. Language Switcher Logic ---
+            const langBtn = document.getElementById('lang-btn');
+            let currentLang = 'id';
+
+            langBtn.addEventListener('click', () => {
+                if(currentLang === 'id') {
+                    currentLang = 'en';
+                    langBtn.innerText = 'EN';
+                    document.body.classList.add('lang-active-en');
+                } else {
+                    currentLang = 'id';
+                    langBtn.innerText = 'ID';
+                    document.body.classList.remove('lang-active-en');
+                }
+            });
+
+            // --- 5. Header Scroll Effect ---
+            window.addEventListener('scroll', () => {
+                if(isMenuOpen) return; 
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-sm');
+                    header.classList.replace('py-0', 'py-1');
+                } else {
+                    header.classList.remove('shadow-sm');
+                    header.classList.replace('py-1', 'py-0');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
