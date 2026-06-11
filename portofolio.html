@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Edutech Nusantara Digital</title>
     
-    <!-- Favicon -->
+    <!-- SEO Meta Tags -->
+    <title>Portofolio - Edutech Nusantara Digital</title>
+    <meta name="description" content="Jelajahi bukti nyata transformasi digital kami. Portofolio website pesantren, sekolah, yayasan, penyusunan SOP, dan profil lembaga dari klien terpercaya.">
+    <meta name="keywords" content="portofolio edutech nusantara, contoh website pesantren, contoh website sekolah, desain website pendidikan, klien edutech nusantara, portofolio tata kelola">
+    <meta name="author" content="Edutech Nusantara Digital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edutechnusantaradigital.github.io/portofolio.html">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edutechnusantaradigital.github.io/portofolio.html">
+    <meta property="og:title" content="Portofolio Karya & Klien - Edutech Nusantara">
+    <meta property="og:description" content="Koleksi karya website pendidikan, penyusunan SOP, dan mitra jaringan terpercaya di seluruh Nusantara.">
+    <meta property="og:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Portofolio Karya & Klien - Edutech Nusantara">
+    <meta property="twitter:description" content="Bukti nyata transformasi digital lembaga pendidikan.">
+    <meta property="twitter:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Portofolio Edutech Nusantara Digital",
+      "description": "Galeri karya dan daftar klien layanan digitalisasi pendidikan.",
+      "url": "https://edutechnusantaradigital.github.io/portofolio.html"
+    }
+    </script>
+
+    <!-- Favicon & Preload -->
     <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+    <link rel="preload" as="image" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
 
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <!-- AOS Animation Library CSS -->
+    <!-- Icons & Animation -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Tailwind CSS -->
@@ -73,9 +103,9 @@
                     </span>
                 </a>
                 <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
-                    <button id="lang-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
-                    <button id="theme-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
-                    <button id="menu-btn" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
+                    <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
+                    <button id="theme-btn" aria-label="Ubah Tema" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
+                    <button id="menu-btn" aria-label="Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
                 </div>
             </div>
         </div>
@@ -120,12 +150,8 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
                     <div class="portfolio-item group relative bg-white dark:bg-cardDark rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800" data-category="yayasan" data-aos="zoom-in">
                         <div class="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden flex items-center justify-center p-4">
-                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-                                <a href="https://www.maraja-group.com/" target="_blank" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a>
-                            </div>
-                            <div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/40 dark:to-blue-800/20 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-700">
-                                <span class="font-heading text-2xl text-primary/50 dark:text-blue-400/50">Maraja Group</span>
-                            </div>
+                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10"><a href="https://www.maraja-group.com/" target="_blank" rel="noopener noreferrer" aria-label="Lihat Maraja Group" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a></div>
+                            <div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/40 dark:to-blue-800/20 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-700"><span class="font-heading text-2xl text-primary/50 dark:text-blue-400/50">Maraja Group</span></div>
                         </div>
                         <div class="p-6">
                             <div class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider mb-2">Yayasan & Organisasi</div>
@@ -136,12 +162,8 @@
 
                     <div class="portfolio-item group relative bg-white dark:bg-cardDark rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800" data-category="yayasan" data-aos="zoom-in">
                         <div class="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden flex items-center justify-center p-4">
-                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-                                <a href="https://lombokfokus.com/" target="_blank" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a>
-                            </div>
-                            <div class="w-full h-full bg-gradient-to-br from-green-100 to-blue-50 dark:from-green-900/40 dark:to-blue-900/20 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-700">
-                                <span class="font-heading text-2xl text-primary/50 dark:text-blue-400/50">Lombok Fokus</span>
-                            </div>
+                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10"><a href="https://lombokfokus.com/" target="_blank" rel="noopener noreferrer" aria-label="Lihat Lombok Fokus" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a></div>
+                            <div class="w-full h-full bg-gradient-to-br from-green-100 to-blue-50 dark:from-green-900/40 dark:to-blue-900/20 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-700"><span class="font-heading text-2xl text-primary/50 dark:text-blue-400/50">Lombok Fokus</span></div>
                         </div>
                         <div class="p-6">
                             <div class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider mb-2">Portal Media</div>
@@ -152,12 +174,8 @@
 
                     <div class="portfolio-item group relative bg-white dark:bg-cardDark rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800" data-category="yayasan" data-aos="zoom-in">
                         <div class="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden flex items-center justify-center p-4">
-                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-                                <a href="https://www.criminallawstudy.com/?m=1" target="_blank" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a>
-                            </div>
-                            <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl flex items-center justify-center border border-gray-300 dark:border-gray-600 text-center px-4">
-                                <span class="font-heading text-xl text-dark/40 dark:text-white/40">Criminal Law Study</span>
-                            </div>
+                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10"><a href="https://www.criminallawstudy.com/?m=1" target="_blank" rel="noopener noreferrer" aria-label="Lihat Criminal Law" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a></div>
+                            <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl flex items-center justify-center border border-gray-300 dark:border-gray-600 text-center px-4"><span class="font-heading text-xl text-dark/40 dark:text-white/40">Criminal Law Study</span></div>
                         </div>
                         <div class="p-6">
                             <div class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider mb-2">Edukasi & Hukum</div>
@@ -168,9 +186,7 @@
 
                     <div class="portfolio-item group relative bg-white dark:bg-cardDark rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800" data-category="yayasan" data-aos="zoom-in">
                         <div class="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden flex items-center justify-center p-4">
-                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-                                <a href="https://www.lakpesdamnuntb.com/?m=1" target="_blank" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a>
-                            </div>
+                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10"><a href="https://www.lakpesdamnuntb.com/?m=1" target="_blank" rel="noopener noreferrer" aria-label="Lihat Lakpesdam" class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl"><i class="ph ph-link text-2xl"></i></a></div>
                             <div class="w-full h-full bg-gradient-to-tr from-green-600/20 to-primary/20 rounded-xl flex flex-col items-center justify-center border border-gray-200 dark:border-gray-700">
                                 <i class="ph-fill ph-users-three text-4xl text-green-700/40 dark:text-green-400/40 mb-2"></i>
                                 <span class="font-heading text-lg text-green-800/60 dark:text-green-300/60 text-center">Lakpesdam NU NTB</span>
@@ -188,9 +204,9 @@
                             <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center z-10 p-4 text-center">
                                 <span class="text-white font-bold mb-2 text-sm">Lihat Jaringan:</span>
                                 <div class="flex flex-wrap justify-center gap-2">
-                                    <a href="http://ntbkita.com" target="_blank" class="px-3 py-1 bg-white/20 hover:bg-white text-white hover:text-primary rounded text-xs transition-colors">NTBKita</a>
-                                    <a href="http://sumbawapost.com" target="_blank" class="px-3 py-1 bg-white/20 hover:bg-white text-white hover:text-primary rounded text-xs transition-colors">SumbawaPost</a>
-                                    <a href="http://detikntb.com" target="_blank" class="px-3 py-1 bg-white/20 hover:bg-white text-white hover:text-primary rounded text-xs transition-colors">DetikNTB</a>
+                                    <a href="http://ntbkita.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1 bg-white/20 hover:bg-white text-white hover:text-primary rounded text-xs transition-colors">NTBKita</a>
+                                    <a href="http://sumbawapost.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1 bg-white/20 hover:bg-white text-white hover:text-primary rounded text-xs transition-colors">SumbawaPost</a>
+                                    <a href="http://detikntb.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1 bg-white/20 hover:bg-white text-white hover:text-primary rounded text-xs transition-colors">DetikNTB</a>
                                 </div>
                             </div>
                             <i class="ph-fill ph-newspaper text-6xl text-primary/30 dark:text-blue-400/30"></i>
@@ -293,18 +309,21 @@
 
     <footer class="bg-white dark:bg-bgDark py-10 transition-colors border-t border-gray-100 dark:border-gray-800 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech" data-aos="fade-up" data-aos-delay="0">
-            <p class="text-dark/70 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100"><span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span><span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span></p>
+            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara" data-aos="fade-up" data-aos-delay="0" loading="lazy">
+            <p class="text-dark/70 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                <span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span>
+                <span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span>
+            </p>
             <p class="text-dark/40 dark:text-gray-500 text-xs md:text-sm font-medium tracking-wide" data-aos="fade-up" data-aos-delay="200">© 2026 Edutech Nusantara Digital</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/6287850934303" target="_blank" class="fixed bottom-6 right-6 z-[65] floating-element group">
+    <a href="https://wa.me/6287850934303" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" class="fixed bottom-6 right-6 z-[65] floating-element group">
         <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
         <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800"><i class="ph-fill ph-whatsapp-logo text-4xl"></i></div>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const htmlTag = document.documentElement;
@@ -345,9 +364,7 @@
                 else { header.classList.remove('shadow-sm'); header.classList.replace('py-1', 'py-0'); }
             });
 
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-
+            const filterBtns = document.querySelectorAll('.filter-btn'), portfolioItems = document.querySelectorAll('.portfolio-item');
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     filterBtns.forEach(b => { b.classList.remove('bg-primary', 'text-white', 'border-primary'); b.classList.add('bg-white', 'text-dark', 'border-gray-200'); b.classList.replace('dark:bg-primary', 'dark:bg-cardDark'); });
