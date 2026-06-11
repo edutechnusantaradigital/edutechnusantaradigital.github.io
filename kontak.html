@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Edutech Nusantara Digital</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: { primary: '#067cc2', secondary: '#3f8e25', dark: '#000000', light: '#ffffff', primaryDark: '#045281', secondaryDark: '#285b17', bgDark: '#0f172a', cardDark: '#1e293b' },
+                    fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Montserrat', 'sans-serif'], }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; font-weight: 600; transition: background-color 0.3s ease, color 0.3s ease; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; font-weight: 900; }
+        p, span, li, label, input, select, textarea { font-weight: 500; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .dark .glass-nav { background: rgba(15, 23, 42, 0.85); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .menu-open-header { background: transparent !important; backdrop-filter: none !important; border-bottom: transparent !important; }
+        #menu-overlay { transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s; }
+        .menu-open { opacity: 1 !important; visibility: visible !important; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .floating-element { animation: float 4s ease-in-out infinite; }
+        #preloader { transition: opacity 0.5s ease, visibility 0.5s ease; }
+        .preloader-hidden { opacity: 0; visibility: hidden; }
+        .faq-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease-out, padding 0.4s ease-out; }
+        .faq-content > div { overflow: hidden; }
+        .faq-item.active .faq-content { grid-template-rows: 1fr; padding-bottom: 1.5rem; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); color: #067cc2; }
+        .dark .faq-item.active .faq-icon { color: #60a5fa; }
+        .form-input:focus { outline: none; border-color: #067cc2; box-shadow: 0 0 0 4px rgba(6, 124, 194, 0.1); }
+        .lang-en { display: none; }
+        .lang-active-en .lang-id { display: none; }
+        .lang-active-en .lang-en { display: inline-block; }
+        .lang-active-en p.lang-en, .lang-active-en div.lang-en, .lang-active-en h1.lang-en, .lang-active-en h2.lang-en, .lang-active-en li.lang-en, .lang-active-en h3.lang-en, .lang-active-en h4.lang-en, .lang-active-en span.lang-en, .lang-active-en label.lang-en { display: block; }
+        .lang-active-en span.lang-en { display: inline; }
+    </style>
+</head>
+<body class="antialiased text-dark bg-light dark:bg-bgDark dark:text-gray-100 overflow-x-hidden">
+
+    <div id="preloader" class="fixed inset-0 bg-[#ffffff] dark:bg-bgDark z-[9999] flex items-center justify-center">
+        <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" onerror="this.src='https://ui-avatars.com/api/?name=EN&background=067cc2&color=fff&rounded=true'" alt="Loading..." class="w-24 h-24 animate-pulse">
+    </div>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-[60] glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex-shrink-0 flex items-center gap-3 group" data-aos="fade-right">
+                    <img class="h-10 w-auto transition-transform group-hover:scale-110 duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara Digital">
+                    <span class="font-heading text-lg md:text-xl tracking-tight transition-colors">
+                        <span class="text-primary dark:text-white">Edutech</span>
+                        <span class="hidden sm:inline text-secondary dark:text-white">Nusantara</span>
+                        <span class="hidden lg:inline text-dark dark:text-white">Digital</span>
+                    </span>
+                </a>
+                <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
+                    <button id="lang-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
+                    <button id="theme-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
+                    <button id="menu-btn" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center">
+        <nav class="flex flex-col text-center gap-8">
+            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a>
+            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Tentang</span><span class="lang-en">About</span></a>
+            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
+            <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
+            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
+        </nav>
+    </div>
+
+    <main class="pt-28 pb-10 overflow-hidden min-h-screen">
+        <section class="relative py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-64 bg-secondary/10 dark:bg-secondaryDark/20 rounded-full blur-3xl -z-10"></div>
+            <h1 data-aos="zoom-in" class="text-4xl md:text-5xl lg:text-6xl mb-6">
+                <span class="lang-id">Mari Mulai <span class="text-secondary dark:text-green-400">Transformasi</span> Anda</span>
+                <span class="lang-en">Let's Start Your <span class="text-secondary dark:text-green-400">Transformation</span></span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-dark/70 dark:text-gray-400 max-w-2xl mx-auto">
+                <span class="lang-id">Jadwalkan konsultasi gratis atau tinggalkan pesan untuk mendiskusikan kebutuhan digitalisasi pesantren dan sekolah Anda.</span>
+                <span class="lang-en">Schedule a free consultation or leave a message to discuss your school and boarding school digitalization needs.</span>
+            </p>
+        </section>
+
+        <section class="py-12 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-cardDark rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-5/12 bg-gray-50 dark:bg-gray-900 p-8 md:p-12 border-r border-gray-100 dark:border-gray-800 flex flex-col justify-between">
+                        <div data-aos="fade-right">
+                            <h3 class="text-2xl font-heading mb-8 dark:text-white"><span class="lang-id">Informasi Kontak</span><span class="lang-en">Contact Information</span></h3>
+                            <div class="space-y-6 mb-10">
+                                <a href="https://wa.me/6287850934303" target="_blank" class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 bg-secondary/10 dark:bg-secondaryDark/40 text-secondary dark:text-green-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors"><i class="ph-fill ph-whatsapp-logo text-2xl"></i></div>
+                                    <div>
+                                        <p class="text-sm text-dark/50 dark:text-gray-400 mb-1">WhatsApp</p>
+                                        <p class="font-bold text-lg text-dark dark:text-white group-hover:text-secondary dark:group-hover:text-green-400 transition-colors">+62 878-5093-4303</p>
+                                    </div>
+                                </a>
+                                <a href="mailto:halo@edutechnusantara.com" class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 bg-primary/10 dark:bg-primaryDark/40 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors"><i class="ph-fill ph-envelope-simple text-2xl"></i></div>
+                                    <div>
+                                        <p class="text-sm text-dark/50 dark:text-gray-400 mb-1">Email</p>
+                                        <p class="font-bold text-lg text-dark dark:text-white group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">halo@edutechnusantara.com</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700 h-64 relative group">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1010376.5410186161!2d116.12644260020164!3d-8.599661448833956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbfa5972eb0f1%3A0xc39f28c2e7c48970!2sNusa%20Tenggara%20Bar.!5e0!3m2!1sid!2sid!4v1718000000000!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="grayscale group-hover:grayscale-0 transition-all duration-500"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-7/12 p-8 md:p-12 relative overflow-hidden">
+                        <div class="absolute -top-32 -right-32 w-64 h-64 bg-primary/5 dark:bg-primaryDark/10 rounded-full blur-3xl z-0"></div>
+                        <div class="relative z-10" data-aos="fade-left">
+                            <h3 class="text-2xl md:text-3xl font-heading mb-2 dark:text-white"><span class="lang-id">Formulir Konsultasi Cepat</span><span class="lang-en">Quick Consultation Form</span></h3>
+                            <p class="text-dark/60 dark:text-gray-400 mb-8"><span class="lang-id">Isi data di bawah ini, tim ahli kami akan segera menghubungi Anda melalui WhatsApp.</span><span class="lang-en">Fill out the data below, our expert team will contact you shortly via WhatsApp.</span></p>
+                            <form id="leadForm" class="space-y-5">
+                                <div>
+                                    <label for="nama" class="block text-sm font-bold text-dark/70 dark:text-gray-300 mb-2"><span class="lang-id">Nama Lengkap</span><span class="lang-en">Full Name</span></label>
+                                    <input type="text" id="nama" required placeholder="Masukkan nama Anda" class="form-input w-full px-5 py-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-dark dark:text-white placeholder-gray-400 focus:bg-white dark:focus:bg-gray-900 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="lembaga" class="block text-sm font-bold text-dark/70 dark:text-gray-300 mb-2"><span class="lang-id">Nama Lembaga / Instansi</span><span class="lang-en">Institution Name</span></label>
+                                    <input type="text" id="lembaga" required placeholder="Cth: Ponpes Al-Hikmah / SMA Bina Insani" class="form-input w-full px-5 py-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-dark dark:text-white placeholder-gray-400 focus:bg-white dark:focus:bg-gray-900 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="kebutuhan" class="block text-sm font-bold text-dark/70 dark:text-gray-300 mb-2"><span class="lang-id">Jenis Kebutuhan</span><span class="lang-en">Service Needed</span></label>
+                                    <div class="relative">
+                                        <select id="kebutuhan" required class="form-input w-full px-5 py-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-dark dark:text-white appearance-none cursor-pointer focus:bg-white dark:focus:bg-gray-900 transition-colors">
+                                            <option value="" disabled selected class="lang-id">Pilih layanan yang dibutuhkan...</option>
+                                            <option value="" disabled selected class="lang-en">Select required service...</option>
+                                            <option value="Pembuatan Website Pendidikan">Website Pendidikan (Pesantren/Sekolah)</option>
+                                            <option value="Sistem Informasi (PPDB / E-Raport)">Sistem Informasi (PPDB / E-Raport)</option>
+                                            <option value="Penyusunan SOP Kelembagaan">Penyusunan SOP & Tata Kelola</option>
+                                            <option value="Company Profile & Branding">Company Profile & Branding Media</option>
+                                            <option value="Pendampingan Akreditasi">Pendampingan Akreditasi Digital</option>
+                                            <option value="Lainnya / Konsultasi Umum">Lainnya / Konsultasi Umum</option>
+                                        </select>
+                                        <i class="ph ph-caret-down absolute right-5 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"></i>
+                                    </div>
+                                </div>
+                                <button type="submit" class="w-full mt-4 px-8 py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-primaryDark transition-all hover:-translate-y-1 shadow-lg shadow-primary/30 flex items-center justify-center gap-2 group">
+                                    <span class="lang-id">Kirim Pesan via WhatsApp</span><span class="lang-en">Send Message via WhatsApp</span>
+                                    <i class="ph ph-paper-plane-right text-xl group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50 dark:bg-black border-y border-gray-100 dark:border-gray-800 mt-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl mb-4"><span class="lang-id">7 Tahap <span class="text-primary dark:text-blue-400">Mekanisme Kerja</span></span><span class="lang-en">7 Stages of <span class="text-primary dark:text-blue-400">Working Mechanism</span></span></h2>
+                    <p class="text-dark/60 dark:text-gray-400 max-w-2xl mx-auto text-lg"><span class="lang-id">Proses kerja yang sistematis dan transparan untuk memastikan kepuasan Anda.</span><span class="lang-en">A systematic and transparent working process to ensure your satisfaction.</span></p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                    <div class="bg-white dark:bg-cardDark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center relative group hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="0">
+                        <div class="w-10 h-10 mx-auto bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-primary/30">1</div>
+                        <h4 class="font-heading text-sm mb-2 dark:text-white"><span class="lang-id">Konsultasi</span><span class="lang-en">Consultation</span></h4>
+                        <p class="text-xs text-dark/50 dark:text-gray-400 leading-relaxed">Identifikasi kebutuhan via WA/Form.</p>
+                    </div>
+                    <div class="bg-white dark:bg-cardDark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center relative group hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="50">
+                        <div class="w-10 h-10 mx-auto bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-secondary/30">2</div>
+                        <h4 class="font-heading text-sm mb-2 dark:text-white"><span class="lang-id">Penawaran</span><span class="lang-en">Proposal</span></h4>
+                        <p class="text-xs text-dark/50 dark:text-gray-400 leading-relaxed">Penyusunan Proposal, Harga & Timeline.</p>
+                    </div>
+                    <div class="bg-white dark:bg-cardDark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center relative group hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="w-10 h-10 mx-auto bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-primary/30">3</div>
+                        <h4 class="font-heading text-sm mb-2 dark:text-white"><span class="lang-id">Data</span><span class="lang-en">Data Prep</span></h4>
+                        <p class="text-xs text-dark/50 dark:text-gray-400 leading-relaxed">Pengumpulan Logo, Profil & Materi.</p>
+                    </div>
+                    <div class="bg-white dark:bg-cardDark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center relative group hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="w-10 h-10 mx-auto bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-secondary/30">4</div>
+                        <h4 class="font-heading text-sm mb-2 dark:text-white"><span class="lang-id">Pengerjaan</span><span class="lang-en">Development</span></h4>
+                        <p class="text-xs text-dark/50 dark:text-gray-400 leading-relaxed">Web 3-7 hari, SOP 14-30 hari kerja.</p>
+                    </div>
+                    <div class="bg-white dark:bg-cardDark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center relative group hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="w-10 h-10 mx-auto bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-primary/30">5</div>
+                        <h4 class="font-heading text-sm mb-2 dark:text-white"><span class="lang-id">Revisi</span><span class="lang-en">Revision</span></h4>
+                        <p class="text-xs text-dark/50 dark:text-gray-400 leading-relaxed">Maksimal 3 kali penyesuaian akhir.</p>
+                    </div>
+                    <div class="bg-white dark:bg-cardDark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center relative group hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="250">
+                        <div class="w-10 h-10 mx-auto bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-secondary/30">6</div>
+                        <h4 class="font-heading text-sm mb-2 dark:text-white"><span class="lang-id">Launching</span><span class="lang-en">Launching</span></h4>
+                        <p class="text-xs text-dark/50 dark:text-gray-400 leading-relaxed">Sistem online dan siap digunakan.</p>
+                    </div>
+                    <div class="bg-white dark:bg-cardDark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center relative col-span-2 md:col-span-4 lg:col-span-1 group hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="w-10 h-10 mx-auto bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md shadow-primary/30">7</div>
+                        <h4 class="font-heading text-sm mb-2 dark:text-white"><span class="lang-id">Maintenance</span><span class="lang-en">Maintenance</span></h4>
+                        <p class="text-xs text-dark/50 dark:text-gray-400 leading-relaxed">Backup, Update Sistem & Support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 pb-24 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl mb-2"><span class="lang-id">Pertanyaan <span class="text-secondary dark:text-green-400">Umum (FAQ)</span></span><span class="lang-en">Frequently Asked <span class="text-secondary dark:text-green-400">Questions (FAQ)</span></span></h2>
+                </div>
+                <div class="space-y-4" id="faq-container">
+                    <div class="faq-item bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+                        <button class="w-full px-6 py-5 flex justify-between items-center focus:outline-none text-left">
+                            <h4 class="font-bold text-dark dark:text-white text-lg pr-4"><span class="lang-id">Berapa lama estimasi pembuatan website pendidikan?</span><span class="lang-en">What is the estimated time for creating an educational website?</span></h4>
+                            <i class="ph ph-caret-down text-xl text-primary faq-icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-0">
+                            <div>
+                                <div class="pt-2 border-t border-gray-100 dark:border-gray-700/50 mt-1">
+                                    <p class="text-dark/70 dark:text-gray-400 leading-relaxed text-sm"><span class="lang-id">Pembuatan website standar memakan waktu sekitar <strong>3-7 hari kerja</strong> terhitung sejak data dan materi (logo, profil, foto) dari klien telah kami terima secara lengkap.</span><span class="lang-en">Standard website creation takes about <strong>3-7 working days</strong> starting from when we have completely received data and materials (logo, profile, photos) from the client.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300" data-aos="fade-up" data-aos-delay="50">
+                        <button class="w-full px-6 py-5 flex justify-between items-center focus:outline-none text-left">
+                            <h4 class="font-bold text-dark dark:text-white text-lg pr-4"><span class="lang-id">Apakah biaya sudah termasuk Domain Pendidikan?</span><span class="lang-en">Does the cost include an Educational Domain?</span></h4>
+                            <i class="ph ph-caret-down text-xl text-primary faq-icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-0">
+                            <div>
+                                <div class="pt-2 border-t border-gray-100 dark:border-gray-700/50 mt-1">
+                                    <p class="text-dark/70 dark:text-gray-400 leading-relaxed text-sm"><span class="lang-id"><strong>Ya, sudah termasuk.</strong> Kami menyediakan pendaftaran domain pendidikan resmi seperti <code>.ponpes.id</code>, <code>.sch.id</code>, atau <code>.ac.id</code> secara gratis selama tahun pertama berlangganan. Kami juga akan memandu proses validasi dokumen ke pengelola nama domain Indonesia (PANDI).</span><span class="lang-en"><strong>Yes, it is included.</strong> We provide official educational domain registration such as <code>.ponpes.id</code>, <code>.sch.id</code>, or <code>.ac.id</code> for free during the first year. We will also guide the document validation process.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <button class="w-full px-6 py-5 flex justify-between items-center focus:outline-none text-left">
+                            <h4 class="font-bold text-dark dark:text-white text-lg pr-4"><span class="lang-id">Apakah akan dibantu untuk input isi konten website awal?</span><span class="lang-en">Will you help with initial website content input?</span></h4>
+                            <i class="ph ph-caret-down text-xl text-primary faq-icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-0">
+                            <div>
+                                <div class="pt-2 border-t border-gray-100 dark:border-gray-700/50 mt-1">
+                                    <p class="text-dark/70 dark:text-gray-400 leading-relaxed text-sm"><span class="lang-id"><strong>Ya.</strong> Kami tidak hanya membuatkan kerangka website kosong. Tim kami akan membantu melakukan input data awal (sejarah, profil, visi-misi, galeri awal) berdasarkan data yang Anda kirim pada <em>Tahap Pengumpulan Data</em>.</span><span class="lang-en"><strong>Yes.</strong> We don't just build an empty website frame. Our team will help input initial data (history, profile, vision-mission, initial gallery) based on the data you send.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
+                        <button class="w-full px-6 py-5 flex justify-between items-center focus:outline-none text-left">
+                            <h4 class="font-bold text-dark dark:text-white text-lg pr-4"><span class="lang-id">Bagaimana dengan layanan maintenance / pemeliharaan?</span><span class="lang-en">What about maintenance services?</span></h4>
+                            <i class="ph ph-caret-down text-xl text-primary faq-icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-0">
+                            <div>
+                                <div class="pt-2 border-t border-gray-100 dark:border-gray-700/50 mt-1">
+                                    <p class="text-dark/70 dark:text-gray-400 leading-relaxed text-sm"><span class="lang-id"><strong>Ya, ada.</strong> Kami memberikan garansi dukungan teknis, backup data rutin, update sistem keamanan, dan monitoring website selama Anda masih dalam masa berlangganan aktif dengan kami.</span><span class="lang-en"><strong>Yes, there is.</strong> We provide technical support guarantees, routine data backups, security system updates, and website monitoring as long as your subscription is active.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-bgDark py-10 transition-colors border-t border-gray-100 dark:border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech" data-aos="fade-up" data-aos-delay="0">
+            <p class="text-dark/70 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                <span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span>
+                <span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span>
+            </p>
+            <p class="text-dark/40 dark:text-gray-500 text-xs md:text-sm font-medium tracking-wide" data-aos="fade-up" data-aos-delay="200">© 2026 Edutech Nusantara Digital</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlTag = document.documentElement;
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) htmlTag.classList.add('dark');
+
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader'); preloader.classList.add('preloader-hidden');
+                setTimeout(() => { AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 }); preloader.style.display = 'none'; }, 500); 
+            }, 1000);
+
+            const menuBtn = document.getElementById('menu-btn'), menuIcon = document.getElementById('menu-icon'), menuOverlay = document.getElementById('menu-overlay'), header = document.getElementById('main-header');
+            let isMenuOpen = false;
+            const toggleMenu = () => {
+                isMenuOpen = !isMenuOpen;
+                if(isMenuOpen) { menuOverlay.classList.add('menu-open'); header.classList.add('menu-open-header'); menuIcon.classList.replace('ph-list', 'ph-x'); document.body.style.overflow = 'hidden'; } 
+                else { menuOverlay.classList.remove('menu-open'); header.classList.remove('menu-open-header'); menuIcon.classList.replace('ph-x', 'ph-list'); document.body.style.overflow = 'auto'; }
+            };
+            menuBtn.addEventListener('click', toggleMenu);
+            document.querySelectorAll('.menu-link').forEach(link => link.addEventListener('click', () => { if(isMenuOpen) toggleMenu(); }));
+
+            const themeBtn = document.getElementById('theme-btn'), themeIcon = document.getElementById('theme-icon');
+            if (htmlTag.classList.contains('dark')) themeIcon.classList.replace('ph-moon', 'ph-sun');
+            themeBtn.addEventListener('click', () => {
+                htmlTag.classList.toggle('dark');
+                if(htmlTag.classList.contains('dark')) themeIcon.classList.replace('ph-moon', 'ph-sun');
+                else themeIcon.classList.replace('ph-sun', 'ph-moon');
+            });
+
+            const langBtn = document.getElementById('lang-btn'); let currentLang = 'id';
+            langBtn.addEventListener('click', () => {
+                if(currentLang === 'id') { currentLang = 'en'; langBtn.innerText = 'EN'; document.body.classList.add('lang-active-en'); } 
+                else { currentLang = 'id'; langBtn.innerText = 'ID'; document.body.classList.remove('lang-active-en'); }
+            });
+
+            window.addEventListener('scroll', () => {
+                if(isMenuOpen) return; 
+                if (window.scrollY > 20) { header.classList.add('shadow-sm'); header.classList.replace('py-0', 'py-1'); } 
+                else { header.classList.remove('shadow-sm'); header.classList.replace('py-1', 'py-0'); }
+            });
+
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const button = item.querySelector('button');
+                button.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(otherItem => { otherItem.classList.remove('active'); });
+                    if (!isActive) { item.classList.add('active'); }
+                });
+            });
+            if (faqItems.length > 0) faqItems[0].classList.add('active');
+
+            const leadForm = document.getElementById('leadForm');
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const nama = document.getElementById('nama').value, lembaga = document.getElementById('lembaga').value, kebutuhan = document.getElementById('kebutuhan').value;
+                const textMessage = `Halo Tim Edutech Nusantara,%0A%0ASaya ingin berkonsultasi mengenai layanan digitalisasi pendidikan.%0A%0A*Nama:* ${nama}%0A*Lembaga:* ${lembaga}%0A*Kebutuhan Layanan:* ${kebutuhan}%0A%0AMohon info lebih lanjut mengenai mekanisme kerjanya. Terima kasih.`;
+                const waNumber = '6287850934303'; const waUrl = `https://wa.me/${waNumber}?text=${textMessage}`;
+                window.open(waUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
