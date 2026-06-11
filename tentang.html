@@ -3,20 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang - Edutech Nusantara Digital</title>
     
-    <!-- Favicon -->
+    <!-- SEO Meta Tags -->
+    <title>Tentang - Edutech Nusantara Digital</title>
+    <meta name="description" content="Mengenal Edutech Nusantara Digital, mitra strategis lembaga pendidikan dalam transformasi digital, pembuatan SOP, dan tata kelola pesantren serta sekolah yang profesional.">
+    <meta name="keywords" content="profil edutech nusantara, tentang edutech nusantara, konsultan pendidikan digital, tata kelola pesantren, SOP sekolah">
+    <meta name="author" content="Edutech Nusantara Digital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edutechnusantaradigital.github.io/tentang.html">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edutechnusantaradigital.github.io/tentang.html">
+    <meta property="og:title" content="Tentang Kami - Edutech Nusantara Digital">
+    <meta property="og:description" content="Mitra strategis dalam mewujudkan institusi pendidikan yang profesional, transparan, dan terdigitalisasi secara penuh.">
+    <meta property="og:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Tentang Kami - Edutech Nusantara Digital">
+    <meta property="twitter:description" content="Mitra strategis dalam mewujudkan institusi pendidikan yang profesional, transparan, dan terdigitalisasi.">
+    <meta property="twitter:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Edutech Nusantara Digital",
+        "image": "https://edutechnusantaradigital.github.io/assets/images/logo.png",
+        "url": "https://edutechnusantaradigital.github.io/"
+      }
+    }
+    </script>
+
+    <!-- Favicon & Preload -->
     <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+    <link rel="preload" as="image" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
 
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <!-- AOS Animation Library CSS -->
+    <!-- Icons & Animation -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Tailwind CSS -->
@@ -26,20 +59,8 @@
             darkMode: 'class', 
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#067cc2', 
-                        secondary: '#3f8e25', 
-                        dark: '#000000', 
-                        light: '#ffffff',
-                        primaryDark: '#045281', 
-                        secondaryDark: '#285b17',
-                        bgDark: '#0f172a',
-                        cardDark: '#1e293b'
-                    },
-                    fontFamily: {
-                        heading: ['Poppins', 'sans-serif'],
-                        body: ['Montserrat', 'sans-serif'],
-                    }
+                    colors: { primary: '#067cc2', secondary: '#3f8e25', dark: '#000000', light: '#ffffff', primaryDark: '#045281', secondaryDark: '#285b17', bgDark: '#0f172a', cardDark: '#1e293b' },
+                    fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Montserrat', 'sans-serif'], }
                 }
             }
         }
@@ -82,9 +103,9 @@
                     </span>
                 </a>
                 <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
-                    <button id="lang-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
-                    <button id="theme-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
-                    <button id="menu-btn" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
+                    <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
+                    <button id="theme-btn" aria-label="Ubah Tema" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
+                    <button id="menu-btn" aria-label="Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
                 </div>
             </div>
         </div>
@@ -92,21 +113,11 @@
 
     <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center">
         <nav class="flex flex-col text-center gap-8">
-            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Beranda</span><span class="lang-en">Home</span>
-            </a>
-            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Tentang</span><span class="lang-en">About</span>
-            </a>
-            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Layanan</span><span class="lang-en">Services</span>
-            </a>
-            <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span>
-            </a>
-            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Kontak</span><span class="lang-en">Contact</span>
-            </a>
+            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a>
+            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Tentang</span><span class="lang-en">About</span></a>
+            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
+            <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
+            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
         </nav>
     </div>
 
@@ -237,7 +248,7 @@
 
     <footer class="bg-white dark:bg-bgDark py-10 transition-colors border-t border-gray-100 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech" data-aos="fade-up" data-aos-delay="0">
+            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara" data-aos="fade-up" data-aos-delay="0" loading="lazy">
             <p class="text-dark/70 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
                 <span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span>
                 <span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span>
@@ -246,20 +257,19 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/6287850934303" target="_blank" class="fixed bottom-6 right-6 z-[65] floating-element group">
+    <a href="https://wa.me/6287850934303" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" class="fixed bottom-6 right-6 z-[65] floating-element group">
         <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
         <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800"><i class="ph-fill ph-whatsapp-logo text-4xl"></i></div>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const htmlTag = document.documentElement;
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) htmlTag.classList.add('dark');
 
             setTimeout(() => {
-                const preloader = document.getElementById('preloader');
-                preloader.classList.add('preloader-hidden');
+                const preloader = document.getElementById('preloader'); preloader.classList.add('preloader-hidden');
                 setTimeout(() => { AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 }); preloader.style.display = 'none'; }, 500); 
             }, 1000);
 
