@@ -3,20 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edutech Nusantara Digital</title>
     
-    <!-- Favicon -->
+    <!-- SEO Meta Tags -->
+    <title>Edutech Nusantara Digital</title>
+    <meta name="description" content="Mitra teknologi terpercaya membangun ekosistem digital untuk pesantren dan sekolah di Indonesia. Layanan pembuatan website, sistem informasi PPDB, SOP, dan pendampingan akreditasi.">
+    <meta name="keywords" content="website pesantren, website sekolah, SOP pesantren, digitalisasi pendidikan, jasa website pendidikan, sistem informasi akademik, akreditasi digital, Edutech Nusantara Digital">
+    <meta name="author" content="Edutech Nusantara Digital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edutechnusantaradigital.github.io/">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edutechnusantaradigital.github.io/">
+    <meta property="og:title" content="Edutech Nusantara Digital - Solusi Digitalisasi Pesantren">
+    <meta property="og:description" content="Membangun ekosistem digital untuk pesantren dan sekolah di Indonesia. Jasa website, SOP, dan sistem informasi.">
+    <meta property="og:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://edutechnusantaradigital.github.io/">
+    <meta property="twitter:title" content="Edutech Nusantara Digital">
+    <meta property="twitter:description" content="Membangun ekosistem digital untuk pesantren dan sekolah di Indonesia.">
+    <meta property="twitter:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Edutech Nusantara Digital",
+      "image": "https://edutechnusantaradigital.github.io/assets/images/logo.png",
+      "url": "https://edutechnusantaradigital.github.io/",
+      "telephone": "+6287850934303",
+      "email": "halo@edutechnusantara.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Nusa Tenggara Barat",
+        "addressCountry": "ID"
+      },
+      "description": "Perusahaan digitalisasi kelembagaan pendidikan. Melayani pembuatan website pesantren/sekolah, penyusunan SOP, dan pendampingan akreditasi."
+    }
+    </script>
+
+    <!-- Favicon & Preload -->
     <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+    <link rel="preload" as="image" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
 
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <!-- AOS Animation Library CSS -->
+    <!-- Icons & Animation -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Tailwind CSS -->
@@ -26,80 +65,26 @@
             darkMode: 'class', 
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#067cc2', 
-                        secondary: '#3f8e25', 
-                        dark: '#000000', 
-                        light: '#ffffff',
-                        primaryDark: '#045281', 
-                        secondaryDark: '#285b17',
-                        bgDark: '#0f172a',
-                        cardDark: '#1e293b'
-                    },
-                    fontFamily: {
-                        heading: ['Poppins', 'sans-serif'],
-                        body: ['Montserrat', 'sans-serif'],
-                    }
+                    colors: { primary: '#067cc2', secondary: '#3f8e25', dark: '#000000', light: '#ffffff', primaryDark: '#045281', secondaryDark: '#285b17', bgDark: '#0f172a', cardDark: '#1e293b' },
+                    fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Montserrat', 'sans-serif'], }
                 }
             }
         }
     </script>
 
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        h1, h2, h3, h4, h5, h6, .font-heading {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 900;
-        }
-        p, span, li {
-            font-weight: 500;
-        }
-
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .dark .glass-nav {
-            background: rgba(15, 23, 42, 0.85);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .menu-open-header {
-            background: transparent !important;
-            backdrop-filter: none !important;
-            border-bottom: transparent !important;
-        }
-
-        #menu-overlay {
-            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
-        }
-        .menu-open {
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
-        }
-        .floating-element {
-            animation: float 4s ease-in-out infinite;
-        }
-
-        #preloader {
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-        .preloader-hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
+        body { font-family: 'Montserrat', sans-serif; font-weight: 600; transition: background-color 0.3s ease, color 0.3s ease; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; font-weight: 900; }
+        p, span, li { font-weight: 500; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .dark .glass-nav { background: rgba(15, 23, 42, 0.85); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .menu-open-header { background: transparent !important; backdrop-filter: none !important; border-bottom: transparent !important; }
+        #menu-overlay { transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s; }
+        .menu-open { opacity: 1 !important; visibility: visible !important; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .floating-element { animation: float 4s ease-in-out infinite; }
+        #preloader { transition: opacity 0.5s ease, visibility 0.5s ease; }
+        .preloader-hidden { opacity: 0; visibility: hidden; }
         .lang-en { display: none; }
         .lang-active-en .lang-id { display: none; }
         .lang-active-en .lang-en { display: inline-block; }
@@ -118,23 +103,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="/" class="flex-shrink-0 flex items-center gap-3 group" data-aos="fade-right">
-                    <img class="h-10 w-auto transition-transform group-hover:scale-110 duration-300" 
-                         src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara Digital">
+                    <img class="h-10 w-auto transition-transform group-hover:scale-110 duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara Digital">
                     <span class="font-heading text-lg md:text-xl tracking-tight transition-colors">
                         <span class="text-primary dark:text-white">Edutech</span>
                         <span class="hidden sm:inline text-secondary dark:text-white">Nusantara</span>
                         <span class="hidden lg:inline text-dark dark:text-white">Digital</span>
                     </span>
                 </a>
-
                 <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
-                    <button id="lang-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
-                    <button id="theme-btn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white">
-                        <i class="ph ph-moon text-2xl" id="theme-icon"></i>
-                    </button>
-                    <button id="menu-btn" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]">
-                        <i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i>
-                    </button>
+                    <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
+                    <button id="theme-btn" aria-label="Ubah Tema Gelap Terang" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
+                    <button id="menu-btn" aria-label="Buka Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
                 </div>
             </div>
         </div>
@@ -142,21 +121,11 @@
 
     <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center">
         <nav class="flex flex-col text-center gap-8">
-            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Beranda</span><span class="lang-en">Home</span>
-            </a>
-            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Tentang</span><span class="lang-en">About</span>
-            </a>
-            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Layanan</span><span class="lang-en">Services</span>
-            </a>
-            <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span>
-            </a>
-            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">
-                <span class="lang-id">Kontak</span><span class="lang-en">Contact</span>
-            </a>
+            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a>
+            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Tentang</span><span class="lang-en">About</span></a>
+            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
+            <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
+            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
         </nav>
     </div>
 
@@ -171,20 +140,13 @@
             </div>
 
             <h1 data-aos="zoom-in" data-aos-delay="100" class="text-4xl md:text-6xl lg:text-7xl leading-tight md:leading-tight lg:leading-tight mb-12">
-                <span class="lang-id">
-                    <span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> untuk 
-                    <span class="text-secondary dark:text-green-400">Pesantren</span> dan Sekolah Indonesia
-                </span>
-                <span class="lang-en">
-                    <span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> for 
-                    <span class="text-secondary dark:text-green-400">Boarding Schools</span> and Indonesian Schools
-                </span>
+                <span class="lang-id"><span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> untuk <span class="text-secondary dark:text-green-400">Pesantren</span> dan Sekolah Indonesia</span>
+                <span class="lang-en"><span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> for <span class="text-secondary dark:text-green-400">Boarding Schools</span> and Indonesian Schools</span>
             </h1>
 
             <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row gap-5 justify-center items-center w-full sm:w-auto">
                 <a href="https://wa.me/6287850934303" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-primary dark:bg-primaryDark text-white rounded-xl hover:bg-primary/90 dark:hover:bg-primaryDark/80 transition-all font-bold shadow-lg shadow-primary/30 dark:shadow-none flex items-center justify-center gap-2 text-lg hover:-translate-y-1">
-                    <i class="ph ph-whatsapp-logo text-2xl"></i> 
-                    <span class="lang-id">Konsultasi Gratis</span><span class="lang-en">Free Consultation</span>
+                    <i class="ph ph-whatsapp-logo text-2xl"></i> <span class="lang-id">Konsultasi Gratis</span><span class="lang-en">Free Consultation</span>
                 </a>
                 <a href="/layanan" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-transparent text-dark dark:text-white border-2 border-dark dark:border-white rounded-xl hover:bg-dark hover:text-white dark:hover:bg-white dark:hover:text-dark transition-all font-bold flex items-center justify-center gap-2 text-lg hover:-translate-y-1">
                     <span class="lang-id">Lihat Paket</span><span class="lang-en">View Packages</span> <i class="ph ph-arrow-right text-xl"></i>
@@ -294,7 +256,6 @@
                     <span class="lang-id">Siap! <span class="text-secondary dark:text-green-400">Go Digital?</span></span>
                     <span class="lang-en">Ready! <span class="text-secondary dark:text-green-400">Go Digital?</span></span>
                 </h2>
-                
                 <a href="https://wa.me/6287850934303" target="_blank" class="inline-block px-10 py-5 bg-white text-dark font-bold rounded-xl text-lg hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-2 shadow-2xl">
                     <span class="lang-id">Konsultasi Sekarang!</span><span class="lang-en">Consult Now!</span>
                 </a>
@@ -305,7 +266,7 @@
     <footer class="bg-white dark:bg-bgDark py-10 transition-colors border-t border-gray-100 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
             <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" 
-                 src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech" data-aos="fade-up" data-aos-delay="0">
+                 src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara" data-aos="fade-up" data-aos-delay="0" loading="lazy">
             <p class="text-dark/70 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
                 <span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span>
                 <span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span>
@@ -316,14 +277,14 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/6287850934303" target="_blank" class="fixed bottom-6 right-6 z-[65] floating-element group">
+    <a href="https://wa.me/6287850934303" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" class="fixed bottom-6 right-6 z-[65] floating-element group">
         <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
         <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800">
             <i class="ph-fill ph-whatsapp-logo text-4xl"></i>
         </div>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const htmlTag = document.documentElement;
@@ -332,37 +293,20 @@
             setTimeout(() => {
                 const preloader = document.getElementById('preloader');
                 preloader.classList.add('preloader-hidden');
-                setTimeout(() => {
-                    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
-                    preloader.style.display = 'none';
-                }, 500); 
+                setTimeout(() => { AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 }); preloader.style.display = 'none'; }, 500); 
             }, 1000);
 
-            const menuBtn = document.getElementById('menu-btn');
-            const menuIcon = document.getElementById('menu-icon');
-            const menuOverlay = document.getElementById('menu-overlay');
-            const header = document.getElementById('main-header');
+            const menuBtn = document.getElementById('menu-btn'), menuIcon = document.getElementById('menu-icon'), menuOverlay = document.getElementById('menu-overlay'), header = document.getElementById('main-header');
             let isMenuOpen = false;
-
             const toggleMenu = () => {
                 isMenuOpen = !isMenuOpen;
-                if(isMenuOpen) {
-                    menuOverlay.classList.add('menu-open');
-                    header.classList.add('menu-open-header');
-                    menuIcon.classList.replace('ph-list', 'ph-x');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    menuOverlay.classList.remove('menu-open');
-                    header.classList.remove('menu-open-header');
-                    menuIcon.classList.replace('ph-x', 'ph-list');
-                    document.body.style.overflow = 'auto';
-                }
+                if(isMenuOpen) { menuOverlay.classList.add('menu-open'); header.classList.add('menu-open-header'); menuIcon.classList.replace('ph-list', 'ph-x'); document.body.style.overflow = 'hidden'; } 
+                else { menuOverlay.classList.remove('menu-open'); header.classList.remove('menu-open-header'); menuIcon.classList.replace('ph-x', 'ph-list'); document.body.style.overflow = 'auto'; }
             };
             menuBtn.addEventListener('click', toggleMenu);
             document.querySelectorAll('.menu-link').forEach(link => link.addEventListener('click', () => { if(isMenuOpen) toggleMenu(); }));
 
-            const themeBtn = document.getElementById('theme-btn');
-            const themeIcon = document.getElementById('theme-icon');
+            const themeBtn = document.getElementById('theme-btn'), themeIcon = document.getElementById('theme-icon');
             if (htmlTag.classList.contains('dark')) themeIcon.classList.replace('ph-moon', 'ph-sun');
             themeBtn.addEventListener('click', () => {
                 htmlTag.classList.toggle('dark');
@@ -370,23 +314,16 @@
                 else themeIcon.classList.replace('ph-sun', 'ph-moon');
             });
 
-            const langBtn = document.getElementById('lang-btn');
-            let currentLang = 'id';
+            const langBtn = document.getElementById('lang-btn'); let currentLang = 'id';
             langBtn.addEventListener('click', () => {
-                if(currentLang === 'id') {
-                    currentLang = 'en'; langBtn.innerText = 'EN'; document.body.classList.add('lang-active-en');
-                } else {
-                    currentLang = 'id'; langBtn.innerText = 'ID'; document.body.classList.remove('lang-active-en');
-                }
+                if(currentLang === 'id') { currentLang = 'en'; langBtn.innerText = 'EN'; document.body.classList.add('lang-active-en'); } 
+                else { currentLang = 'id'; langBtn.innerText = 'ID'; document.body.classList.remove('lang-active-en'); }
             });
 
             window.addEventListener('scroll', () => {
                 if(isMenuOpen) return; 
-                if (window.scrollY > 20) {
-                    header.classList.add('shadow-sm'); header.classList.replace('py-0', 'py-1');
-                } else {
-                    header.classList.remove('shadow-sm'); header.classList.replace('py-1', 'py-0');
-                }
+                if (window.scrollY > 20) { header.classList.add('shadow-sm'); header.classList.replace('py-0', 'py-1'); } 
+                else { header.classList.remove('shadow-sm'); header.classList.replace('py-1', 'py-0'); }
             });
         });
     </script>
