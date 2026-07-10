@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Jasa Pembuatan OJS Terbaik | EduTech Nusantara Digital</title>
+    <meta name="description" content="Jasa pembuatan website jurnal Open Journal Systems (OJS) versi terbaru. Instalasi OJS, hosting, domain, ISSN, indeksasi Garuda, Google Scholar, Dimensions, Copernicus hingga DOAJ.">
+    <meta name="keywords" content="Jasa OJS, Pembuatan OJS, Instalasi OJS, Open Journal Systems, Website Jurnal, Jasa DOAJ, Jasa ISSN, Google Scholar, Garuda, Dimensions, Copernicus">
+    <meta name="author" content="Edutech Nusantara Digital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edutechnusantaradigital.github.io/layanan/ojs/">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edutechnusantaradigital.github.io/layanan/ojs/">
+    <meta property="og:title" content="Jasa Pembuatan OJS Terbaik | EduTech Nusantara Digital">
+    <meta property="og:description" content="Layanan pembuatan dan pengelolaan Open Journal Systems (OJS) versi 3.5 dengan hosting cepat, ISSN, dan indeksasi internasional.">
+    <meta property="og:image" content="https://edutechnusantaradigital.github.io/assets/images/ojs-cover.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://edutechnusantaradigital.github.io/layanan/ojs/">
+    <meta property="twitter:title" content="Jasa Pembuatan OJS Terbaik">
+    <meta property="twitter:description" content="Layanan pembuatan dan pengelolaan Open Journal Systems profesional.">
+    <meta property="twitter:image" content="https://edutechnusantaradigital.github.io/assets/images/ojs-cover.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Layanan Pembuatan & Pengelolaan Open Journal Systems (OJS)",
+      "provider": {
+        "@type": "Organization",
+        "name": "Edutech Nusantara Digital",
+        "url": "https://edutechnusantaradigital.github.io/",
+        "telephone": "+6287850934303",
+        "email": "halo@edutechnusantara.com"
+      },
+      "description": "Kami membantu kampus, sekolah tinggi, lembaga penelitian, organisasi profesi, dan penerbit dalam membangun jurnal ilmiah profesional berbasis Open Journal Systems (OJS) versi terbaru.",
+      "areaServed": "ID",
+      "availableLanguage": "id"
+    }
+    </script>
+
+    <!-- Favicon & Preload -->
+    <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+    <link rel="preload" as="image" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Icons & Animation -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: { 
+                        primary: '#2563eb', 
+                        secondary: '#10b981', 
+                        dark: '#000000', 
+                        light: '#ffffff', 
+                        primaryDark: '#1e40af', 
+                        secondaryDark: '#059669', 
+                        bgDark: '#0f172a', 
+                        cardDark: '#1e293b' 
+                    },
+                    fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Montserrat', 'sans-serif'], }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; font-weight: 600; transition: background-color 0.3s ease, color 0.3s ease; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; font-weight: 900; }
+        p, span, li { font-weight: 500; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .dark .glass-nav { background: rgba(15, 23, 42, 0.85); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .menu-open-header { background: transparent !important; backdrop-filter: none !important; border-bottom: transparent !important; }
+        #menu-overlay { transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s; }
+        .menu-open { opacity: 1 !important; visibility: visible !important; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .floating-element { animation: float 4s ease-in-out infinite; }
+        #preloader { transition: opacity 0.5s ease, visibility 0.5s ease; }
+        .preloader-hidden { opacity: 0; visibility: hidden; }
+        .lang-en { display: none; }
+        .lang-active-en .lang-id { display: none; }
+        .lang-active-en .lang-en { display: inline-block; }
+        .lang-active-en p.lang-en, .lang-active-en div.lang-en, .lang-active-en h1.lang-en, .lang-active-en h2.lang-en { display: block; }
+        .badge-best { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        table { border-collapse: collapse; }
+        .check-mark { color: #10b981; }
+        .cross-mark { color: #ef4444; }
+    </style>
+</head>
+<body class="antialiased text-dark bg-light dark:bg-bgDark dark:text-gray-100 overflow-x-hidden">
+
+    <div id="preloader" class="fixed inset-0 bg-[#ffffff] dark:bg-bgDark z-[9999] flex items-center justify-center">
+        <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" 
+             onerror="this.src='https://ui-avatars.com/api/?name=EN&background=2563eb&color=fff&rounded=true'"
+             alt="Loading..." class="w-24 h-24 animate-pulse">
+    </div>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-[60] glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex-shrink-0 flex items-center gap-3 group" data-aos="fade-right">
+                    <img class="h-10 w-auto transition-transform group-hover:scale-110 duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara Digital">
+                    <span class="font-heading text-lg md:text-xl tracking-tight transition-colors">
+                        <span class="text-primary dark:text-blue-400">Edutech</span>
+                        <span class="hidden sm:inline text-secondary dark:text-emerald-400">Nusantara</span>
+                    </span>
+                </a>
+                <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
+                    <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm">ID</button>
+                    <button id="theme-btn" aria-label="Ubah Tema" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"><i id="theme-icon" class="ph ph-moon text-xl"></i></button>
+                    <button id="menu-btn" aria-label="Menu" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors"><i id="menu-icon" class="ph ph-list text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center">
+        <nav class="flex flex-col text-center gap-8">
+            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary transition-all hover:scale-110"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a>
+            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary transition-all hover:scale-110"><span class="lang-id">Tentang</span><span class="lang-en">About</span></a>
+            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary transition-all hover:scale-110"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
+            <a href="/layanan/ojs" class="menu-link font-heading text-4xl md:text-5xl text-secondary transition-all hover:scale-110"><span class="lang-id">OJS</span><span class="lang-en">OJS</span></a>
+            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary transition-all hover:scale-110"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="pt-32 pb-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <li><a href="/" class="hover:text-primary transition-colors"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                <li><i class="ph ph-caret-right"></i></li>
+                <li><a href="/layanan" class="hover:text-primary transition-colors"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a></li>
+                <li><i class="ph ph-caret-right"></i></li>
+                <li class="text-primary font-semibold"><span class="lang-id">OJS</span><span class="lang-en">OJS</span></li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative pt-12 pb-20 lg:pt-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
+            <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-primary/10 dark:bg-primaryDark/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            
+            <div data-aos="fade-down" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 text-sm mb-6 font-semibold">
+                <i class="ph-fill ph-book-open text-lg"></i>
+                <span class="lang-id">Jurnal Ilmiah Profesional</span>
+                <span class="lang-en">Professional Scientific Journal</span>
+            </div>
+
+            <h1 data-aos="zoom-in" data-aos-delay="100" class="text-4xl md:text-5xl lg:text-6xl leading-tight md:leading-tight lg:leading-tight mb-6 max-w-4xl">
+                <span class="lang-id">Layanan Pembuatan & Pengelolaan <span class="text-primary dark:text-blue-400">Open Journal Systems</span> (OJS)</span>
+                <span class="lang-en">Professional <span class="text-primary dark:text-blue-400">Open Journal Systems</span> (OJS) Creation & Management Service</span>
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="150" class="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-3xl">
+                <span class="lang-id">Kami membantu kampus, sekolah tinggi, lembaga penelitian, organisasi profesi, dan penerbit dalam membangun jurnal ilmiah profesional berbasis Open Journal Systems (OJS) versi terbaru.</span>
+                <span class="lang-en">We help universities, colleges, research institutions, professional organizations, and publishers build professional scientific journals based on the latest Open Journal Systems (OJS) version.</span>
+            </p>
+
+            <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row gap-5 justify-center items-center w-full sm:w-auto">
+                <a href="https://wa.me/6287850934303?text=Halo,%20saya%20tertarik%20dengan%20layanan%20OJS.%20Bisa%20konsultasi?" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-primary dark:bg-primaryDark text-white rounded-xl hover:bg-primary/90 dark:hover:bg-primaryDark/90 transition-all duration-300 font-bold shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                    <i class="ph ph-whatsapp-logo text-2xl"></i> <span class="lang-id">Konsultasi Sekarang</span><span class="lang-en">Consult Now</span>
+                </a>
+                <a href="#pricing" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-transparent text-dark dark:text-white border-2 border-primary dark:border-primary rounded-xl hover:bg-primary hover:text-white dark:hover:bg-primary transition-all duration-300 font-bold flex items-center justify-center gap-2">
+                    <span class="lang-id">Lihat Paket</span><span class="lang-en">View Packages</span> <i class="ph ph-arrow-down text-xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Keunggulan Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="lang-id">Mengapa Memilih <span class="text-primary dark:text-blue-400">EduTech Nusantara Digital</span></span>
+                    <span class="lang-en">Why Choose <span class="text-primary dark:text-blue-400">EduTech Nusantara Digital</span></span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div data-aos="flip-up" data-aos-delay="0" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-check-circle"></i></div>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white"><span class="lang-id">OJS Versi Terbaru</span><span class="lang-en">Latest OJS Version</span></h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm"><span class="lang-id">Instalasi dan setup menggunakan OJS versi 3.5 terbaru dengan fitur lengkap.</span><span class="lang-en">Installation using latest OJS version 3.5 with complete features.</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="100" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-emerald-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-lightning"></i></div>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white"><span class="lang-id">Hosting Cepat & Aman</span><span class="lang-en">Fast & Secure Hosting</span></h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm"><span class="lang-id">Server berkecepatan tinggi dengan jaminan uptime 99.9% dan keamanan berlapis.</span><span class="lang-en">High-speed server with 99.9% uptime guarantee and layered security.</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="200" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-gear"></i></div>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white"><span class="lang-id">Setup Lengkap</span><span class="lang-en">Complete Setup</span></h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm"><span class="lang-id">Kustomisasi menyeluruh mulai dari tema, header, cover, hingga template artikel.</span><span class="lang-en">Comprehensive customization from theme, header, cover to article templates.</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="300" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-emerald-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-users"></i></div>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white"><span class="lang-id">Pendampingan Maksimal</span><span class="lang-en">Maximum Support</span></h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm"><span class="lang-id">Tim profesional siap mendampingi dari konsultasi awal hingga maintenance berkelanjutan.</span><span class="lang-en">Professional team ready to support from initial consultation to ongoing maintenance.</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="400" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-book"></i></div>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white"><span class="lang-id">Gratis Pelatihan</span><span class="lang-en">Free Training</span></h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm"><span class="lang-id">Pelatihan via Zoom dan video tutorial lengkap untuk manajemen jurnal.</span><span class="lang-en">Zoom training and complete video tutorials for journal management.</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="500" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-emerald-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-wrench"></i></div>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white"><span class="lang-id">Maintenance Berkala</span><span class="lang-en">Regular Maintenance</span></h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm"><span class="lang-id">Pemeliharaan rutin, backup otomatis, dan update keamanan server.</span><span class="lang-en">Regular maintenance, automatic backups, and server security updates.</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="lang-id">Paket Layanan <span class="text-primary dark:text-blue-400">OJS</span></span>
+                    <span class="lang-en"><span class="text-primary dark:text-blue-400">OJS</span> Service Packages</span>
+                </h2>
+                <p class="text-gray-700 dark:text-gray-400"><span class="lang-id">Pilih paket yang sesuai dengan kebutuhan jurnal Anda</span><span class="lang-en">Choose a package that suits your journal needs</span></p>
+            </div>
+
+            <!-- Paket Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+                <!-- Paket Hemat -->
+                <div data-aos="fade-up" data-aos-delay="0" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 flex flex-col relative group">
+                    <h3 class="text-2xl font-bold mb-2 dark:text-white"><span class="lang-id">Paket Hemat</span><span class="lang-en">Budget Package</span></h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary dark:text-blue-400">Rp700K</span>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2"><span class="lang-id">Untuk 1 tahun</span><span class="lang-en">For 1 year</span></p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Hosting</strong> 1 GB / 1 Tahun</span><span class="lang-en"><strong>Hosting</strong> 1 GB / 1 Year</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Domain</strong> .com/.org 1 Tahun</span><span class="lang-en"><strong>Domain</strong> .com/.org 1 Year</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Email Domain</strong></span><span class="lang-en"><strong>Domain Email</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Instalasi OJS</strong> 3.5</span><span class="lang-en"><strong>OJS Installation</strong> 3.5</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>E-ISSN</strong> & <strong>P-ISSN</strong></span><span class="lang-en"><strong>E-ISSN</strong> & <strong>P-ISSN</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Indeksasi Garuda, Google Scholar</span><span class="lang-en">Garuda, Google Scholar Indexing</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Maintenance 6 Bulan</span><span class="lang-en">6 Months Maintenance</span></li>
+                    </ul>
+                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20tertarik%20paket%20Hemat%20OJS%20dengan%20harga%20Rp700K.%20Bisa%20info%20lebih%20detail?" target="_blank" class="w-full py-3 bg-primary dark:bg-primaryDark text-white rounded-xl font-bold hover:opacity-90 transition-all text-center"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Order Now</span></a>
+                </div>
+
+                <!-- Paket Medium (Most Popular) -->
+                <div data-aos="zoom-in" data-aos-delay="100" class="bg-gradient-to-br from-primary to-blue-600 dark:from-primaryDark dark:to-blue-700 text-white rounded-2xl p-8 shadow-2xl border border-blue-400 dark:border-blue-600 hover:shadow-2xl transition-all duration-300 flex flex-col relative lg:col-span-1 transform lg:scale-105">
+                    <div class="absolute -top-4 right-4 bg-secondary dark:bg-secondaryDark text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider badge-best">
+                        <span class="lang-id">🌟 Paling Populer</span><span class="lang-en">🌟 Most Popular</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Paket Medium</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Rp2.2M</span>
+                        <p class="text-sm text-blue-100 mt-2"><span class="lang-id">Untuk 1 tahun</span><span class="lang-en">For 1 year</span></p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check mt-0.5"></i> <span><strong>Hosting Unlimited</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check mt-0.5"></i> <span><strong>Storage & Bandwidth</strong> Unlimited</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check mt-0.5"></i> <span><strong>Email Unlimited</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check mt-0.5"></i> <span><strong>OJS 3.5</strong> + Tema Premium</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check mt-0.5"></i> <span>Indeksasi: Garuda, Dimensions, Copernicus, Google Scholar</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check mt-0.5"></i> <span class="lang-id">Pelatihan Zoom + Video Tutorial</span><span class="lang-en">Zoom Training + Video Tutorials</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check mt-0.5"></i> <span class="lang-id">Akses CPanel + Maintenance</span><span class="lang-en">CPanel Access + Maintenance</span></li>
+                    </ul>
+                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20tertarik%20paket%20Medium%20OJS%20dengan%20harga%20Rp2.2M.%20Bisa%20info%20lebih%20detail?" target="_blank" class="w-full py-3 bg-white text-primary dark:text-primaryDark rounded-xl font-bold hover:bg-blue-50 transition-all text-center"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Order Now</span></a>
+                </div>
+
+                <!-- Paket Exclusive 1 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 flex flex-col relative group">
+                    <h3 class="text-2xl font-bold mb-2 dark:text-white"><span class="lang-id">Exclusive 1</span><span class="lang-en">Exclusive 1</span></h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary dark:text-blue-400">Rp4.4M</span>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2"><span class="lang-id">+ Pendirian PT Perorangan</span><span class="lang-en">+ Solo Company Registration</span></p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span><strong>Semua fitur Medium</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Landing Page</strong> Website</span><span class="lang-en"><strong>Landing Page</strong> Website</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Pendirian PT</strong> Perorangan</span><span class="lang-en"><strong>Solo PT</strong> Registration</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span><strong>DOAJ</strong> Indexing</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Akses Hosting Penuh</span><span class="lang-en">Full Hosting Access</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Unlimited Revisi</span><span class="lang-en">Unlimited Revision</span></li>
+                    </ul>
+                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20tertarik%20paket%20Exclusive%201%20OJS%20dengan%20harga%20Rp4.4M.%20Bisa%20info%20lebih%20detail?" target="_blank" class="w-full py-3 bg-primary dark:bg-primaryDark text-white rounded-xl font-bold hover:opacity-90 transition-all text-center"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Order Now</span></a>
+                </div>
+
+                <!-- Paket Exclusive 2 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 flex flex-col relative group">
+                    <h3 class="text-2xl font-bold mb-2 dark:text-white"><span class="lang-id">Exclusive 2</span><span class="lang-en">Exclusive 2</span></h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary dark:text-blue-400">Rp5.5M</span>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2"><span class="lang-id">+ Pendirian CV</span><span class="lang-en">+ CV Registration</span></p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Semua fitur Exclusive 1</strong></span><span class="lang-en"><strong>All Exclusive 1 features</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Pendirian CV</strong> (Commanditaire Vennootschap)</span><span class="lang-en"><strong>CV Registration</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Konsultasi Bisnis Tambahan</span><span class="lang-en">Additional Business Consultation</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Support Priority 24/7</span><span class="lang-en">24/7 Priority Support</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Update & Maintenance Gratis</span><span class="lang-en">Free Updates & Maintenance</span></li>
+                    </ul>
+                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20tertarik%20paket%20Exclusive%202%20OJS%20dengan%20harga%20Rp5.5M.%20Bisa%20info%20lebih%20detail?" target="_blank" class="w-full py-3 bg-primary dark:bg-primaryDark text-white rounded-xl font-bold hover:opacity-90 transition-all text-center"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Order Now</span></a>
+                </div>
+
+                <!-- Paket Exclusive 3 -->
+                <div data-aos="fade-up" data-aos-delay="400" class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 flex flex-col relative group">
+                    <h3 class="text-2xl font-bold mb-2 dark:text-white"><span class="lang-id">Exclusive 3</span><span class="lang-en">Exclusive 3</span></h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary dark:text-blue-400">Rp7.5M</span>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2"><span class="lang-id">+ PT Umum/Yayasan</span><span class="lang-en">+ Foundation/Company</span></p>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Semua fitur Exclusive</strong></span><span class="lang-en"><strong>All Exclusive features</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id"><strong>Pendirian PT Umum</strong> atau <strong>Yayasan</strong></span><span class="lang-en"><strong>PT/Foundation</strong> Registration</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Audit & Legal Consultation</span><span class="lang-en">Audit & Legal Consultation</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Tim Dedicated Account Manager</span><span class="lang-en">Dedicated Account Manager</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Custom Development & Integrasi API</span><span class="lang-en">Custom Development & API Integration</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-secondary mt-0.5"></i> <span class="lang-id">Support Lifetime</span><span class="lang-en">Lifetime Support</span></li>
+                    </ul>
+                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20tertarik%20paket%20Exclusive%203%20OJS%20dengan%20harga%20Rp7.5M.%20Bisa%20info%20lebih%20detail?" target="_blank" class="w-full py-3 bg-primary dark:bg-primaryDark text-white rounded-xl font-bold hover:opacity-90 transition-all text-center"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Order Now</span></a>
+                </div>
+            </div>
+
+            <!-- Add-on Options -->
+            <div data-aos="fade-up" class="text-center mb-12">
+                <h3 class="text-2xl font-bold mb-8 dark:text-white">
+                    <span class="lang-id">Opsi Tambahan</span>
+                    <span class="lang-en">Additional Options</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all">
+                        <i class="ph ph-fingerprint text-4xl text-primary mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2 dark:text-white">DOI</h4>
+                        <p class="text-gray-700 dark:text-gray-400 text-sm mb-4"><span class="lang-id">Digital Object Identifier untuk identifikasi artikel</span><span class="lang-en">Digital Object Identifier for article identification</span></p>
+                        <p class="text-2xl font-bold text-primary">Rp1.3M</p>
+                    </div>
+                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all">
+                        <i class="ph ph-article text-4xl text-secondary mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2 dark:text-white"><span class="lang-id">5 Artikel Siap</span><span class="lang-en">5 Ready Articles</span></h4>
+                        <p class="text-gray-700 dark:text-gray-400 text-sm mb-4"><span class="lang-id">5 artikel siap publish untuk edisi pertama</span><span class="lang-en">5 ready-to-publish articles for first edition</span></p>
+                        <p class="text-2xl font-bold text-secondary">Rp1.3M</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div data-aos="fade-up" class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="lang-id">Perbandingan Paket</span>
+                    <span class="lang-en">Package Comparison</span>
+                </h2>
+            </div>
+
+            <div data-aos="zoom-in" class="overflow-x-auto">
+                <table class="w-full border-collapse text-sm">
+                    <thead>
+                        <tr class="bg-primary dark:bg-primaryDark text-white">
+                            <th class="p-4 text-left font-bold"><span class="lang-id">Fitur</span><span class="lang-en">Feature</span></th>
+                            <th class="p-4 text-center font-bold"><span class="lang-id">Hemat</span><span class="lang-en">Budget</span></th>
+                            <th class="p-4 text-center font-bold"><span class="lang-id">Medium</span><span class="lang-en">Medium</span></th>
+                            <th class="p-4 text-center font-bold"><span class="lang-id">Exclusive 1</span><span class="lang-en">Exclusive 1</span></th>
+                            <th class="p-4 text-center font-bold"><span class="lang-id">Exclusive 2</span><span class="lang-en">Exclusive 2</span></th>
+                            <th class="p-4 text-center font-bold"><span class="lang-id">Exclusive 3</span><span class="lang-en">Exclusive 3</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-cardDark/50">
+                            <td class="p-4 font-semibold"><span class="lang-id">Hosting</span><span class="lang-en">Hosting</span></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center text-secondary font-bold">Unlimited</td>
+                            <td class="p-4 text-center text-secondary font-bold">Unlimited</td>
+                            <td class="p-4 text-center text-secondary font-bold">Unlimited</td>
+                            <td class="p-4 text-center text-secondary font-bold">Unlimited</td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-cardDark/50">
+                            <td class="p-4 font-semibold"><span class="lang-id">Email Unlimited</span><span class="lang-en">Unlimited Email</span></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-cardDark/50">
+                            <td class="p-4 font-semibold"><span class="lang-id">Landing Page</span><span class="lang-en">Landing Page</span></td>
+                            <td class="p-4 text-center"><i class="ph ph-x text-red-500 text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph ph-x text-red-500 text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-cardDark/50">
+                            <td class="p-4 font-semibold"><span class="lang-id">DOAJ Indexing</span><span class="lang-en">DOAJ Indexing</span></td>
+                            <td class="p-4 text-center"><i class="ph ph-x text-red-500 text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph ph-x text-red-500 text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-cardDark/50">
+                            <td class="p-4 font-semibold"><span class="lang-id">Pelatihan Zoom</span><span class="lang-en">Zoom Training</span></td>
+                            <td class="p-4 text-center"><i class="ph ph-x text-red-500 text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph-fill ph-check text-secondary text-xl"></i></td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-cardDark/50">
+                            <td class="p-4 font-semibold"><span class="lang-id">Maintenance</span><span class="lang-en">Maintenance</span></td>
+                            <td class="p-4 text-center text-gray-600 dark:text-gray-400">6 <span class="lang-id">bln</span><span class="lang-en">mo</span></td>
+                            <td class="p-4 text-center text-secondary font-bold">1 <span class="lang-id">tahun</span><span class="lang-en">year</span></td>
+                            <td class="p-4 text-center text-secondary font-bold">1 <span class="lang-id">tahun</span><span class="lang-en">year</span></td>
+                            <td class="p-4 text-center text-secondary font-bold">1 <span class="lang-id">tahun</span><span class="lang-en">year</span></td>
+                            <td class="p-4 text-center text-secondary font-bold"><span class="lang-id">Selamanya</span><span class="lang-en">Forever</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-cardDark/50">
+                            <td class="p-4 font-semibold"><span class="lang-id">Pendirian Badan Usaha</span><span class="lang-en">Business Registration</span></td>
+                            <td class="p-4 text-center"><i class="ph ph-x text-red-500 text-xl"></i></td>
+                            <td class="p-4 text-center"><i class="ph ph-x text-red-500 text-xl"></i></td>
+                            <td class="p-4 text-center text-gray-600 dark:text-gray-400 text-xs"><span class="lang-id">PT Perorangan</span><span class="lang-en">Solo PT</span></td>
+                            <td class="p-4 text-center text-gray-600 dark:text-gray-400 text-xs"><span class="lang-id">PT / CV</span><span class="lang-en">PT / CV</span></td>
+                            <td class="p-4 text-center text-gray-600 dark:text-gray-400 text-xs"><span class="lang-id">PT / Yayasan</span><span class="lang-en">PT / Foundation</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold">
+                    <span class="lang-id">Pertanyaan Umum (FAQ)</span>
+                    <span class="lang-en">Frequently Asked Questions</span>
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <details data-aos="fade-up" data-aos-delay="0" class="bg-white dark:bg-cardDark rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <summary class="flex items-center justify-between font-bold text-lg dark:text-white hover:text-primary transition-colors">
+                        <span class="lang-id">Apakah sudah termasuk ISSN?</span>
+                        <span class="lang-en">Does it include ISSN?</span>
+                        <i class="ph ph-plus group-open:hidden"></i>
+                        <i class="ph ph-minus hidden group-open:block"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">
+                        <span class="lang-id">Ya, semua paket sudah termasuk E-ISSN dan P-ISSN (jika dicetak). Tim kami akan membantu proses permohonan ISSN ke LIPI secara lengkap.</span>
+                        <span class="lang-en">Yes, all packages include E-ISSN and P-ISSN (if printed). Our team will help with the complete ISSN application process to LIPI.</span>
+                    </p>
+                </details>
+
+                <details data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-cardDark rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <summary class="flex items-center justify-between font-bold text-lg dark:text-white hover:text-primary transition-colors">
+                        <span class="lang-id">Apakah sudah termasuk DOAJ?</span>
+                        <span class="lang-en">Does it include DOAJ?</span>
+                        <i class="ph ph-plus group-open:hidden"></i>
+                        <i class="ph ph-minus hidden group-open:block"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">
+                        <span class="lang-id">DOAJ (Directory of Open Access Journals) termasuk dalam paket Exclusive 1, 2, dan 3. Untuk paket Hemat dan Medium, DOAJ bisa ditambahkan sebagai opsi tambahan.</span>
+                        <span class="lang-en">DOAJ (Directory of Open Access Journals) is included in Exclusive 1, 2, and 3 packages. For Budget and Medium packages, DOAJ can be added as an optional add-on.</span>
+                    </p>
+                </details>
+
+                <details data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-cardDark rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <summary class="flex items-center justify-between font-bold text-lg dark:text-white hover:text-primary transition-colors">
+                        <span class="lang-id">Berapa lama proses pengerjaan?</span>
+                        <span class="lang-en">How long is the process?</span>
+                        <i class="ph ph-plus group-open:hidden"></i>
+                        <i class="ph ph-minus hidden group-open:block"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">
+                        <span class="lang-id">Proses setup OJS biasanya membutuhkan 2-3 minggu dari pembayaran hingga launch. Ini termasuk instalasi, kustomisasi, integrasi ISSN, dan training pengguna. Permohonan ISSN ke LIPI membutuhkan waktu 2-4 minggu terpisah.</span>
+                        <span class="lang-en">The OJS setup process typically takes 2-3 weeks from payment to launch. This includes installation, customization, ISSN integration, and user training. ISSN application to LIPI takes 2-4 weeks separately.</span>
+                    </p>
+                </details>
+
+                <details data-aos="fade-up" data-aos-delay="300" class="bg-white dark:bg-cardDark rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <summary class="flex items-center justify-between font-bold text-lg dark:text-white hover:text-primary transition-colors">
+                        <span class="lang-id">Apakah mendapat pelatihan?</span>
+                        <span class="lang-en">Is training provided?</span>
+                        <i class="ph ph-plus group-open:hidden"></i>
+                        <i class="ph ph-minus hidden group-open:block"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">
+                        <span class="lang-id">Iya, paket Medium dan Exclusive sudah termasuk pelatihan via Zoom (2-3 sesi). Paket Hemat bisa mendapat pelatihan dengan biaya tambahan. Semua paket juga mendapat video tutorial lengkap.</span>
+                        <span class="lang-en">Yes, Medium and Exclusive packages include Zoom training (2-3 sessions). Budget package can get training with additional cost. All packages include complete video tutorials.</span>
+                    </p>
+                </details>
+
+                <details data-aos="fade-up" data-aos-delay="400" class="bg-white dark:bg-cardDark rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <summary class="flex items-center justify-between font-bold text-lg dark:text-white hover:text-primary transition-colors">
+                        <span class="lang-id">Apakah mendapat akses hosting?</span>
+                        <span class="lang-en">Do we get hosting access?</span>
+                        <i class="ph ph-plus group-open:hidden"></i>
+                        <i class="ph ph-minus hidden group-open:block"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">
+                        <span class="lang-id">Ya, paket Exclusive 1, 2, dan 3 sudah termasuk akses CPanel penuh. Paket Medium juga bisa mendapat akses CPanel dengan permintaan khusus. Paket Hemat bisa menambahkan akses CPanel dengan biaya tambahan.</span>
+                        <span class="lang-en">Yes, Exclusive 1, 2, and 3 packages include full CPanel access. Medium package can also get CPanel access upon request. Budget package can add CPanel access for additional cost.</span>
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div data-aos="zoom-in" class="bg-gradient-to-r from-primary to-blue-600 dark:from-primaryDark dark:to-blue-700 rounded-3xl p-12 md:p-16 text-center text-white relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-96 h-96 bg-white/10 rounded-full blur-2xl"></div>
+                <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-secondary/20 rounded-full blur-2xl"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="lang-id">Siap Memiliki Website Jurnal Profesional?</span>
+                        <span class="lang-en">Ready to Have a Professional Journal Website?</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                        <span class="lang-id">Konsultasikan kebutuhan OJS Anda sekarang dan dapatkan penawaran spesial eksklusif.</span>
+                        <span class="lang-en">Consult your OJS needs now and get exclusive special offers.</span>
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                        <a href="https://wa.me/6287850934303?text=Halo,%20saya%20ingin%20konsultasi%20gratis%20tentang%20pembuatan%20OJS%20untuk%20jurnal%20kami." target="_blank" class="px-10 py-4 bg-white text-primary dark:text-primaryDark rounded-xl font-bold hover:bg-blue-50 transition-all shadow-xl text-lg flex items-center gap-2">
+                            <i class="ph-fill ph-whatsapp-logo text-2xl"></i> <span class="lang-id">Hubungi WhatsApp</span><span class="lang-en">WhatsApp Us</span>
+                        </a>
+                        <a href="mailto:halo@edutechnusantara.com" class="px-10 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 transition-all text-lg flex items-center gap-2">
+                            <i class="ph ph-envelope text-2xl"></i> <span class="lang-id">Email</span><span class="lang-en">Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div data-aos="flip-up" data-aos-delay="0" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-book-open"></i></div>
+                    <h3 class="text-4xl font-bold text-primary dark:text-blue-400 mb-2">25+</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">Jurnal Dibuat</span><span class="lang-en">Journals Created</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="100" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 mx-auto bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-emerald-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-users"></i></div>
+                    <h3 class="text-4xl font-bold text-secondary dark:text-emerald-400 mb-2">500+</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">Pengguna Aktif</span><span class="lang-en">Active Users</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="200" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-file-text"></i></div>
+                    <h3 class="text-4xl font-bold text-primary dark:text-blue-400 mb-2">5000+</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">Artikel Terpublikasi</span><span class="lang-en">Published Articles</span></p>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="300" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 mx-auto bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-emerald-400 rounded-xl flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-smile"></i></div>
+                    <h3 class="text-4xl font-bold text-secondary dark:text-emerald-400 mb-2">98%</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">Kepuasan Klien</span><span class="lang-en">Client Satisfaction</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-bgDark py-10 transition-colors border-t border-gray-100 dark:border-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" 
+                 src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara" data-aos="fade-up" loading="lazy">
+            <p class="text-gray-700 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                <span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span>
+                <span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span>
+            </p>
+            <p class="text-gray-600 dark:text-gray-500 text-xs md:text-sm font-medium tracking-wide mb-6" data-aos="fade-up" data-aos-delay="200">
+                © 2026 Edutech Nusantara Digital | <a href="mailto:halo@edutechnusantara.com" class="hover:text-primary transition-colors">halo@edutechnusantara.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6287850934303" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" class="fixed bottom-6 right-6 z-[65] floating-element group">
+        <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
+        <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800">
+            <i class="ph-fill ph-whatsapp-logo text-4xl"></i>
+        </div>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlTag = document.documentElement;
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) htmlTag.classList.add('dark');
+
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('preloader-hidden');
+                setTimeout(() => { AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 }); preloader.style.display = 'none'; }, 500); 
+            }, 1000);
+
+            const menuBtn = document.getElementById('menu-btn'), menuIcon = document.getElementById('menu-icon'), menuOverlay = document.getElementById('menu-overlay'), header = document.getElementById('main-header');
+            let isMenuOpen = false;
+            const toggleMenu = () => {
+                isMenuOpen = !isMenuOpen;
+                if(isMenuOpen) { menuOverlay.classList.add('menu-open'); header.classList.add('menu-open-header'); menuIcon.classList.replace('ph-list', 'ph-x'); document.body.style.overflow = 'hidden'; } 
+                else { menuOverlay.classList.remove('menu-open'); header.classList.remove('menu-open-header'); menuIcon.classList.replace('ph-x', 'ph-list'); document.body.style.overflow = 'auto'; }
+            };
+            menuBtn.addEventListener('click', toggleMenu);
+            document.querySelectorAll('.menu-link').forEach(link => link.addEventListener('click', () => { if(isMenuOpen) toggleMenu(); }));
+
+            const themeBtn = document.getElementById('theme-btn'), themeIcon = document.getElementById('theme-icon');
+            if (htmlTag.classList.contains('dark')) themeIcon.classList.replace('ph-moon', 'ph-sun');
+            themeBtn.addEventListener('click', () => {
+                htmlTag.classList.toggle('dark');
+                if(htmlTag.classList.contains('dark')) themeIcon.classList.replace('ph-moon', 'ph-sun');
+                else themeIcon.classList.replace('ph-sun', 'ph-moon');
+            });
+
+            const langBtn = document.getElementById('lang-btn'); let currentLang = 'id';
+            langBtn.addEventListener('click', () => {
+                if(currentLang === 'id') { currentLang = 'en'; langBtn.innerText = 'EN'; document.body.classList.add('lang-active-en'); } 
+                else { currentLang = 'id'; langBtn.innerText = 'ID'; document.body.classList.remove('lang-active-en'); }
+            });
+
+            window.addEventListener('scroll', () => {
+                if(isMenuOpen) return; 
+                if (window.scrollY > 20) { header.classList.add('shadow-sm'); } 
+                else { header.classList.remove('shadow-sm'); }
+            });
+
+            // Lazy loading images
+            if ('IntersectionObserver' in window) {
+                const imgObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.style.opacity = '1';
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                document.querySelectorAll('img[loading="lazy"]').forEach(img => imgObserver.observe(img));
+            }
+        });
+    </script>
+</body>
+</html>
