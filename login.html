@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masuk — Dashboard</title>
+  <meta name="description" content="Halaman login untuk akses dashboard." />
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --primary:#2563eb;
+      --muted:#6b7280;
+      --danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:linear-gradient(180deg, var(--bg), #eef2ff); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem}
+    .container{width:100%; max-width:420px}
+    .card{background:var(--card); border-radius:12px; box-shadow:0 6px 24px rgba(15,23,42,0.08); padding:2rem}
+    h1{margin:0 0 0.25rem 0; font-size:1.25rem}
+    p.lead{margin:0 0 1.25rem 0; color:var(--muted); font-size:0.95rem}
+    form{display:grid; gap:0.75rem}
+    label{font-size:0.85rem; color:var(--muted)}
+    input[type="email"], input[type="password"]{width:100%; padding:0.75rem 0.9rem; border:1px solid #e6e9ef; border-radius:8px; font-size:0.95rem}
+    .row{display:flex; gap:0.75rem; align-items:center; justify-content:space-between}
+    .actions{display:flex; gap:0.5rem}
+    .btn{background:var(--primary); color:white; border:none; padding:0.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:600}
+    .btn.secondary{background:transparent; color:var(--primary); border:1px solid rgba(37,99,235,0.12)}
+    .help{font-size:0.85rem; color:var(--muted)}
+    .error{color:var(--danger); font-size:0.85rem}
+    .remember{display:flex; gap:0.5rem; align-items:center}
+    .toggle-pass{background:none; border:none; cursor:pointer; color:var(--muted); font-size:0.9rem}
+    .footer{margin-top:1rem; text-align:center; color:var(--muted); font-size:0.9rem}
+    @media (max-width:420px){body{padding:1rem}}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card" aria-labelledby="login-heading">
+      <header>
+        <h1 id="login-heading">Masuk ke Dashboard</h1>
+        <p class="lead">Masukkan email dan kata sandi Anda untuk mengakses dashboard.</p>
+      </header>
+
+      <form id="loginForm" novalidate>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="nama@contoh.com" required aria-required="true" />
+          <div id="emailError" class="error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="password">Kata sandi</label>
+          <div style="display:flex; gap:0.5rem; align-items:center">
+            <input id="password" name="password" type="password" placeholder="Masukkan kata sandi" required aria-required="true" style="flex:1" />
+            <button type="button" class="toggle-pass" id="togglePass" aria-pressed="false" aria-label="Tampilkan kata sandi">Tampilkan</button>
+          </div>
+          <div id="passwordError" class="error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="row">
+          <label class="remember"><input type="checkbox" id="remember" name="remember" /> Ingat saya</label>
+          <a href="#" class="help">Lupa kata sandi?</a>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Masuk</button>
+          <button class="btn secondary" type="button" id="demoBtn">Masuk Demo</button>
+        </div>
+      </form>
+
+      <p class="footer">Belum punya akun? <a href="#">Daftar</a></p>
+    </section>
+  </main>
+
+  <script>
+    // Simple client-side validation and demo behaviour.
+    const form = document.getElementById('loginForm');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    const togglePass = document.getElementById('togglePass');
+    const demoBtn = document.getElementById('demoBtn');
+
+    togglePass.addEventListener('click', () => {
+      const shown = password.type === 'text';
+      password.type = shown ? 'password' : 'text';
+      togglePass.textContent = shown ? 'Tampilkan' : 'Sembunyikan';
+      togglePass.setAttribute('aria-pressed', String(!shown));
+    });
+
+    function validate() {
+      let ok = true;
+      emailError.textContent = '';
+      passwordError.textContent = '';
+
+      if (!email.value) { emailError.textContent = 'Email wajib diisi.'; ok = false }
+      else if (!/^\S+@\S+\.\S+$/.test(email.value)) { emailError.textContent = 'Format email tidak valid.'; ok = false }
+
+      if (!password.value) { passwordError.textContent = 'Kata sandi wajib diisi.'; ok = false }
+      else if (password.value.length < 6) { passwordError.textContent = 'Kata sandi minimal 6 karakter.'; ok = false }
+
+      return ok;
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!validate()) return;
+
+      // TODO: Ganti bagian ini dengan panggilan ke backend (fetch / API) untuk autentikasi.
+      // Saat ini demo: simulasikan login sukses dan redirect ke dashboard.
+      const loader = document.createElement('span');
+      loader.textContent = ' ...';
+      e.submitter?.appendChild(loader);
+
+      setTimeout(() => {
+        // Simulasi sukses
+        window.location.href = '/dashboard.html';
+      }, 800);
+    });
+
+    demoBtn.addEventListener('click', () => {
+      // Isi contoh demo dan submit
+      email.value = 'demo@contoh.com';
+      password.value = 'demopass';
+      form.dispatchEvent(new Event('submit', {bubbles:true, cancelable:true}));
+    });
+  </script>
+</body>
+</html>
