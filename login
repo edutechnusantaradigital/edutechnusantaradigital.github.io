@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="id">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260713-01-aaff8b9"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduTech Nusantara Digital CRM</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+:root{--bg-primary:#f8fafc;--bg-secondary:#ffffff;--bg-tertiary:#f1f5f9;--text-primary:#1e293b;--text-secondary:#475569;--text-tertiary:#64748b;--border-color:#e2e8f0;--input-bg:#ffffff;--input-border:#cbd5e1;--glass-bg:rgba(255,255,255,0.85);--header-bg:rgba(255,255,255,0.8);--sidebar-bg:#ffffff;--sidebar-border:#e2e8f0;--card-shadow:0 1px 3px rgba(0,0,0,0.1)}
+body.dark-mode{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-tertiary:#334155;--text-primary:#f1f5f9;--text-secondary:#cbd5e1;--text-tertiary:#94a3b8;--border-color:#475569;--input-bg:#1e293b;--input-border:#475569;--glass-bg:rgba(30,41,59,0.85);--header-bg:rgba(30,41,59,0.8);--sidebar-bg:#1e293b;--sidebar-border:#334155;--card-shadow:0 1px 3px rgba(0,0,0,0.3)}
+*{font-family:'DM Sans',sans-serif}
+body{background-color:var(--bg-primary);color:var(--text-primary);transition:background-color 0.3s,color 0.3s}
+.glass{background:var(--glass-bg);backdrop-filter:blur(12px)}
+.sidebar-item:hover,.sidebar-item.active{background:rgba(59,130,246,0.1);color:#2563eb}
+.stat-card{transition:transform 0.2s,box-shadow 0.2s;background-color:var(--bg-secondary);border-color:var(--border-color)}
+.stat-card:hover{transform:translateY(-2px);box-shadow:var(--card-shadow)}
+#login-view,#forgot-view,#otp-view,#reset-view,#register-view{min-height:calc(100 * min(var(--vh,1vh),1vh))}
+#app-view,#client-view{min-height:calc(100 * min(var(--vh,1vh),1vh))}
+.progress-bar{transition:width 0.6s ease}
+#sidebar,#client-sidebar{background-color:var(--sidebar-bg);border-color:var(--sidebar-border);transition:background-color 0.3s,border-color 0.3s}
+[data-template-id="app-header"],[data-template-id="client-header"]{background-color:var(--header-bg)!important;transition:background-color 0.3s}
+.bg-white{background-color:var(--bg-secondary)!important;transition:background-color 0.3s}
+input[type="text"],input[type="email"],input[type="date"],input[type="password"],input[type="number"],select,textarea{background-color:var(--input-bg)!important;color:var(--text-primary)!important;border-color:var(--input-border)!important;transition:background-color 0.3s,color 0.3s,border-color 0.3s}
+input::placeholder{color:var(--text-tertiary)!important}
+.text-slate-800{color:var(--text-primary)!important}
+.text-slate-700{color:var(--text-secondary)!important}
+.text-slate-600{color:var(--text-secondary)!important}
+.text-slate-500{color:var(--text-tertiary)!important}
+.border-slate-200{border-color:var(--border-color)!important}
+.border-slate-100{border-color:var(--border-color)!important}
+.bg-slate-50{background-color:var(--bg-tertiary)!important}
+.bg-slate-100{background-color:var(--bg-tertiary)!important;transition:background-color 0.3s}
+table thead{background-color:var(--bg-tertiary)!important;transition:background-color 0.3s}
+.loading-spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 0.6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',accent:'#06b6d4'}}}}</script>
+  <script src="/_sdk/0179d719c431a79e.data_sdk.js" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <script src="/_sdk/9432170dbd2ae0df.resizing_sdk.js" type="text/javascript" integrity="sha512-FeT+58sb1f9ejWPWFjCbJvTT+SDwGV+ngrHUnlO7TWEOoqwOLj6p256kO3vOL7DIWl1cIgrobiof8v2bOigwPg=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full bg-slate-50"><!-- LOGIN VIEW -->
+  <div id="login-view" class="flex items-center justify-center p-4 bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600">
+   <div class="glass rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <div class="text-center mb-8">
+     <div class="w-16 h-16 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center mb-4">
+      <i data-lucide="graduation-cap" class="text-white" style="width:32px;height:32px"></i>
+     </div>
+     <h1 data-template-id="login-title" class="canva-text text-2xl font-bold text-slate-800"></h1>
+     <p data-template-id="login-subtitle" class="canva-text text-slate-500 mt-1"></p>
+    </div>
+    <form id="login-form" class="space-y-4">
+     <div>
+      <label data-template-id="login-user-label" for="login-user" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="login-user" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Username atau No. WhatsApp">
+     </div>
+     <div class="relative">
+      <label data-template-id="login-pass-label" for="login-pass" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="login-pass" type="password" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none pr-12" placeholder="Password"><button type="button" id="toggle-pass" class="absolute right-3 top-9 text-slate-400 hover:text-slate-600"><i data-lucide="eye" style="width:20px;height:20px"></i></button>
+     </div>
+     <div class="flex items-center justify-between text-sm">
+      <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-600">Ingat Saya</span></label><a href="#" id="go-forgot" class="text-blue-600 hover:underline">Lupa Password?</a>
+     </div><button data-template-id="login-btn" type="submit" class="canva-button w-full py-3 rounded-xl font-semibold text-white transition hover:opacity-90"></button>
+     <p class="text-center text-sm text-slate-500">Belum punya akun? <a href="#" id="go-register" class="text-blue-600 font-medium hover:underline">Daftar</a></p>
+    </form>
+    <div id="login-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center"></div>
+   </div>
+  </div><!-- FORGOT PASSWORD VIEW -->
+  <div id="forgot-view" class="hidden flex items-center justify-center p-4 bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600">
+   <div class="glass rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <div class="text-center mb-8">
+     <div class="w-16 h-16 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center mb-4">
+      <i data-lucide="lock" class="text-white" style="width:32px;height:32px"></i>
+     </div>
+     <h1 data-template-id="forgot-title" class="canva-text text-2xl font-bold text-slate-800"></h1>
+     <p data-template-id="forgot-subtitle" class="canva-text text-slate-500 mt-1"></p>
+    </div>
+    <form id="forgot-form" class="space-y-4">
+     <div>
+      <label data-template-id="forgot-user-label" for="forgot-user" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="forgot-user" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Username atau Email">
+     </div><button data-template-id="forgot-verify-btn" type="submit" class="canva-button w-full py-3 rounded-xl font-semibold text-white transition hover:opacity-90"></button>
+     <p class="text-center text-sm text-slate-500"><a href="#" id="back-to-login" class="text-blue-600 font-medium hover:underline">Kembali ke Login</a></p>
+    </form>
+    <div id="forgot-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center"></div>
+   </div>
+  </div><!-- OTP VIEW -->
+  <div id="otp-view" class="hidden flex items-center justify-center p-4 bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600">
+   <div class="glass rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <div class="text-center mb-8">
+     <div class="w-16 h-16 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center mb-4">
+      <i data-lucide="mail" class="text-white" style="width:32px;height:32px"></i>
+     </div>
+     <h1 data-template-id="otp-title" class="canva-text text-2xl font-bold text-slate-800"></h1>
+     <p data-template-id="otp-subtitle" class="canva-text text-slate-500 mt-1"></p>
+    </div>
+    <form id="otp-form" class="space-y-4">
+     <div>
+      <label data-template-id="otp-code-label" for="otp-code" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="otp-code" type="text" maxlength="6" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-center text-2xl tracking-widest" placeholder="000000">
+     </div><button data-template-id="otp-verify-btn" type="submit" class="canva-button w-full py-3 rounded-xl font-semibold text-white transition hover:opacity-90"></button>
+     <p class="text-center text-sm text-slate-500"><a href="#" id="resend-otp" class="text-blue-600 font-medium hover:underline">Kirim ulang OTP</a></p>
+    </form>
+    <div id="otp-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center"></div>
+   </div>
+  </div><!-- RESET VIEW -->
+  <div id="reset-view" class="hidden flex items-center justify-center p-4 bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600">
+   <div class="glass rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <div class="text-center mb-8">
+     <div class="w-16 h-16 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center mb-4">
+      <i data-lucide="key" class="text-white" style="width:32px;height:32px"></i>
+     </div>
+     <h1 data-template-id="reset-title" class="canva-text text-2xl font-bold text-slate-800"></h1>
+     <p data-template-id="reset-subtitle" class="canva-text text-slate-500 mt-1"></p>
+    </div>
+    <form id="reset-form" class="space-y-4">
+     <div class="relative">
+      <label data-template-id="reset-pass-label" for="reset-pass" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="reset-pass" type="password" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none pr-12" placeholder="Password Baru"><button type="button" id="toggle-reset-pass" class="absolute right-3 top-9 text-slate-400 hover:text-slate-600"><i data-lucide="eye" style="width:20px;height:20px"></i></button>
+     </div>
+     <div class="relative">
+      <label data-template-id="reset-confirm-label" for="reset-confirm" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="reset-confirm" type="password" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none pr-12" placeholder="Konfirmasi Password"><button type="button" id="toggle-reset-confirm" class="absolute right-3 top-9 text-slate-400 hover:text-slate-600"><i data-lucide="eye" style="width:20px;height:20px"></i></button>
+     </div><button data-template-id="reset-btn" type="submit" class="canva-button w-full py-3 rounded-xl font-semibold text-white transition hover:opacity-90"></button>
+    </form>
+    <div id="reset-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center"></div>
+    <div id="reset-success" class="hidden mt-4 p-3 bg-green-50 border border-green-200 rounded-xl text-green-600 text-sm text-center"></div>
+   </div>
+  </div><!-- REGISTER VIEW -->
+  <div id="register-view" class="hidden flex items-center justify-center p-4 bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600">
+   <div class="glass rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <div class="text-center mb-8">
+     <div class="w-16 h-16 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center mb-4">
+      <i data-lucide="user-plus" class="text-white" style="width:32px;height:32px"></i>
+     </div>
+     <h1 data-template-id="register-title" class="canva-text text-2xl font-bold text-slate-800"></h1>
+     <p data-template-id="register-subtitle" class="canva-text text-slate-500 mt-1"></p>
+    </div>
+    <form id="register-form" class="space-y-4">
+     <div>
+      <label data-template-id="register-name-label" for="register-name" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="register-name" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Nama Lengkap">
+     </div>
+     <div>
+      <label data-template-id="register-company-label" for="register-company" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="register-company" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Nama Perusahaan">
+     </div>
+     <div>
+      <label data-template-id="register-email-label" for="register-email" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="register-email" type="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Email">
+     </div>
+     <div>
+      <label data-template-id="register-wa-label" for="register-wa" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="register-wa" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="No. WhatsApp">
+     </div>
+     <div>
+      <label data-template-id="register-user-label" for="register-user" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="register-user" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Username">
+     </div>
+     <div class="relative">
+      <label data-template-id="register-pass-label" for="register-pass" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="register-pass" type="password" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none pr-12" placeholder="Password"><button type="button" id="toggle-register-pass" class="absolute right-3 top-9 text-slate-400 hover:text-slate-600"><i data-lucide="eye" style="width:20px;height:20px"></i></button>
+     </div>
+     <div class="relative">
+      <label data-template-id="register-confirm-label" for="register-confirm" class="canva-text block text-sm font-medium text-slate-700 mb-1"></label><input id="register-confirm" type="password" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none pr-12" placeholder="Konfirmasi Password"><button type="button" id="toggle-register-confirm" class="absolute right-3 top-9 text-slate-400 hover:text-slate-600"><i data-lucide="eye" style="width:20px;height:20px"></i></button>
+     </div>
+     <div class="flex items-start gap-2">
+      <input id="register-terms" type="checkbox" class="mt-1 rounded"><label for="register-terms" class="text-sm text-slate-600">Saya setuju dengan <a href="#" class="text-blue-600 hover:underline">Syarat &amp; Ketentuan</a></label>
+     </div><button data-template-id="register-btn" type="submit" class="canva-button w-full py-3 rounded-xl font-semibold text-white transition hover:opacity-90"></button>
+     <p class="text-center text-sm text-slate-500">Sudah punya akun? <a href="#" id="go-login" class="text-blue-600 font-medium hover:underline">Masuk</a></p>
+    </form>
+    <div id="register-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center"></div>
+    <div id="register-success" class="hidden mt-4 p-3 bg-green-50 border border-green-200 rounded-xl text-green-600 text-sm text-center"></div>
+   </div>
+  </div><!-- ADMIN APP VIEW -->
+  <div id="app-view" class="hidden flex">
+   <aside id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white border-r border-slate-200 z-40 flex flex-col transition-transform lg:translate-x-0 -translate-x-full">
+    <div class="p-5 border-b border-slate-100">
+     <h2 data-template-id="sidebar-brand" class="canva-text font-bold text-lg text-slate-800 flex items-center gap-2"><i data-lucide="graduation-cap" class="text-blue-600" style="width:24px;height:24px"></i></h2>
+    </div>
+    <nav class="flex-1 p-4 space-y-1 overflow-y-auto"><button data-nav="dashboard" class="sidebar-item active w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="layout-dashboard" style="width:18px;height:18px"></i> Dashboard</button> <button data-nav="clients" class="sidebar-item w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="users" style="width:18px;height:18px"></i> Data Client</button> <button data-nav="orders" class="sidebar-item w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="shopping-cart" style="width:18px;height:18px"></i> Order</button> <button data-nav="services" class="sidebar-item w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="briefcase" style="width:18px;height:18px"></i> Data Layanan</button> <button data-nav="invoices" class="sidebar-item w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="file-text" style="width:18px;height:18px"></i> Invoice</button> <button data-nav="reports" class="sidebar-item w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="bar-chart-2" style="width:18px;height:18px"></i> Laporan</button> <button data-nav="settings" class="sidebar-item w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="settings" style="width:18px;height:18px"></i> Pengaturan</button>
+    </nav>
+    <div class="p-4 border-t border-slate-100">
+     <button id="logout-btn" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-red-600 hover:bg-red-50"><i data-lucide="log-out" style="width:18px;height:18px"></i> Logout</button>
+    </div>
+   </aside>
+   <div class="flex-1 lg:ml-64">
+    <header data-template-id="app-header" class="canva-header sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200 px-4 lg:px-8 py-4 flex items-center justify-between">
+     <div class="flex items-center gap-3">
+      <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-slate-100"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <h1 data-template-id="dashboard-title" class="canva-text font-semibold text-slate-800"></h1>
+     </div>
+     <div class="flex items-center gap-3">
+      <div class="relative">
+       <button id="notif-btn" class="p-2 rounded-lg hover:bg-slate-100 relative"><i data-lucide="bell" style="width:20px;height:20px" class="text-slate-600"></i><span id="notif-badge" class="absolute top-1 right-1 w-5 h-5 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">0</span></button>
+       <div id="notif-dropdown" class="hidden absolute right-0 top-12 w-80 bg-white rounded-xl shadow-2xl border border-slate-200 z-50 max-h-96 overflow-y-auto">
+        <div class="sticky top-0 bg-white border-b border-slate-100 p-3 flex items-center justify-between rounded-t-xl">
+         <h3 class="font-semibold text-slate-800 text-sm">Notifikasi</h3><button id="clear-all-notif" class="text-xs text-blue-600 hover:underline">Tandai Semua</button>
+        </div>
+        <div id="notif-list" class="space-y-1"></div>
+       </div>
+       <div id="notif-overlay" class="hidden fixed inset-0 z-40" style="background:transparent"></div>
+      </div><img data-template-id="admin-avatar" class="canva-image w-9 h-9 rounded-full object-cover" loading="lazy">
+     </div>
+    </header><!-- Dashboard -->
+    <main id="page-dashboard" class="p-4 lg:p-8 space-y-6">
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div data-template-id="stat-clients" class="canva-card stat-card bg-white rounded-2xl p-5 border border-slate-100">
+       <div class="flex items-center justify-between">
+        <div>
+         <p class="text-sm text-slate-500">Total Client</p>
+         <p id="stat-client-num" class="text-2xl font-bold text-slate-800 mt-1">0</p>
+        </div>
+        <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center">
+         <i data-lucide="users" class="text-blue-600" style="width:20px;height:20px"></i>
+        </div>
+       </div>
+      </div>
+      <div data-template-id="stat-active" class="canva-card stat-card bg-white rounded-2xl p-5 border border-slate-100">
+       <div class="flex items-center justify-between">
+        <div>
+         <p class="text-sm text-slate-500">Order Aktif</p>
+         <p id="stat-active-num" class="text-2xl font-bold text-slate-800 mt-1">0</p>
+        </div>
+        <div class="w-11 h-11 bg-cyan-100 rounded-xl flex items-center justify-center">
+         <i data-lucide="activity" class="text-cyan-600" style="width:20px;height:20px"></i>
+        </div>
+       </div>
+      </div>
+      <div data-template-id="stat-completed" class="canva-card stat-card bg-white rounded-2xl p-5 border border-slate-100">
+       <div class="flex items-center justify-between">
+        <div>
+         <p class="text-sm text-slate-500">Selesai</p>
+         <p id="stat-completed-num" class="text-2xl font-bold text-slate-800 mt-1">0</p>
+        </div>
+        <div class="w-11 h-11 bg-green-100 rounded-xl flex items-center justify-center">
+         <i data-lucide="check-circle" class="text-green-600" style="width:20px;height:20px"></i>
+        </div>
+       </div>
+      </div>
+      <div data-template-id="stat-unpaid" class="canva-card stat-card bg-white rounded-2xl p-5 border border-slate-100">
+       <div class="flex items-center justify-between">
+        <div>
+         <p class="text-sm text-slate-500">Belum Dibayar</p>
+         <p id="stat-unpaid-num" class="text-2xl font-bold text-orange-600 mt-1">0</p>
+        </div>
+        <div class="w-11 h-11 bg-orange-100 rounded-xl flex items-center justify-center">
+         <i data-lucide="alert-circle" class="text-orange-600" style="width:20px;height:20px"></i>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div data-template-id="chart-section" class="canva-card bg-white rounded-2xl p-6 border border-slate-100 lg:col-span-2">
+       <h3 data-template-id="chart-section-title" class="canva-text font-semibold text-slate-800 mb-4"></h3>
+       <canvas id="revenue-chart" height="120"></canvas>
+      </div>
+      <div data-template-id="calendar-section" class="canva-card bg-white rounded-2xl p-6 border border-slate-100">
+       <h3 data-template-id="calendar-title" class="canva-text font-semibold text-slate-800 mb-4"></h3>
+       <div id="mini-calendar" class="text-sm"></div>
+      </div>
+     </div>
+     <div data-template-id="activity-section" class="canva-card bg-white rounded-2xl p-6 border border-slate-100">
+      <h3 data-template-id="activity-title" class="canva-text font-semibold text-slate-800 mb-4"></h3>
+      <div id="activity-list" class="space-y-3 text-sm">
+       <p class="text-slate-500">Memuat data...</p>
+      </div>
+     </div>
+    </main><!-- Clients -->
+    <main id="page-clients" class="hidden p-4 lg:p-8 space-y-4">
+     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <h2 class="text-lg font-semibold text-slate-800">Data Client</h2>
+      <div class="flex flex-wrap gap-2">
+       <input id="client-search" type="text" placeholder="Cari client..." class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 outline-none"><button id="export-csv-btn" class="px-4 py-2 bg-green-600 text-white rounded-xl text-sm font-medium hover:bg-green-700 flex items-center gap-2"><i data-lucide="download" style="width:16px;height:16px"></i> Export</button><button id="add-client-btn" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700">+ Tambah</button>
+      </div>
+     </div>
+     <div id="client-form-wrap" class="hidden bg-white rounded-2xl border border-slate-100 p-5 space-y-3">
+      <h3 class="font-semibold text-slate-800 text-sm" id="client-form-title">Tambah Client</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+       <input id="cf-name" type="text" placeholder="Nama" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="cf-company" type="text" placeholder="Perusahaan" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="cf-email" type="email" placeholder="Email" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="cf-username" type="text" placeholder="Username" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="cf-wa" type="text" placeholder="WhatsApp" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="cf-projects" type="number" placeholder="Jumlah Project" min="0" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><select id="cf-status" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><option>Aktif</option><option>Non-Aktif</option></select>
+      </div>
+      <div class="flex gap-2">
+       <button id="cf-save" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Simpan</button><button id="cf-cancel" class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-slate-200">Batal</button>
+      </div>
+     </div>
+     <div id="client-limit-warning" class="hidden p-3 bg-orange-50 border border-orange-200 rounded-xl text-orange-700 text-sm text-center">
+      Batas maksimum 999 data tercapai. Hapus data terlebih dahulu.
+     </div>
+     <div class="bg-white rounded-2xl border border-slate-100 overflow-x-auto">
+      <table class="w-full text-sm">
+       <thead class="bg-slate-50 text-slate-500">
+        <tr>
+         <th class="px-4 py-3 text-left font-medium">Nama</th>
+         <th class="px-4 py-3 text-left font-medium">Email</th>
+         <th class="px-4 py-3 text-left font-medium">Username</th>
+         <th class="px-4 py-3 text-left font-medium">Perusahaan</th>
+         <th class="px-4 py-3 text-left font-medium">WhatsApp</th>
+         <th class="px-4 py-3 text-left font-medium">Project</th>
+         <th class="px-4 py-3 text-left font-medium">Status</th>
+         <th class="px-4 py-3 text-left font-medium">Aksi</th>
+        </tr>
+       </thead>
+       <tbody id="client-tbody" class="divide-y divide-slate-100"></tbody>
+      </table>
+     </div>
+     <div class="flex items-center justify-between text-sm">
+      <span id="page-info" class="text-slate-500"></span>
+      <div class="flex gap-2">
+       <button id="prev-page-btn" class="px-3 py-1 rounded-lg border border-slate-200 hover:bg-slate-100">← Sebelumnya</button><button id="next-page-btn" class="px-3 py-1 rounded-lg border border-slate-200 hover:bg-slate-100">Berikutnya →</button>
+      </div>
+     </div>
+    </main><!-- Orders -->
+    <main id="page-orders" class="hidden p-4 lg:p-8 space-y-4">
+     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <h2 class="text-lg font-semibold text-slate-800">Order</h2>
+      <div class="flex flex-wrap gap-2">
+       <input id="order-search" type="text" placeholder="Cari order..." class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 outline-none"><select id="order-status-filter" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 outline-none"><option value="">Semua Status</option><option value="Pending">Pending</option><option value="Proses">Proses</option><option value="Selesai">Selesai</option></select><button id="add-order-btn" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700">+ Tambah Order</button>
+      </div>
+     </div>
+     <div id="order-form-wrap" class="hidden bg-white rounded-2xl border border-slate-100 p-5 space-y-3">
+      <h3 class="font-semibold text-slate-800 text-sm" id="order-form-title">Tambah Order</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+       <input id="of-client" type="text" placeholder="Nama Client" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="of-project" type="text" placeholder="Nama Project" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="of-value" type="text" placeholder="Nilai (Rp)" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><select id="of-status" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><option>Pending</option><option>Proses</option><option>Selesai</option></select>
+      </div>
+      <div class="flex gap-2">
+       <button id="of-save" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Simpan</button><button id="of-cancel" class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-slate-200">Batal</button>
+      </div>
+     </div>
+     <div class="bg-white rounded-2xl border border-slate-100 overflow-x-auto">
+      <table class="w-full text-sm">
+       <thead class="bg-slate-50 text-slate-500">
+        <tr>
+         <th class="px-4 py-3 text-left font-medium">Client</th>
+         <th class="px-4 py-3 text-left font-medium">Project</th>
+         <th class="px-4 py-3 text-left font-medium">Nilai</th>
+         <th class="px-4 py-3 text-left font-medium">Status</th>
+         <th class="px-4 py-3 text-left font-medium">Aksi</th>
+        </tr>
+       </thead>
+       <tbody id="order-tbody" class="divide-y divide-slate-100"></tbody>
+      </table>
+     </div>
+     <div class="flex items-center justify-between text-sm">
+      <span id="order-page-info" class="text-slate-500"></span>
+      <div class="flex gap-2">
+       <button id="order-prev-page-btn" class="px-3 py-1 rounded-lg border border-slate-200 hover:bg-slate-100">← Sebelumnya</button><button id="order-next-page-btn" class="px-3 py-1 rounded-lg border border-slate-200 hover:bg-slate-100">Berikutnya →</button>
+      </div>
+     </div>
+    </main><!-- Services -->
+    <main id="page-services" class="hidden p-4 lg:p-8 space-y-4">
+     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <h2 class="text-lg font-semibold text-slate-800">Data Layanan</h2>
+      <div class="flex flex-wrap gap-2">
+       <input id="service-search" type="text" placeholder="Cari layanan..." class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 outline-none"><button id="add-service-btn" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700">+ Tambah</button>
+      </div>
+     </div>
+     <div id="service-form-wrap" class="hidden bg-white rounded-2xl border border-slate-100 p-5 space-y-3">
+      <h3 class="font-semibold text-slate-800 text-sm" id="service-form-title">Tambah Layanan</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+       <input id="sf-name" type="text" placeholder="Nama Layanan" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><select id="sf-category" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><option value="">Pilih Kategori</option><option value="Development">Development</option><option value="Design">Design</option><option value="Marketing">Marketing</option><option value="Infrastructure">Infrastructure</option></select><input id="sf-price" type="text" placeholder="Harga (Rp)" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="sf-duration" type="text" placeholder="Estimasi Pengerjaan" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><textarea id="sf-description" placeholder="Deskripsi" rows="2" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"></textarea><select id="sf-status" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><option>Tersedia</option><option>Tidak Tersedia</option></select>
+      </div>
+      <div class="flex gap-2">
+       <button id="sf-save" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Simpan</button><button id="sf-cancel" class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-slate-200">Batal</button>
+      </div>
+     </div>
+     <div class="bg-white rounded-2xl border border-slate-100 overflow-x-auto">
+      <table class="w-full text-sm">
+       <thead class="bg-slate-50 text-slate-500">
+        <tr>
+         <th class="px-4 py-3 text-left font-medium">Nama</th>
+         <th class="px-4 py-3 text-left font-medium">Kategori</th>
+         <th class="px-4 py-3 text-left font-medium">Harga</th>
+         <th class="px-4 py-3 text-left font-medium">Estimasi</th>
+         <th class="px-4 py-3 text-left font-medium">Status</th>
+         <th class="px-4 py-3 text-left font-medium">Aksi</th>
+        </tr>
+       </thead>
+       <tbody id="service-tbody" class="divide-y divide-slate-100"></tbody>
+      </table>
+     </div>
+    </main><!-- Invoices -->
+    <main id="page-invoices" class="hidden p-4 lg:p-8 space-y-4">
+     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <h2 class="text-lg font-semibold text-slate-800">Invoice</h2>
+      <div class="flex flex-wrap gap-2">
+       <input id="invoice-search" type="text" placeholder="Cari invoice..." class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 outline-none"><select id="invoice-status-filter" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 outline-none"><option value="">Semua Status</option><option value="Lunas">Lunas</option><option value="Belum Lunas">Belum Lunas</option></select><button id="add-invoice-btn" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700">+ Tambah</button>
+      </div>
+     </div>
+     <div id="invoice-form-wrap" class="hidden bg-white rounded-2xl border border-slate-100 p-5 space-y-3">
+      <h3 class="font-semibold text-slate-800 text-sm" id="invoice-form-title">Tambah Invoice</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+       <input id="if-no" type="text" placeholder="No. Invoice" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="if-client" type="text" placeholder="Client" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><input id="if-amount" type="text" placeholder="Jumlah (Rp)" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><select id="if-status" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500"><option>Belum Lunas</option><option>Lunas</option></select><input id="if-date" type="date" class="px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div class="flex gap-2">
+       <button id="if-save" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Simpan</button><button id="if-cancel" class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-slate-200">Batal</button>
+      </div>
+     </div>
+     <div class="bg-white rounded-2xl border border-slate-100 overflow-x-auto">
+      <table class="w-full text-sm">
+       <thead class="bg-slate-50 text-slate-500">
+        <tr>
+         <th class="px-4 py-3 text-left font-medium">No. Invoice</th>
+         <th class="px-4 py-3 text-left font-medium">Client</th>
+         <th class="px-4 py-3 text-left font-medium">Jumlah</th>
+         <th class="px-4 py-3 text-left font-medium">Status</th>
+         <th class="px-4 py-3 text-left font-medium">Tanggal</th>
+         <th class="px-4 py-3 text-left font-medium">Aksi</th>
+        </tr>
+       </thead>
+       <tbody id="invoice-tbody" class="divide-y divide-slate-100"></tbody>
+      </table>
+     </div>
+     <div class="flex items-center justify-between text-sm">
+      <span id="invoice-page-info" class="text-slate-500"></span>
+      <div class="flex gap-2">
+       <button id="invoice-prev-page-btn" class="px-3 py-1 rounded-lg border border-slate-200 hover:bg-slate-100">← Sebelumnya</button><button id="invoice-next-page-btn" class="px-3 py-1 rounded-lg border border-slate-200 hover:bg-slate-100">Berikutnya →</button>
+      </div>
+     </div>
+    </main><!-- Reports -->
+    <main id="page-reports" class="hidden p-4 lg:p-8 space-y-6">
+     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <h2 class="text-lg font-semibold text-slate-800">Laporan</h2>
+      <div class="flex flex-wrap gap-2">
+       <select id="report-category-filter" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 outline-none"><option value="">Semua Kategori</option><option value="Development">Development</option><option value="Design">Design</option><option value="Marketing">Marketing</option><option value="Infrastructure">Infrastructure</option></select>
+      </div>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="bg-white rounded-2xl p-5 border border-slate-100 text-center">
+       <p class="text-sm text-slate-500">Total Pendapatan</p>
+       <p id="report-total-revenue" class="text-2xl font-bold text-slate-800 mt-1">Rp 0</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 border border-slate-100 text-center">
+       <p class="text-sm text-slate-500">Total Order</p>
+       <p id="report-total-orders" class="text-2xl font-bold text-slate-800 mt-1">0</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 border border-slate-100 text-center">
+       <p class="text-sm text-slate-500">Total Client</p>
+       <p id="report-total-clients" class="text-2xl font-bold text-slate-800 mt-1">0</p>
+      </div>
+     </div>
+     <div class="bg-white rounded-2xl p-6 border border-slate-100">
+      <h3 class="font-semibold text-slate-800 mb-4">Pendapatan per Layanan</h3>
+      <div id="report-service-list" class="space-y-2 text-sm"></div>
+     </div>
+    </main><!-- Settings -->
+    <main id="page-settings" class="hidden p-4 lg:p-8 space-y-6">
+     <h2 class="text-lg font-semibold text-slate-800">Pengaturan</h2>
+     <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden">
+      <div class="flex border-b border-slate-200 overflow-x-auto"><button data-settings-tab="profile" class="settings-tab-btn active flex-1 px-4 py-3 text-sm font-medium text-slate-700 border-b-2 border-blue-600 hover:bg-slate-50 whitespace-nowrap"><i data-lucide="user" style="width:16px;height:16px;display:inline;margin-right:0.5rem;vertical-align:middle"></i> Profil</button> <button data-settings-tab="theme" class="settings-tab-btn flex-1 px-4 py-3 text-sm font-medium text-slate-500 border-b-2 border-transparent hover:bg-slate-50 whitespace-nowrap"><i data-lucide="palette" style="width:16px;height:16px;display:inline;margin-right:0.5rem;vertical-align:middle"></i> Tema</button>
+      </div>
+      <div id="tab-profile" class="settings-tab-content p-6 space-y-4">
+       <h3 class="font-semibold text-slate-700">Profil Admin</h3>
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+         <label class="block text-sm text-slate-500 mb-1">Nama</label><input id="set-name" type="text" value="Ahmad Rizki" class="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+         <label class="block text-sm text-slate-500 mb-1">Email</label><input id="set-email" type="email" value="admin@edutech.id" class="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+       </div><button id="save-profile" class="px-5 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700">Simpan Profil</button>
+       <div id="profile-toast" class="hidden text-sm text-green-600 font-medium">
+        ✓ Profil disimpan
+       </div>
+      </div>
+      <div id="tab-theme" class="settings-tab-content hidden p-6 space-y-4">
+       <h3 class="font-semibold text-slate-700">Tema Aplikasi</h3>
+       <div class="space-y-3"><label class="flex items-center gap-4 p-4 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50"><input type="radio" name="theme-choice" value="light" checked class="w-4 h-4">
+         <div>
+          <p class="font-medium text-slate-700">Terang</p>
+         </div></label> <label class="flex items-center gap-4 p-4 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50"><input type="radio" name="theme-choice" value="dark" class="w-4 h-4">
+         <div>
+          <p class="font-medium text-slate-700">Gelap</p>
+         </div></label>
+       </div><button id="apply-theme" class="px-5 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700">Terapkan Tema</button>
+       <div id="theme-toast" class="hidden text-sm text-green-600 font-medium">
+        ✓ Tema diterapkan
+       </div>
+      </div>
+     </div>
+    </main>
+   </div>
+  </div><!-- CLIENT DASHBOARD VIEW -->
+  <div id="client-view" class="hidden flex">
+   <aside id="client-sidebar" class="fixed inset-y-0 left-0 w-64 bg-white border-r border-slate-200 z-40 flex flex-col transition-transform lg:translate-x-0 -translate-x-full">
+    <div class="p-5 border-b border-slate-100">
+     <h2 data-template-id="client-sidebar-brand" class="canva-text font-bold text-lg text-slate-800 flex items-center gap-2"><i data-lucide="graduation-cap" class="text-blue-600" style="width:24px;height:24px"></i></h2>
+    </div>
+    <nav class="flex-1 p-4 space-y-1 overflow-y-auto"><button data-cnav="c-summary" class="sidebar-item active w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="layout-dashboard" style="width:18px;height:18px"></i> Ringkasan</button> <button data-cnav="c-invoices" class="sidebar-item w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700"><i data-lucide="file-text" style="width:18px;height:18px"></i> Invoice</button>
+    </nav>
+    <div class="p-4 border-t border-slate-100">
+     <button id="client-logout-btn" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-red-600 hover:bg-red-50"><i data-lucide="log-out" style="width:18px;height:18px"></i> Logout</button>
+    </div>
+   </aside>
+   <div class="flex-1 lg:ml-64">
+    <header data-template-id="client-header" class="canva-header sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200 px-4 lg:px-8 py-4 flex items-center justify-between">
+     <div class="flex items-center gap-3">
+      <button id="client-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-slate-100"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <h1 data-template-id="client-dashboard-title" class="canva-text font-semibold text-slate-800"></h1>
+     </div>
+     <div class="flex items-center gap-3">
+      <span id="client-greeting" class="text-sm text-slate-500"></span><img data-template-id="client-avatar" class="canva-image w-9 h-9 rounded-full object-cover" loading="lazy">
+     </div>
+    </header>
+    <main id="page-c-summary" class="p-4 lg:p-8 space-y-6">
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="stat-card bg-white rounded-2xl p-5 border border-slate-100">
+       <p class="text-sm text-slate-500">Project Aktif</p>
+       <p id="client-active-orders" class="text-2xl font-bold text-blue-600 mt-1">0</p>
+      </div>
+      <div class="stat-card bg-white rounded-2xl p-5 border border-slate-100">
+       <p class="text-sm text-slate-500">Total Nilai</p>
+       <p id="client-total-value" class="text-2xl font-bold text-slate-800 mt-1">Rp 0</p>
+      </div>
+      <div class="stat-card bg-white rounded-2xl p-5 border border-slate-100">
+       <p class="text-sm text-slate-500">Invoice Belum Lunas</p>
+       <p id="client-unpaid" class="text-2xl font-bold text-orange-600 mt-1">0</p>
+      </div>
+     </div>
+    </main>
+    <main id="page-c-invoices" class="hidden p-4 lg:p-8 space-y-4">
+     <h2 class="text-lg font-semibold text-slate-800">Invoice Saya</h2>
+     <div class="bg-white rounded-2xl border border-slate-100 overflow-x-auto">
+      <table class="w-full text-sm">
+       <thead class="bg-slate-50 text-slate-500">
+        <tr>
+         <th class="px-4 py-3 text-left font-medium">No. Invoice</th>
+         <th class="px-4 py-3 text-left font-medium">Jumlah</th>
+         <th class="px-4 py-3 text-left font-medium">Status</th>
+         <th class="px-4 py-3 text-left font-medium">Tanggal</th>
+        </tr>
+       </thead>
+       <tbody id="client-invoice-tbody" class="divide-y divide-slate-100"></tbody>
+      </table>
+     </div>
+    </main>
+   </div>
+  </div><!-- Mobile overlays -->
+  <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black/40 z-30 lg:hidden"></div>
+  <div id="client-sidebar-overlay" class="hidden fixed inset-0 bg-black/40 z-30 lg:hidden"></div>
+  <script src="/_sdk/719055fef2a85d14.editing_sdk.js" integrity="sha512-kFqrdGgIiTOsu307feB5Cy3JVP9IayftsmCIZ0csxYBGuBmJQPhyvcnmKR8F0fTW97h5s1gAvz3SumI8zJ6OxQ=="></script>
+  <script>
+// Theme
+let currentTheme=localStorage.getItem('edutech-theme')||'light';
+function applyTheme(t){if(t==='dark')document.body.classList.add('dark-mode');else document.body.classList.remove('dark-mode');currentTheme=t;localStorage.setItem('edutech-theme',t);}
+applyTheme(currentTheme);
+lucide.createIcons();
+
+// Data state
+let allData=[];
+let currentRecordCount=0;
+
+// Users (demo - not persisted)
+const USERS=[{username:'admin',password:'admin123',role:'admin',name:'Ahmad Rizki'},{username:'client1',password:'client123',role:'client',name:'Budi Santoso',company:'PT Maju Sejahtera'}];
+
+// Helpers
+function getByType(type){return allData.filter(r=>r.type===type);}
+function fmt(n){return'Rp '+Number(n||0).toLocaleString('id-ID');}
+
+// View management
+function showView(id){['login-view','forgot-view','otp-view','reset-view','register-view','app-view','client-view'].forEach(v=>document.getElementById(v).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
+
+// Auth
+document.getElementById('go-register').addEventListener('click',e=>{e.preventDefault();showView('register-view');});
+document.getElementById('go-forgot').addEventListener('click',e=>{e.preventDefault();showView('forgot-view');});
+document.getElementById('back-to-login').addEventListener('click',e=>{e.preventDefault();showView('login-view');});
+document.getElementById('go-login').addEventListener('click',e=>{e.preventDefault();showView('login-view');});
+
+document.getElementById('login-form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const user=document.getElementById('login-user').value.trim(),pass=document.getElementById('login-pass').value.trim();
+  const err=document.getElementById('login-error');err.classList.add('hidden');
+  if(!user||!pass){err.textContent='Silakan isi semua field.';err.classList.remove('hidden');return;}
+  const found=USERS.find(u=>u.username===user&&u.password===pass);
+  if(found){
+    if(found.role==='admin'){showView('app-view');renderDashboard();initChart();renderCalendar();}
+    else{document.getElementById('client-greeting').textContent='Halo, '+found.name;showView('client-view');renderClientDashboard(found);}
+  }else{err.textContent='Username atau password salah.';err.classList.remove('hidden');}
+});
+
+document.getElementById('register-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('register-success').textContent='Registrasi berhasil!';document.getElementById('register-success').classList.remove('hidden');setTimeout(()=>{showView('login-view');document.getElementById('register-success').classList.add('hidden');},2000);});
+
+// Forgot/OTP/Reset (demo)
+let generatedOTP=null;
+document.getElementById('forgot-form').addEventListener('submit',e=>{e.preventDefault();generatedOTP='123456';showView('otp-view');});
+document.getElementById('otp-form').addEventListener('submit',e=>{e.preventDefault();const code=document.getElementById('otp-code').value.trim();if(code===generatedOTP)showView('reset-view');else{document.getElementById('otp-error').textContent='Kode OTP salah.';document.getElementById('otp-error').classList.remove('hidden');}});
+document.getElementById('resend-otp').addEventListener('click',e=>{e.preventDefault();generatedOTP='123456';});
+document.getElementById('reset-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('reset-success').textContent='Password berhasil direset!';document.getElementById('reset-success').classList.remove('hidden');setTimeout(()=>showView('login-view'),2000);});
+
+// Toggle passwords
+['toggle-pass:login-pass','toggle-register-pass:register-pass','toggle-register-confirm:register-confirm','toggle-reset-pass:reset-pass','toggle-reset-confirm:reset-confirm'].forEach(pair=>{const[btn,inp]=pair.split(':');document.getElementById(btn)?.addEventListener('click',()=>{const i=document.getElementById(inp);i.type=i.type==='password'?'text':'password';});});
+
+// Sidebar nav
+document.querySelectorAll('[data-nav]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-nav]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#app-view main[id^="page-"]').forEach(p=>p.classList.add('hidden'));document.getElementById('page-'+btn.dataset.nav).classList.remove('hidden');closeSidebar();});});
+
+const sidebar=document.getElementById('sidebar'),overlay=document.getElementById('sidebar-overlay');
+document.getElementById('menu-toggle').addEventListener('click',()=>{sidebar.classList.remove('-translate-x-full');overlay.classList.remove('hidden');});
+function closeSidebar(){sidebar.classList.add('-translate-x-full');overlay.classList.add('hidden');}
+overlay.addEventListener('click',closeSidebar);
+document.getElementById('logout-btn').addEventListener('click',()=>{showView('login-view');document.getElementById('login-form').reset();});
+
+// Client sidebar
+document.querySelectorAll('[data-cnav]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-cnav]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#client-view main[id^="page-c-"]').forEach(p=>p.classList.add('hidden'));document.getElementById('page-'+btn.dataset.cnav).classList.remove('hidden');closeClientSidebar();});});
+const clientSidebar=document.getElementById('client-sidebar'),clientOverlay=document.getElementById('client-sidebar-overlay');
+document.getElementById('client-menu-toggle').addEventListener('click',()=>{clientSidebar.classList.remove('-translate-x-full');clientOverlay.classList.remove('hidden');});
+function closeClientSidebar(){clientSidebar.classList.add('-translate-x-full');clientOverlay.classList.add('hidden');}
+clientOverlay.addEventListener('click',closeClientSidebar);
+document.getElementById('client-logout-btn').addEventListener('click',()=>{showView('login-view');document.getElementById('login-form').reset();});
+
+// Notifications (static demo)
+document.getElementById('notif-btn').addEventListener('click',e=>{e.stopPropagation();document.getElementById('notif-dropdown').classList.toggle('hidden');document.getElementById('notif-overlay').classList.toggle('hidden');});
+document.getElementById('notif-overlay').addEventListener('click',()=>{document.getElementById('notif-dropdown').classList.add('hidden');document.getElementById('notif-overlay').classList.add('hidden');});
+document.getElementById('notif-badge').classList.add('hidden');
+
+// Data SDK
+const dataHandler={
+  onDataChanged(data){
+    allData=data;
+    currentRecordCount=data.length;
+    renderDashboard();
+    renderClientsPage();
+    renderOrdersPage();
+    renderServicesPage();
+    renderInvoicesPage();
+    renderReports();
+  }
+};
+
+async function initSDK(){
+  const r=await window.dataSdk.init(dataHandler);
+  if(!r.isOk)console.error('SDK init failed');
+}
+initSDK();
+
+// Dashboard
+function renderDashboard(){
+  const clients=getByType('client'),orders=getByType('order'),invoices=getByType('invoice');
+  document.getElementById('stat-client-num').textContent=clients.length;
+  document.getElementById('stat-active-num').textContent=orders.filter(o=>o.status==='Proses'||o.status==='Pending').length;
+  document.getElementById('stat-completed-num').textContent=orders.filter(o=>o.status==='Selesai').length;
+  document.getElementById('stat-unpaid-num').textContent=invoices.filter(i=>i.status==='Belum Lunas').length;
+  // Activity
+  const recent=allData.slice(-5).reverse();
+  const actEl=document.getElementById('activity-list');
+  if(recent.length===0){actEl.innerHTML='<p class="text-slate-500">Belum ada aktivitas.</p>';return;}
+  actEl.innerHTML=recent.map(r=>`<div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50"><div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center"><i data-lucide="plus" style="width:14px;height:14px" class="text-blue-600"></i></div><div><p class="font-medium text-slate-700">${r.type}: ${r.name||r.client||r.invoice_no||'-'}</p></div></div>`).join('');
+  lucide.createIcons();
+}
+
+// CLIENTS CRUD
+const ITEMS_PER_PAGE=5;
+let clientCurrentPage=1,clientFilterText='',editingClientRecord=null;
+
+function renderClientsPage(){
+  const clients=getByType('client').filter(c=>(c.name||'').toLowerCase().includes(clientFilterText)||(c.company||'').toLowerCase().includes(clientFilterText));
+  const start=(clientCurrentPage-1)*ITEMS_PER_PAGE,end=start+ITEMS_PER_PAGE;
+  const pageData=clients.slice(start,end);
+  const totalPages=Math.ceil(clients.length/ITEMS_PER_PAGE)||1;
+  document.getElementById('client-tbody').innerHTML=pageData.map(c=>`<tr data-id="${c.__backendId}"><td class="px-4 py-3 font-medium text-slate-800">${c.name||''}</td><td class="px-4 py-3 text-slate-600 text-xs">${c.email||''}</td><td class="px-4 py-3 text-slate-600 text-xs">${c.username||''}</td><td class="px-4 py-3 text-slate-600">${c.company||''}</td><td class="px-4 py-3 text-slate-600">${c.wa||''}</td><td class="px-4 py-3 text-center font-semibold text-blue-600">${c.projects||0}</td><td class="px-4 py-3"><span class="px-2 py-1 rounded-lg text-xs font-medium ${c.status==='Aktif'?'bg-green-100 text-green-700':'bg-slate-100 text-slate-500'}">${c.status||''}</span></td><td class="px-4 py-3 flex gap-2"><button onclick="editClient('${c.__backendId}')" class="text-blue-600 hover:underline text-xs">Edit</button><button onclick="deleteRecord('${c.__backendId}')" class="text-red-500 hover:underline text-xs">Hapus</button></td></tr>`).join('');
+  document.getElementById('page-info').textContent=`Halaman ${clientCurrentPage} dari ${totalPages} (${clients.length} total)`;
+}
+document.getElementById('client-search').addEventListener('input',e=>{clientFilterText=e.target.value.toLowerCase();clientCurrentPage=1;renderClientsPage();});
+document.getElementById('prev-page-btn').addEventListener('click',()=>{if(clientCurrentPage>1){clientCurrentPage--;renderClientsPage();}});
+document.getElementById('next-page-btn').addEventListener('click',()=>{clientCurrentPage++;renderClientsPage();});
+document.getElementById('add-client-btn').addEventListener('click',()=>{editingClientRecord=null;document.getElementById('client-form-title').textContent='Tambah Client';['cf-name','cf-company','cf-email','cf-username','cf-wa','cf-projects'].forEach(id=>document.getElementById(id).value='');document.getElementById('cf-status').value='Aktif';document.getElementById('client-form-wrap').classList.remove('hidden');});
+document.getElementById('cf-cancel').addEventListener('click',()=>document.getElementById('client-form-wrap').classList.add('hidden'));
+document.getElementById('cf-save').addEventListener('click',async()=>{
+  const n=document.getElementById('cf-name').value.trim(),co=document.getElementById('cf-company').value.trim(),em=document.getElementById('cf-email').value.trim(),u=document.getElementById('cf-username').value.trim(),w=document.getElementById('cf-wa').value.trim(),p=parseInt(document.getElementById('cf-projects').value)||0,s=document.getElementById('cf-status').value;
+  if(!n)return;
+  const btn=document.getElementById('cf-save');btn.disabled=true;btn.innerHTML='<span class="loading-spinner"></span>';
+  if(currentRecordCount>=999){document.getElementById('client-limit-warning').classList.remove('hidden');btn.disabled=false;btn.textContent='Simpan';return;}
+  if(editingClientRecord){
+    const updated={...editingClientRecord,name:n,company:co,email:em,username:u,wa:w,projects:p,status:s};
+    await window.dataSdk.update(updated);
+  }else{
+    await window.dataSdk.create({type:'client',name:n,company:co,email:em,username:u,wa:w,projects:p,status:s});
+  }
+  btn.disabled=false;btn.textContent='Simpan';document.getElementById('client-form-wrap').classList.add('hidden');
+});
+window.editClient=function(id){
+  const c=allData.find(r=>r.__backendId===id);if(!c)return;
+  editingClientRecord=c;document.getElementById('client-form-title').textContent='Edit Client';
+  document.getElementById('cf-name').value=c.name||'';document.getElementById('cf-company').value=c.company||'';document.getElementById('cf-email').value=c.email||'';document.getElementById('cf-username').value=c.username||'';document.getElementById('cf-wa').value=c.wa||'';document.getElementById('cf-projects').value=c.projects||0;document.getElementById('cf-status').value=c.status||'Aktif';
+  document.getElementById('client-form-wrap').classList.remove('hidden');
+};
+window.deleteRecord=async function(id){
+  const rec=allData.find(r=>r.__backendId===id);if(!rec)return;
+  await window.dataSdk.delete(rec);
+};
+document.getElementById('export-csv-btn').addEventListener('click',()=>{
+  const clients=getByType('client');
+  let csv='Nama,Email,Username,Perusahaan,WhatsApp,Project,Status\n';
+  clients.forEach(c=>{csv+=[c.name,c.email,c.username,c.company,c.wa,c.projects,c.status].map(v=>`"${v||''}"`).join(',')+'\n';});
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='clients.csv';link.click();
+});
+
+// ORDERS CRUD
+let orderCurrentPage=1,orderFilterText='',orderStatusFilter='',editingOrderRecord=null;
+function renderOrdersPage(){
+  const orders=getByType('order').filter(o=>{const ms=(o.client||'').toLowerCase().includes(orderFilterText)||(o.project||'').toLowerCase().includes(orderFilterText);const mst=orderStatusFilter===''||o.status===orderStatusFilter;return ms&&mst;});
+  const start=(orderCurrentPage-1)*ITEMS_PER_PAGE,end=start+ITEMS_PER_PAGE;
+  const pageData=orders.slice(start,end);const totalPages=Math.ceil(orders.length/ITEMS_PER_PAGE)||1;
+  document.getElementById('order-tbody').innerHTML=pageData.map(o=>{const sc=o.status==='Selesai'?'bg-green-100 text-green-700':o.status==='Proses'?'bg-blue-100 text-blue-700':'bg-yellow-100 text-yellow-700';return`<tr><td class="px-4 py-3 font-medium text-slate-800">${o.client||''}</td><td class="px-4 py-3 text-slate-600">${o.project||''}</td><td class="px-4 py-3 text-slate-600">${fmt(o.value)}</td><td class="px-4 py-3"><span class="px-2 py-1 rounded-lg text-xs font-medium ${sc}">${o.status||''}</span></td><td class="px-4 py-3 flex gap-2"><button onclick="editOrder('${o.__backendId}')" class="text-blue-600 hover:underline text-xs">Edit</button><button onclick="deleteRecord('${o.__backendId}')" class="text-red-500 hover:underline text-xs">Hapus</button></td></tr>`;}).join('');
+  document.getElementById('order-page-info').textContent=`Halaman ${orderCurrentPage} dari ${totalPages}`;
+}
+document.getElementById('order-search').addEventListener('input',e=>{orderFilterText=e.target.value.toLowerCase();orderCurrentPage=1;renderOrdersPage();});
+document.getElementById('order-status-filter').addEventListener('change',e=>{orderStatusFilter=e.target.value;orderCurrentPage=1;renderOrdersPage();});
+document.getElementById('order-prev-page-btn').addEventListener('click',()=>{if(orderCurrentPage>1){orderCurrentPage--;renderOrdersPage();}});
+document.getElementById('order-next-page-btn').addEventListener('click',()=>{orderCurrentPage++;renderOrdersPage();});
+document.getElementById('add-order-btn').addEventListener('click',()=>{editingOrderRecord=null;document.getElementById('order-form-title').textContent='Tambah Order';['of-client','of-project','of-value'].forEach(id=>document.getElementById(id).value='');document.getElementById('of-status').value='Pending';document.getElementById('order-form-wrap').classList.remove('hidden');});
+document.getElementById('of-cancel').addEventListener('click',()=>document.getElementById('order-form-wrap').classList.add('hidden'));
+document.getElementById('of-save').addEventListener('click',async()=>{
+  const c=document.getElementById('of-client').value.trim(),p=document.getElementById('of-project').value.trim(),v=parseInt(document.getElementById('of-value').value.replace(/\D/g,''))||0,s=document.getElementById('of-status').value;
+  if(!c||!p)return;
+  const btn=document.getElementById('of-save');btn.disabled=true;btn.innerHTML='<span class="loading-spinner"></span>';
+  if(editingOrderRecord){await window.dataSdk.update({...editingOrderRecord,client:c,project:p,value:v,status:s});}
+  else{if(currentRecordCount>=999){btn.disabled=false;btn.textContent='Simpan';return;}await window.dataSdk.create({type:'order',client:c,project:p,value:v,status:s});}
+  btn.disabled=false;btn.textContent='Simpan';document.getElementById('order-form-wrap').classList.add('hidden');
+});
+window.editOrder=function(id){const o=allData.find(r=>r.__backendId===id);if(!o)return;editingOrderRecord=o;document.getElementById('order-form-title').textContent='Edit Order';document.getElementById('of-client').value=o.client||'';document.getElementById('of-project').value=o.project||'';document.getElementById('of-value').value=o.value||'';document.getElementById('of-status').value=o.status||'Pending';document.getElementById('order-form-wrap').classList.remove('hidden');};
+
+// SERVICES CRUD
+let serviceFilterText='',editingServiceRecord=null;
+function renderServicesPage(){
+  const services=getByType('service').filter(s=>(s.name||'').toLowerCase().includes(serviceFilterText)||(s.category||'').toLowerCase().includes(serviceFilterText));
+  document.getElementById('service-tbody').innerHTML=services.map(s=>{const sc=s.status==='Tersedia'?'bg-green-100 text-green-700':'bg-slate-100 text-slate-500';return`<tr><td class="px-4 py-3 font-medium text-slate-800">${s.name||''}</td><td class="px-4 py-3 text-slate-600">${s.category||''}</td><td class="px-4 py-3 text-slate-600">${fmt(s.price)}</td><td class="px-4 py-3 text-slate-600">${s.duration||''}</td><td class="px-4 py-3"><span class="px-2 py-1 rounded-lg text-xs font-medium ${sc}">${s.status||''}</span></td><td class="px-4 py-3 flex gap-2"><button onclick="editService('${s.__backendId}')" class="text-blue-600 hover:underline text-xs">Edit</button><button onclick="deleteRecord('${s.__backendId}')" class="text-red-500 hover:underline text-xs">Hapus</button></td></tr>`;}).join('');
+}
+document.getElementById('service-search').addEventListener('input',e=>{serviceFilterText=e.target.value.toLowerCase();renderServicesPage();});
+document.getElementById('add-service-btn').addEventListener('click',()=>{editingServiceRecord=null;document.getElementById('service-form-title').textContent='Tambah Layanan';['sf-name','sf-price','sf-duration','sf-description'].forEach(id=>document.getElementById(id).value='');document.getElementById('sf-category').value='';document.getElementById('sf-status').value='Tersedia';document.getElementById('service-form-wrap').classList.remove('hidden');});
+document.getElementById('sf-cancel').addEventListener('click',()=>document.getElementById('service-form-wrap').classList.add('hidden'));
+document.getElementById('sf-save').addEventListener('click',async()=>{
+  const n=document.getElementById('sf-name').value.trim(),c=document.getElementById('sf-category').value,p=parseInt(document.getElementById('sf-price').value.replace(/\D/g,''))||0,d=document.getElementById('sf-duration').value.trim(),desc=document.getElementById('sf-description').value.trim(),s=document.getElementById('sf-status').value;
+  if(!n||!c)return;
+  const btn=document.getElementById('sf-save');btn.disabled=true;btn.innerHTML='<span class="loading-spinner"></span>';
+  if(editingServiceRecord){await window.dataSdk.update({...editingServiceRecord,name:n,category:c,price:p,duration:d,description:desc,status:s});}
+  else{if(currentRecordCount>=999){btn.disabled=false;btn.textContent='Simpan';return;}await window.dataSdk.create({type:'service',name:n,category:c,price:p,duration:d,description:desc,status:s});}
+  btn.disabled=false;btn.textContent='Simpan';document.getElementById('service-form-wrap').classList.add('hidden');
+});
+window.editService=function(id){const s=allData.find(r=>r.__backendId===id);if(!s)return;editingServiceRecord=s;document.getElementById('service-form-title').textContent='Edit Layanan';document.getElementById('sf-name').value=s.name||'';document.getElementById('sf-category').value=s.category||'';document.getElementById('sf-price').value=s.price||'';document.getElementById('sf-duration').value=s.duration||'';document.getElementById('sf-description').value=s.description||'';document.getElementById('sf-status').value=s.status||'Tersedia';document.getElementById('service-form-wrap').classList.remove('hidden');};
+
+// INVOICES CRUD
+let invoiceCurrentPage=1,invoiceFilterText='',invoiceStatusFilter='',editingInvoiceRecord=null;
+function renderInvoicesPage(){
+  const invoices=getByType('invoice').filter(i=>{const ms=(i.invoice_no||'').toLowerCase().includes(invoiceFilterText)||(i.client||'').toLowerCase().includes(invoiceFilterText);const mst=invoiceStatusFilter===''||i.status===invoiceStatusFilter;return ms&&mst;});
+  const start=(invoiceCurrentPage-1)*ITEMS_PER_PAGE,end=start+ITEMS_PER_PAGE;
+  const pageData=invoices.slice(start,end);const totalPages=Math.ceil(invoices.length/ITEMS_PER_PAGE)||1;
+  document.getElementById('invoice-tbody').innerHTML=pageData.map(i=>{const sc=i.status==='Lunas'?'bg-green-100 text-green-700':'bg-orange-100 text-orange-700';return`<tr><td class="px-4 py-3 font-medium text-slate-800">${i.invoice_no||''}</td><td class="px-4 py-3 text-slate-600">${i.client||''}</td><td class="px-4 py-3 text-slate-600">${fmt(i.amount)}</td><td class="px-4 py-3"><span class="px-2 py-1 rounded-lg text-xs font-medium ${sc}">${i.status||''}</span></td><td class="px-4 py-3 text-slate-500">${i.date||''}</td><td class="px-4 py-3 flex gap-2"><button onclick="toggleInvoice('${i.__backendId}')" class="text-blue-600 hover:underline text-xs">Ubah Status</button><button onclick="deleteRecord('${i.__backendId}')" class="text-red-500 hover:underline text-xs">Hapus</button></td></tr>`;}).join('');
+  document.getElementById('invoice-page-info').textContent=`Halaman ${invoiceCurrentPage} dari ${totalPages}`;
+}
+document.getElementById('invoice-search').addEventListener('input',e=>{invoiceFilterText=e.target.value.toLowerCase();invoiceCurrentPage=1;renderInvoicesPage();});
+document.getElementById('invoice-status-filter').addEventListener('change',e=>{invoiceStatusFilter=e.target.value;invoiceCurrentPage=1;renderInvoicesPage();});
+document.getElementById('invoice-prev-page-btn').addEventListener('click',()=>{if(invoiceCurrentPage>1){invoiceCurrentPage--;renderInvoicesPage();}});
+document.getElementById('invoice-next-page-btn').addEventListener('click',()=>{invoiceCurrentPage++;renderInvoicesPage();});
+document.getElementById('add-invoice-btn').addEventListener('click',()=>{editingInvoiceRecord=null;document.getElementById('invoice-form-title').textContent='Tambah Invoice';['if-no','if-client','if-amount'].forEach(id=>document.getElementById(id).value='');document.getElementById('if-status').value='Belum Lunas';document.getElementById('if-date').value=new Date().toISOString().split('T')[0];document.getElementById('invoice-form-wrap').classList.remove('hidden');});
+document.getElementById('if-cancel').addEventListener('click',()=>document.getElementById('invoice-form-wrap').classList.add('hidden'));
+document.getElementById('if-save').addEventListener('click',async()=>{
+  const no=document.getElementById('if-no').value.trim(),c=document.getElementById('if-client').value.trim(),a=parseInt(document.getElementById('if-amount').value.replace(/\D/g,''))||0,s=document.getElementById('if-status').value,d=document.getElementById('if-date').value;
+  if(!no||!c)return;
+  const btn=document.getElementById('if-save');btn.disabled=true;btn.innerHTML='<span class="loading-spinner"></span>';
+  if(currentRecordCount>=999){btn.disabled=false;btn.textContent='Simpan';return;}
+  await window.dataSdk.create({type:'invoice',invoice_no:no,client:c,amount:a,status:s,date:d});
+  btn.disabled=false;btn.textContent='Simpan';document.getElementById('invoice-form-wrap').classList.add('hidden');
+});
+window.toggleInvoice=async function(id){const rec=allData.find(r=>r.__backendId===id);if(!rec)return;await window.dataSdk.update({...rec,status:rec.status==='Lunas'?'Belum Lunas':'Lunas'});};
+
+// Reports
+function renderReports(){
+  const orders=getByType('order'),clients=getByType('client'),services=getByType('service');
+  const cat=document.getElementById('report-category-filter').value;
+  const filteredOrders=cat?orders.filter(o=>{const svc=services.find(s=>s.name===o.project);return svc&&svc.category===cat;}):orders;
+  const totalRev=filteredOrders.reduce((s,o)=>s+(Number(o.value)||0),0);
+  document.getElementById('report-total-revenue').textContent=fmt(totalRev);
+  document.getElementById('report-total-orders').textContent=orders.length;
+  document.getElementById('report-total-clients').textContent=clients.length;
+  // Service breakdown
+  const svcMap={};services.forEach(s=>{if(!cat||s.category===cat)svcMap[s.name]={category:s.category,price:s.price,count:0,total:0};});
+  filteredOrders.forEach(o=>{if(svcMap[o.project]){svcMap[o.project].count++;svcMap[o.project].total+=Number(o.value)||0;}});
+  document.getElementById('report-service-list').innerHTML=Object.entries(svcMap).map(([name,d])=>`<div class="flex justify-between p-2 rounded-lg bg-slate-50"><span class="font-medium text-slate-700">${name} <span class="text-xs text-slate-400">(${d.category})</span></span><span class="text-green-600 font-semibold">${fmt(d.total)}</span></div>`).join('')||'<p class="text-slate-500">Belum ada data.</p>';
+}
+document.getElementById('report-category-filter').addEventListener('change',renderReports);
+
+// Client dashboard
+function renderClientDashboard(user){
+  const orders=getByType('order').filter(o=>o.client===user.company);
+  const invoices=getByType('invoice').filter(i=>i.client===user.company);
+  document.getElementById('client-active-orders').textContent=orders.filter(o=>o.status!=='Selesai').length;
+  document.getElementById('client-total-value').textContent=fmt(orders.reduce((s,o)=>s+(Number(o.value)||0),0));
+  document.getElementById('client-unpaid').textContent=invoices.filter(i=>i.status==='Belum Lunas').length;
+  document.getElementById('client-invoice-tbody').innerHTML=invoices.map(i=>{const sc=i.status==='Lunas'?'bg-green-100 text-green-700':'bg-orange-100 text-orange-700';return`<tr><td class="px-4 py-3 font-medium text-slate-800">${i.invoice_no||''}</td><td class="px-4 py-3 text-slate-600">${fmt(i.amount)}</td><td class="px-4 py-3"><span class="px-2 py-1 rounded-lg text-xs font-medium ${sc}">${i.status}</span></td><td class="px-4 py-3 text-slate-500">${i.date||''}</td></tr>`;}).join('');
+}
+
+// Chart
+function initChart(){
+  const ctx=document.getElementById('revenue-chart');if(!ctx)return;
+  new Chart(ctx,{type:'bar',data:{labels:['Jan','Feb','Mar','Apr','Mei','Jun','Jul'],datasets:[{label:'Pendapatan (Juta Rp)',data:[18,24,16,32,28,38,42],backgroundColor:'rgba(37,99,235,0.8)',borderRadius:8}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+}
+
+// Calendar
+function renderCalendar(){
+  const year=2026,month=6;
+  const firstDay=new Date(year,month,1).getDay(),daysInMonth=new Date(year,month+1,0).getDate();
+  const months=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+  let html=`<p class="text-center font-medium text-slate-700 mb-2">${months[month]} ${year}</p><div class="grid grid-cols-7 gap-1 text-center text-xs">`;
+  ['Min','Sen','Sel','Rab','Kam','Jum','Sab'].forEach(d=>{html+=`<span class="font-medium text-slate-400">${d}</span>`;});
+  for(let i=0;i<firstDay;i++)html+=`<span></span>`;
+  for(let d=1;d<=daysInMonth;d++){html+=`<span class="py-1 rounded ${d===13?'bg-blue-600 text-white font-bold':'text-slate-600 hover:bg-slate-100'} cursor-default">${d}</span>`;}
+  html+='</div>';document.getElementById('mini-calendar').innerHTML=html;
+}
+
+// Settings
+document.querySelectorAll('.settings-tab-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.settings-tab-btn').forEach(b=>{b.classList.remove('active','border-blue-600','text-slate-700');b.classList.add('border-transparent','text-slate-500');});document.querySelectorAll('.settings-tab-content').forEach(c=>c.classList.add('hidden'));btn.classList.add('active','border-blue-600','text-slate-700');btn.classList.remove('border-transparent','text-slate-500');document.getElementById('tab-'+btn.dataset.settingsTab).classList.remove('hidden');});});
+document.getElementById('save-profile').addEventListener('click',()=>{document.getElementById('profile-toast').classList.remove('hidden');setTimeout(()=>document.getElementById('profile-toast').classList.add('hidden'),2000);});
+document.getElementById('apply-theme').addEventListener('click',()=>{applyTheme(document.querySelector('input[name="theme-choice"]:checked').value);document.getElementById('theme-toast').classList.remove('hidden');setTimeout(()=>document.getElementById('theme-toast').classList.add('hidden'),2000);});
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1a53a9ac4803ef7',t:'MTc4MzkxMzYzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
