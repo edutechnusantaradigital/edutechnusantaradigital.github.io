@@ -113,7 +113,7 @@
                 <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
                     <!-- Added: Login link/button -->
                     <a href="/login.html" id="login-btn" class="hidden sm:inline-flex items-center px-4 py-2 bg-white dark:bg-transparent text-dark dark:text-white border border-transparent rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium">
-                        Masuk
+                        <span class="lang-id">Masuk</span><span class="lang-en">Login</span>
                     </a>
                     <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold">ID</button>
                     <button id="theme-btn" aria-label="Ubah Tema Gelap Terang" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold"><i id="theme-icon" class="ph ph-moon"></i></button>
@@ -131,7 +131,7 @@
             <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
             <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
             <!-- Added: Login link in full-screen menu -->
-            <a href="/login.html" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">Masuk</a>
+            <a href="/login.html" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Masuk</span><span class="lang-en">Login</span></a>
         </nav>
     </div>
 
@@ -151,8 +151,8 @@
             </h1>
 
             <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row gap-5 justify-center items-center w-full sm:w-auto">
-                <a href="https://wa.me/6287850934303" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-primary dark:bg-primaryDark text-white rounded-xl hover:bg-primary/90 dark:hover:bg-primaryDark/90 transition-colors font-bold">
-                    <i class="ph ph-whatsapp-logo text-2xl"></i> <span class="lang-id">Konsultasi Gratis</span><span class="lang-en">Free Consultation</span>
+                <a href="/login.html" class="w-full sm:w-auto px-8 py-4 bg-primary dark:bg-primaryDark text-white rounded-xl hover:bg-primary/90 dark:hover:bg-primaryDark/90 transition-colors font-bold flex items-center justify-center gap-2">
+                    <i class="ph ph-user text-2xl"></i> <span class="lang-id">Konsultasi Gratis</span><span class="lang-en">Free Consultation</span>
                 </a>
                 <a href="/layanan" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-transparent text-dark dark:text-white border-2 border-dark dark:border-white rounded-xl hover:bg-dark hover:text-white transition-colors font-bold">
                     <span class="lang-id">Lihat Paket</span><span class="lang-en">View Packages</span> <i class="ph ph-arrow-right text-xl"></i>
@@ -197,57 +197,114 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div data-aos="fade-right" data-aos-delay="100" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 dark:bg-primaryDark/10 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors"></div>
                     <div class="w-14 h-14 bg-primary dark:bg-primaryDark text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-globe text-xl"></i></div>
-                    <h3 class="text-2xl mb-3 dark:text-white">Website Company Profile</h3>
+                    <h3 class="text-2xl mb-1 dark:text-white">Website Company Profile</h3>
+                    <p class="text-xs text-primary dark:text-blue-400 font-bold mb-4 uppercase tracking-wider"><span class="lang-id">Mulai Rp2.5 Juta</span><span class="lang-en">Starts from Rp2.5M</span></p>
                     <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
-                        <span class="lang-id">Website informatif, elegan, dan responsif untuk menampilkan profil identitas sekolah atau pesantren.</span>
-                        <span class="lang-en">Informative, elegant, and responsive website to display the profile identity of your school.</span>
+                        <span class="lang-id">Website informatif, elegan, dan responsif untuk menampilkan profil identitas sekolah, madrasah, atau pesantren Anda secara profesional.</span>
+                        <span class="lang-en">Informative, elegant, and responsive website to display the profile identity of your school, madrasah, or boarding school professionally.</span>
                     </p>
                     <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Domain dan Hosting 1 Tahun</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Desain Premium Responsif</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Integrasi Media Sosial</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Domain .sch.id / .com & Hosting</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Desain Premium & Responsive</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Integrasi Peta & WA Chat</span></li>
                     </ul>
-                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20pesan%20paket%20Website%20Company%20Profile%20dengan%20harga%20Rp2,5%20Juta.%20Bisa%20konsultasi%20lebih%20lanjut?" target="_blank" class="inline-block px-6 py-3 bg-secondary text-white rounded-xl font-bold hover:opacity-95">Hubungi via WhatsApp</a>
+                    <a href="/login.html" class="block w-full py-3 text-center bg-secondary text-white rounded-xl font-bold hover:opacity-95 transition-opacity"><span class="lang-id">Pesan Paket</span><span class="lang-en">Order Package</span></a>
                 </div>
 
-                <!-- Card 2 -->
-                <div data-aos="zoom-in" data-aos-delay="200" class="bg-dark dark:bg-black text-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.1)] border border-gray-800 relative overflow-hidden">
-                    <div class="absolute top-4 right-4 bg-secondary dark:bg-secondaryDark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse"><span class="lang-id">Terbaik</span><span class="lang-en">Best</span></div>
+                <!-- Card 2 (OJS Jurnal) -->
+                <div data-aos="fade-up" data-aos-delay="150" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 dark:bg-primaryDark/10 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors"></div>
+                    <div class="w-14 h-14 bg-primary dark:bg-primaryDark text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-books text-xl"></i></div>
+                    <h3 class="text-2xl mb-1 dark:text-white">Website OJS Jurnal</h3>
+                    <p class="text-xs text-primary dark:text-blue-400 font-bold mb-4 uppercase tracking-wider"><span class="lang-id">Mulai Rp700 Ribu / Thn</span><span class="lang-en">Starts from Rp700K / Yr</span></p>
+                    <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        <span class="lang-id">Pembuatan platform pengelolaan jurnal ilmiah bereputasi berbasis Open Journal Systems (OJS) v3.5 terbaru dengan keamanan andal.</span>
+                        <span class="lang-en">Creation of highly reputable scientific journal management platform based on the latest Open Journal Systems (OJS) v3.5 with robust security.</span>
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Setup OJS 3.5 Terbaru</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Indeksasi Google Scholar / Garuda</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Domain .org / .id & SSL Gratis</span></li>
+                    </ul>
+                    <a href="/login.html" class="block w-full py-3 text-center bg-secondary text-white rounded-xl font-bold hover:opacity-95 transition-opacity"><span class="lang-id">Pesan Paket OJS</span><span class="lang-en">Order OJS Package</span></a>
+                </div>
+
+                <!-- Card 3 (Berita) -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 dark:bg-primaryDark/10 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors"></div>
+                    <div class="w-14 h-14 bg-primary dark:bg-primaryDark text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-newspaper text-xl"></i></div>
+                    <h3 class="text-2xl mb-1 dark:text-white">Website Portal Berita</h3>
+                    <p class="text-xs text-primary dark:text-blue-400 font-bold mb-4 uppercase tracking-wider"><span class="lang-id">Mulai Rp4.5 Juta</span><span class="lang-en">Starts from Rp4.5M</span></p>
+                    <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        <span class="lang-id">Portal berita modern, cepat, teroptimasi SEO & Google News, dilengkapi panel redaksi, jurnalis, editor, dan slot iklan siap tayang.</span>
+                        <span class="lang-en">Modern, fast, SEO & Google News optimized portal website, featuring complete editorial, journalist, editor dashboards, and ad spaces.</span>
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Manajemen Redaksi & Multi-penulis</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Optimasi Google News & AMP</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Slot Iklan Siap Pakai (AdSense Ready)</span></li>
+                    </ul>
+                    <a href="/login.html" class="block w-full py-3 text-center bg-secondary text-white rounded-xl font-bold hover:opacity-95 transition-opacity"><span class="lang-id">Pesan Paket Berita</span><span class="lang-en">Order News Package</span></a>
+                </div>
+
+                <!-- Card 4 (Masjid) -->
+                <div data-aos="fade-up" data-aos-delay="250" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 dark:bg-primaryDark/10 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors"></div>
+                    <div class="w-14 h-14 bg-primary dark:bg-primaryDark text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-heart text-xl"></i></div>
+                    <h3 class="text-2xl mb-1 dark:text-white">Website Masjid & Yayasan</h3>
+                    <p class="text-xs text-primary dark:text-blue-400 font-bold mb-4 uppercase tracking-wider"><span class="lang-id">Mulai Rp2.5 Juta</span><span class="lang-en">Starts from Rp2.5M</span></p>
+                    <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        <span class="lang-id">Media dakwah dan transparansi kas masjid digital. Dilengkapi jadwal shalat otomatis, agenda kajian, galeri, serta QRIS donasi online.</span>
+                        <span class="lang-en">Islamic preaching media and digital financial transparency. Features automated prayer times, study agendas, galleries, and QRIS online donation.</span>
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Laporan Keuangan Kas Transparan</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Jadwal Shalat Otomatis Real-time</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Integrasi Gerbang Donasi & QRIS</span></li>
+                    </ul>
+                    <a href="/login.html" class="block w-full py-3 text-center bg-secondary text-white rounded-xl font-bold hover:opacity-95 transition-opacity"><span class="lang-id">Pesan Paket Masjid</span><span class="lang-en">Order Mosque Package</span></a>
+                </div>
+
+                <!-- Card 5 (Organisasi) -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 dark:bg-primaryDark/10 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors"></div>
+                    <div class="w-14 h-14 bg-primary dark:bg-primaryDark text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-users text-xl"></i></div>
+                    <h3 class="text-2xl mb-1 dark:text-white">Website Organisasi</h3>
+                    <p class="text-xs text-primary dark:text-blue-400 font-bold mb-4 uppercase tracking-wider"><span class="lang-id">Mulai Rp3.5 Juta</span><span class="lang-en">Starts from Rp3.5M</span></p>
+                    <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        <span class="lang-id">Website resmi eksklusif untuk organisasi profesi, yayasan kemanusiaan, alumni, asosiasi, atau komunitas hobi agar terekspos profesional.</span>
+                        <span class="lang-en">Exclusive official website for professional organizations, humanitarian foundations, alumni, associations, or hobby communities to look highly professional.</span>
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Pendaftaran Anggota (KTA) Online</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Manajemen Agenda & Program Kerja</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Halaman Berita & Dokumentasi Kegiatan</span></li>
+                    </ul>
+                    <a href="/login.html" class="block w-full py-3 text-center bg-secondary text-white rounded-xl font-bold hover:opacity-95 transition-opacity"><span class="lang-id">Pesan Paket Organisasi</span><span class="lang-en">Order Org Package</span></a>
+                </div>
+
+                <!-- Card 6 (Akademik / PPDB - Existing styled as featured hero card) -->
+                <div data-aos="zoom-in" data-aos-delay="350" class="bg-dark dark:bg-black text-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.1)] border border-gray-800 relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 bg-secondary dark:bg-secondaryDark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></div>
                     <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/20 rounded-full blur-2xl z-0"></div>
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-secondary text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:rotate-12 transition-transform"><i class="ph ph-database text-xl"></i></div>
-                        <h3 class="text-2xl mb-3">Sistem Informasi Akademik</h3>
+                        <h3 class="text-2xl mb-1">Sistem Informasi Akademik</h3>
+                        <p class="text-xs text-secondary dark:text-green-400 font-bold mb-4 uppercase tracking-wider"><span class="lang-id">Mulai Rp8.5 Juta</span><span class="lang-en">Starts from Rp8.5M</span></p>
                         <p class="text-white/70 mb-6 text-sm leading-relaxed">
-                            <span class="lang-id">Sistem digital terintegrasi untuk manajemen pendaftaran (PPDB), akademik, hingga keuangan lembaga.</span>
-                            <span class="lang-en">Integrated digital system for registration (PPDB), academic, to institutional financial management.</span>
+                            <span class="lang-id">Sistem digitalisasi komprehensif sekolah & pesantren: modul penerimaan santri baru (PPDB online), portal wali murid, nilai rapor, dan pencatatan kasir keuangan terpusat.</span>
+                            <span class="lang-en">Comprehensive school & boarding school digitization system: online student admission (PPDB), parent portals, academic reports, and centralized cashier recording.</span>
                         </p>
                         <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Modul PPDB Online</span></li>
-                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Nilai dan Raport</span></li>
-                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Portal Wali Santri/Murid</span></li>
+                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Sistem Formulir PPDB Online & Ujian</span></li>
+                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Manajemen Tagihan SPP & Keuangan</span></li>
+                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Hak Akses Guru, Wali, & Siswa</span></li>
                         </ul>
-                        <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20pesan%20Konsultasi%20PPDB,%20Bagaimana%20proses%20lebih%20lanjut?" target="_blank" class="block w-full py-3 text-center rounded-xl bg-white text-dark font-bold">Konsultasi PPDB</a>
+                        <a href="/login.html" class="block w-full py-3 text-center rounded-xl bg-white text-dark font-bold hover:bg-white/90 transition-colors"><span class="lang-id">Pesan Sistem Akademik</span><span class="lang-en">Order Academic System</span></a>
                     </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div data-aos="fade-left" data-aos-delay="300" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 dark:bg-secondaryDark/10 rounded-bl-full -z-10 group-hover:bg-secondary/10 transition-colors"></div>
-                    <div class="w-14 h-14 bg-secondary text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-books text-xl"></i></div>
-                    <h3 class="text-2xl mb-3 dark:text-white">Penyusunan SOP Lembaga</h3>
-                    <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
-                        <span class="lang-id">Bantuan standarisasi operasional dan manajerial lembaga pendidikan berbasis digital.</span>
-                        <span class="lang-en">Assistance in standardizing operational and managerial aspects of digital-based education.</span>
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Audit Manajemen Internal</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Buku Panduan SOP</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Pelatihan Pendampingan</span></li>
-                    </ul>
-                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20Susun%20SOP,%20Bagaimana%20proses%20lebih%20lanjut?" target="_blank" class="block w-full py-3 text-center rounded-xl bg-secondary text-white font-bold">Minta Info SOP</a>
                 </div>
             </div>
         </section>
@@ -262,8 +319,8 @@
                     <span class="lang-id">Siap! <span class="text-secondary dark:text-green-400">Go Digital?</span></span>
                     <span class="lang-en">Ready! <span class="text-secondary dark:text-green-400">Go Digital?</span></span>
                 </h2>
-                <a href="https://wa.me/6287850934303" target="_blank" class="inline-block px-10 py-5 bg-white text-dark font-bold rounded-xl text-lg hover:bg-secondary hover:text-white transition-colors">
-                    <span class="lang-id">Konsultasi Sekarang!</span><span class="lang-en">Consult Now!</span>
+                <a href="/login.html" class="inline-block px-10 py-5 bg-white text-dark font-bold rounded-xl text-lg hover:bg-secondary hover:text-white transition-colors">
+                    <span class="lang-id">Masuk untuk Konsultasi</span><span class="lang-en">Login to Consult</span>
                 </a>
             </div>
         </section>
@@ -283,10 +340,10 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/6287850934303" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" class="fixed bottom-6 right-6 z-[65] floating-element group">
+    <a href="/login.html" aria-label="Masuk untuk Konsultasi" class="fixed bottom-6 right-6 z-[65] floating-element group">
         <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
         <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white/10">
-            <i class="ph-fill ph-whatsapp-logo text-4xl"></i>
+            <i class="ph-fill ph-chat-circle-dots text-4xl"></i>
         </div>
     </a>
 

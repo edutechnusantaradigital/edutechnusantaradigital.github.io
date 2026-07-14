@@ -1,0 +1,6 @@
+{
+  "name": "EduTech Nusantara Digital CRM",
+  "description": "SaaS-grade modern Customer Relationship Management (CRM) for digital services, optimized for Google Apps Script and Spreadsheet integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

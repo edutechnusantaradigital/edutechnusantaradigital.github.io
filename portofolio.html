@@ -103,6 +103,10 @@
                     </span>
                 </a>
                 <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
+                    <!-- Added: Login link/button -->
+                    <a href="/login.html" id="login-btn" class="hidden sm:inline-flex items-center px-4 py-2 bg-white dark:bg-transparent text-dark dark:text-white border border-transparent rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium">
+                        <span class="lang-id">Masuk</span><span class="lang-en">Login</span>
+                    </a>
                     <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
                     <button id="theme-btn" aria-label="Ubah Tema" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
                     <button id="menu-btn" aria-label="Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
@@ -118,6 +122,8 @@
             <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
             <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
             <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
+            <!-- Added: Login link in full-screen menu -->
+            <a href="/login.html" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Masuk</span><span class="lang-en">Login</span></a>
         </nav>
     </div>
 
@@ -318,9 +324,9 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/6287850934303" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" class="fixed bottom-6 right-6 z-[65] floating-element group">
+    <a href="/login.html" aria-label="Masuk untuk Konsultasi" class="fixed bottom-6 right-6 z-[65] floating-element group">
         <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
-        <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800"><i class="ph-fill ph-whatsapp-logo text-4xl"></i></div>
+        <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800"><i class="ph-fill ph-chat-circle-dots text-4xl"></i></div>
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>

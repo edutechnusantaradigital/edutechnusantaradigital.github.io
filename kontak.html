@@ -107,6 +107,10 @@
                     </span>
                 </a>
                 <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
+                    <!-- Added: Login link/button -->
+                    <a href="/login.html" id="login-btn" class="hidden sm:inline-flex items-center px-4 py-2 bg-white dark:bg-transparent text-dark dark:text-white border border-transparent rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium">
+                        <span class="lang-id">Masuk</span><span class="lang-en">Login</span>
+                    </a>
                     <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
                     <button id="theme-btn" aria-label="Ubah Tema" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
                     <button id="menu-btn" aria-label="Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
@@ -122,6 +126,8 @@
             <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
             <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
             <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
+            <!-- Added: Login link in full-screen menu -->
+            <a href="/login.html" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Masuk</span><span class="lang-en">Login</span></a>
         </nav>
     </div>
 
@@ -197,8 +203,8 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="w-full mt-4 px-8 py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-primaryDark transition-all hover:-translate-y-1 shadow-lg shadow-primary/30 flex items-center justify-center gap-2 group">
-                                    <span class="lang-id">Kirim Pesan via WhatsApp</span><span class="lang-en">Send Message via WhatsApp</span>
-                                    <i class="ph ph-paper-plane-right text-xl group-hover:translate-x-1 transition-transform"></i>
+                                    <span class="lang-id">Masuk untuk Konsultasi</span><span class="lang-en">Login to Consult</span>
+                                    <i class="ph ph-sign-in text-xl group-hover:translate-x-1 transition-transform"></i>
                                 </button>
                             </form>
                         </div>
@@ -391,10 +397,7 @@
             const leadForm = document.getElementById('leadForm');
             leadForm.addEventListener('submit', function(e) {
                 e.preventDefault(); 
-                const nama = document.getElementById('nama').value, lembaga = document.getElementById('lembaga').value, kebutuhan = document.getElementById('kebutuhan').value;
-                const textMessage = `Halo Tim Edutech Nusantara,%0A%0ASaya ingin berkonsultasi mengenai layanan digitalisasi pendidikan.%0A%0A*Nama:* ${nama}%0A*Lembaga:* ${lembaga}%0A*Kebutuhan Layanan:* ${kebutuhan}%0A%0AMohon info lebih lanjut mengenai mekanisme kerjanya. Terima kasih.`;
-                const waNumber = '6287850934303'; const waUrl = `https://wa.me/${waNumber}?text=${textMessage}`;
-                window.open(waUrl, '_blank');
+                window.location.href = '/login.html';
             });
         });
     </script>
