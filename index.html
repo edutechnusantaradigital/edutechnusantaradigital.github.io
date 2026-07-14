@@ -111,9 +111,13 @@
                     </span>
                 </a>
                 <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
-                    <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm text-dark dark:text-white">ID</button>
-                    <button id="theme-btn" aria-label="Ubah Tema Gelap Terang" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i class="ph ph-moon text-2xl" id="theme-icon"></i></button>
-                    <button id="menu-btn" aria-label="Buka Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors focus:outline-none relative z-[70]"><i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i></button>
+                    <!-- Added: Login link/button -->
+                    <a href="/login.html" id="login-btn" class="hidden sm:inline-flex items-center px-4 py-2 bg-white dark:bg-transparent text-dark dark:text-white border border-transparent rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium">
+                        Masuk
+                    </a>
+                    <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold">ID</button>
+                    <button id="theme-btn" aria-label="Ubah Tema Gelap Terang" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold"><i id="theme-icon" class="ph ph-moon"></i></button>
+                    <button id="menu-btn" aria-label="Buka Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors"><i id="menu-icon" class="ph ph-list text-xl"></i></button>
                 </div>
             </div>
         </div>
@@ -126,6 +130,8 @@
             <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
             <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
             <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
+            <!-- Added: Login link in full-screen menu -->
+            <a href="/login.html" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1">Masuk</a>
         </nav>
     </div>
 
@@ -133,22 +139,22 @@
         <section class="relative pt-36 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
             <div class="absolute top-20 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-primary/10 dark:bg-primaryDark/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
             
-            <div data-aos="fade-down" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary/10 dark:bg-secondaryDark/20 text-secondary dark:text-green-400 text-sm mb-8 font-bold border border-secondary/20 dark:border-secondaryDark/50 shadow-sm transition-transform hover:scale-105 cursor-default">
+            <div data-aos="fade-down" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary/10 dark:bg-secondaryDark/20 text-secondary dark:text-green-400 text-sm mb-8 font-bold">
                 <i class="ph-fill ph-rocket-launch text-lg"></i>
                 <span class="lang-id">Membangun Ekosistem Digital</span>
                 <span class="lang-en">Building Digital Ecosystems</span>
             </div>
 
             <h1 data-aos="zoom-in" data-aos-delay="100" class="text-4xl md:text-6xl lg:text-7xl leading-tight md:leading-tight lg:leading-tight mb-12">
-                <span class="lang-id"><span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> untuk <span class="text-secondary dark:text-green-400">Pesantren</span> dan Sekolah Indonesia</span>
-                <span class="lang-en"><span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> for <span class="text-secondary dark:text-green-400">Boarding Schools</span> and Indonesian Schools</span>
+                <span class="lang-id"><span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> untuk <span class="text-secondary dark:text-green-400">pesantren & sekolah</span></span>
+                <span class="lang-en"><span class="text-primary dark:text-blue-400">Edutech Nusantara Digital</span> <br class="hidden lg:block"/> for <span class="text-secondary dark:text-green-400">boarding schools & schools</span></span>
             </h1>
 
             <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row gap-5 justify-center items-center w-full sm:w-auto">
-                <a href="https://wa.me/6287850934303" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-primary dark:bg-primaryDark text-white rounded-xl hover:bg-primary/90 dark:hover:bg-primaryDark/80 transition-all font-bold shadow-lg shadow-primary/30 dark:shadow-none flex items-center justify-center gap-2 text-lg hover:-translate-y-1">
+                <a href="https://wa.me/6287850934303" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-primary dark:bg-primaryDark text-white rounded-xl hover:bg-primary/90 dark:hover:bg-primaryDark/90 transition-colors font-bold">
                     <i class="ph ph-whatsapp-logo text-2xl"></i> <span class="lang-id">Konsultasi Gratis</span><span class="lang-en">Free Consultation</span>
                 </a>
-                <a href="/layanan" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-transparent text-dark dark:text-white border-2 border-dark dark:border-white rounded-xl hover:bg-dark hover:text-white dark:hover:bg-white dark:hover:text-dark transition-all font-bold flex items-center justify-center gap-2 text-lg hover:-translate-y-1">
+                <a href="/layanan" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-transparent text-dark dark:text-white border-2 border-dark dark:border-white rounded-xl hover:bg-dark hover:text-white transition-colors font-bold">
                     <span class="lang-id">Lihat Paket</span><span class="lang-en">View Packages</span> <i class="ph ph-arrow-right text-xl"></i>
                 </a>
             </div>
@@ -157,23 +163,23 @@
         <section class="py-16 bg-gray-50 dark:bg-cardDark/50 border-y border-gray-100 dark:border-gray-800 transition-colors">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div data-aos="flip-up" data-aos-delay="0" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-16 h-16 mx-auto bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-users text-3xl"></i></div>
+                    <div data-aos="flip-up" data-aos-delay="0" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform">
+                        <div class="w-16 h-16 mx-auto bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-users text-2xl"></i></div>
                         <h3 class="text-4xl text-primary dark:text-blue-400 mb-2">99+</h3>
                         <p class="text-dark/70 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">Pengguna Terpercaya</span><span class="lang-en">Trusted Users</span></p>
                     </div>
-                    <div data-aos="flip-up" data-aos-delay="100" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-16 h-16 mx-auto bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-green-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-desktop text-3xl"></i></div>
+                    <div data-aos="flip-up" data-aos-delay="100" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform">
+                        <div class="w-16 h-16 mx-auto bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-green-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-briefcase text-2xl"></i></div>
                         <h3 class="text-4xl text-secondary dark:text-green-400 mb-2">21+</h3>
                         <p class="text-dark/70 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">Website Dibangun</span><span class="lang-en">Websites Built</span></p>
                     </div>
-                    <div data-aos="flip-up" data-aos-delay="200" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-16 h-16 mx-auto bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-file-text text-3xl"></i></div>
+                    <div data-aos="flip-up" data-aos-delay="200" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform">
+                        <div class="w-16 h-16 mx-auto bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-file-text text-2xl"></i></div>
                         <h3 class="text-4xl text-primary dark:text-blue-400 mb-2">39+</h3>
                         <p class="text-dark/70 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">SOP Disusun</span><span class="lang-en">SOPs Drafted</span></p>
                     </div>
-                    <div data-aos="flip-up" data-aos-delay="300" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-16 h-16 mx-auto bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-green-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-map-pin text-3xl"></i></div>
+                    <div data-aos="flip-up" data-aos-delay="300" class="p-6 bg-white dark:bg-cardDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform">
+                        <div class="w-16 h-16 mx-auto bg-secondary/10 dark:bg-secondaryDark/30 text-secondary dark:text-green-400 rounded-xl flex items-center justify-center mb-4"><i class="ph ph-map-pin text-2xl"></i></div>
                         <h3 class="text-4xl text-secondary dark:text-green-400 mb-2">12+</h3>
                         <p class="text-dark/70 dark:text-gray-400 text-sm uppercase tracking-wider font-bold"><span class="lang-id">Wilayah Terlayani</span><span class="lang-en">Regions Served</span></p>
                     </div>
@@ -191,57 +197,57 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div data-aos="fade-right" data-aos-delay="100" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-[0_8px_30px_rgb(6,124,194,0.15)] transition-all duration-300 relative overflow-hidden group">
+                <div data-aos="fade-right" data-aos-delay="100" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 dark:bg-primaryDark/10 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors"></div>
-                    <div class="w-14 h-14 bg-primary dark:bg-primaryDark text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-browser text-2xl"></i></div>
+                    <div class="w-14 h-14 bg-primary dark:bg-primaryDark text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-globe text-xl"></i></div>
                     <h3 class="text-2xl mb-3 dark:text-white">Website Company Profile</h3>
                     <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
                         <span class="lang-id">Website informatif, elegan, dan responsif untuk menampilkan profil identitas sekolah atau pesantren.</span>
                         <span class="lang-en">Informative, elegant, and responsive website to display the profile identity of your school.</span>
                     </p>
                     <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Domain dan Hosting 1 Tahun</span><span class="lang-en">1 Year Domain and Hosting</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Desain Premium Responsif</span><span class="lang-en">Premium Responsive Design</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Integrasi Media Sosial</span><span class="lang-en">Social Media Integration</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Domain dan Hosting 1 Tahun</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Desain Premium Responsif</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Integrasi Media Sosial</span></li>
                     </ul>
-                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20pesan%20paket%20Website%20Company%20Profile%20dengan%20harga%20Rp2,5%20Juta.%20Bisa%20konsultasi%20lebih%20lanjut?" target="_blank" class="block w-full py-3 text-center rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Rp2,5 Juta</a>
+                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20pesan%20paket%20Website%20Company%20Profile%20dengan%20harga%20Rp2,5%20Juta.%20Bisa%20konsultasi%20lebih%20lanjut?" target="_blank" class="inline-block px-6 py-3 bg-secondary text-white rounded-xl font-bold hover:opacity-95">Hubungi via WhatsApp</a>
                 </div>
 
                 <!-- Card 2 -->
-                <div data-aos="zoom-in" data-aos-delay="200" class="bg-dark dark:bg-black text-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.1)] border border-gray-800 relative overflow-hidden group transform lg:-translate-y-4 hover:-translate-y-6 transition-transform duration-300">
-                    <div class="absolute top-4 right-4 bg-secondary dark:bg-secondaryDark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse"><span class="lang-id">Terlaris</span><span class="lang-en">Best Seller</span></div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="bg-dark dark:bg-black text-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.1)] border border-gray-800 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-secondary dark:bg-secondaryDark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse"><span class="lang-id">Terbaik</span><span class="lang-en">Best</span></div>
                     <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/20 rounded-full blur-2xl z-0"></div>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 bg-secondary text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:rotate-12 transition-transform"><i class="ph ph-database text-2xl"></i></div>
+                        <div class="w-14 h-14 bg-secondary text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:rotate-12 transition-transform"><i class="ph ph-database text-xl"></i></div>
                         <h3 class="text-2xl mb-3">Sistem Informasi Akademik</h3>
                         <p class="text-white/70 mb-6 text-sm leading-relaxed">
                             <span class="lang-id">Sistem digital terintegrasi untuk manajemen pendaftaran (PPDB), akademik, hingga keuangan lembaga.</span>
                             <span class="lang-en">Integrated digital system for registration (PPDB), academic, to institutional financial management.</span>
                         </p>
                         <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Modul PPDB Online</span><span class="lang-en">Online Admission Module</span></li>
-                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Nilai dan Raport</span><span class="lang-en">Grades and Report Cards</span></li>
-                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Portal Wali Santri/Murid</span><span class="lang-en">Parent/Guardian Portal</span></li>
+                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Modul PPDB Online</span></li>
+                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Nilai dan Raport</span></li>
+                            <li class="flex items-center gap-2 text-sm text-white/90"><i class="ph-fill ph-check-circle text-secondary text-lg"></i> <span class="lang-id">Portal Wali Santri/Murid</span></li>
                         </ul>
-                        <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20pesan%20Konsultasi%20PPDB,%20Bagaimana%20proses%20lebih%20lanjut?" target="_blank" class="block w-full py-3 text-center rounded-lg bg-primary text-white font-bold hover:bg-primary/80 transition-colors shadow-lg">Konsultasi PPDB</a>
+                        <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20pesan%20Konsultasi%20PPDB,%20Bagaimana%20proses%20lebih%20lanjut?" target="_blank" class="block w-full py-3 text-center rounded-xl bg-white text-dark font-bold">Konsultasi PPDB</a>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div data-aos="fade-left" data-aos-delay="300" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-[0_8px_30px_rgb(63,142,37,0.15)] transition-all duration-300 relative overflow-hidden group">
+                <div data-aos="fade-left" data-aos-delay="300" class="bg-white dark:bg-cardDark rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 dark:bg-secondaryDark/10 rounded-bl-full -z-10 group-hover:bg-secondary/10 transition-colors"></div>
-                    <div class="w-14 h-14 bg-secondary text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-books text-2xl"></i></div>
+                    <div class="w-14 h-14 bg-secondary text-white rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><i class="ph ph-books text-xl"></i></div>
                     <h3 class="text-2xl mb-3 dark:text-white">Penyusunan SOP Lembaga</h3>
                     <p class="text-dark/70 dark:text-gray-400 mb-6 text-sm leading-relaxed">
                         <span class="lang-id">Bantuan standarisasi operasional dan manajerial lembaga pendidikan berbasis digital.</span>
                         <span class="lang-en">Assistance in standardizing operational and managerial aspects of digital-based education.</span>
                     </p>
                     <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Audit Manajemen Internal</span><span class="lang-en">Internal Management Audit</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Buku Panduan SOP</span><span class="lang-en">SOP Guidebook</span></li>
-                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Pelatihan Pendampingan</span><span class="lang-en">Mentoring & Training</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Audit Manajemen Internal</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Buku Panduan SOP</span></li>
+                        <li class="flex items-center gap-2 text-sm dark:text-gray-300"><i class="ph-fill ph-check-circle text-primary text-lg"></i> <span class="lang-id">Pelatihan Pendampingan</span></li>
                     </ul>
-                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20Susun%20SOP,%20Bagaimana%20proses%20lebih%20lanjut?" target="_blank" class="block w-full py-3 text-center rounded-lg border-2 border-secondary text-secondary font-bold hover:bg-secondary hover:text-white transition-colors">Susun SOP</a>
+                    <a href="https://wa.me/6287850934303?text=Halo,%20saya%20mau%20Susun%20SOP,%20Bagaimana%20proses%20lebih%20lanjut?" target="_blank" class="block w-full py-3 text-center rounded-xl bg-secondary text-white font-bold">Minta Info SOP</a>
                 </div>
             </div>
         </section>
@@ -256,7 +262,7 @@
                     <span class="lang-id">Siap! <span class="text-secondary dark:text-green-400">Go Digital?</span></span>
                     <span class="lang-en">Ready! <span class="text-secondary dark:text-green-400">Go Digital?</span></span>
                 </h2>
-                <a href="https://wa.me/6287850934303" target="_blank" class="inline-block px-10 py-5 bg-white text-dark font-bold rounded-xl text-lg hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-2 shadow-2xl">
+                <a href="https://wa.me/6287850934303" target="_blank" class="inline-block px-10 py-5 bg-white text-dark font-bold rounded-xl text-lg hover:bg-secondary hover:text-white transition-colors">
                     <span class="lang-id">Konsultasi Sekarang!</span><span class="lang-en">Consult Now!</span>
                 </a>
             </div>
@@ -279,7 +285,7 @@
 
     <a href="https://wa.me/6287850934303" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" class="fixed bottom-6 right-6 z-[65] floating-element group">
         <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
-        <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800">
+        <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white/10">
             <i class="ph-fill ph-whatsapp-logo text-4xl"></i>
         </div>
     </a>
@@ -300,7 +306,7 @@
             let isMenuOpen = false;
             const toggleMenu = () => {
                 isMenuOpen = !isMenuOpen;
-                if(isMenuOpen) { menuOverlay.classList.add('menu-open'); header.classList.add('menu-open-header'); menuIcon.classList.replace('ph-list', 'ph-x'); document.body.style.overflow = 'hidden'; } 
+                if(isMenuOpen) { menuOverlay.classList.add('menu-open'); header.classList.add('menu-open-header'); menuIcon.classList.replace('ph-list', 'ph-x'); document.body.style.overflow = 'hidden'; }
                 else { menuOverlay.classList.remove('menu-open'); header.classList.remove('menu-open-header'); menuIcon.classList.replace('ph-x', 'ph-list'); document.body.style.overflow = 'auto'; }
             };
             menuBtn.addEventListener('click', toggleMenu);
