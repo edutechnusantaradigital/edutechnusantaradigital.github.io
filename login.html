@@ -1,44 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#2563EB" />
-    
-    <!-- SEO Optimization Meta Tags -->
-    <title>EduTech Nusantara Digital CRM | Professional SaaS CRM</title>
-    <meta name="description" content="EduTech Nusantara Digital CRM adalah solusi manajemen klien, project milestone pengerjaan website/OJS, pengurusan ISBN, tagihan digital/invoice, dan integrasi database Google Spreadsheet modern." />
-    <meta name="keywords" content="EduTech Nusantara Digital, CRM, SaaS CRM, Jasa Pembuatan Website, Jurnal OJS, ISBN Buku, HKI, Database Google Spreadsheet, Bandung" />
-    <meta name="author" content="EduTech Nusantara Digital" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://edutechnusantaradigital.com/" />
-    <meta property="og:title" content="EduTech Nusantara Digital CRM | Professional SaaS CRM" />
-    <meta property="og:description" content="Manajemen siklus hidup klien, milestone project pengerjaan website/OJS, penerbitan invoice digital, verifikasi transfer, dan kolaborasi terpadu." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&h=630&q=80" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EduTech Nusantara Digital</title>
 
-    <!-- Google Font: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- PWA Web Manifest Link -->
-    <link rel="manifest" href="./manifest.json" />
-  </head>
-  <body class="antialiased font-sans bg-slate-50 dark:bg-slate-900 selection:bg-blue-600/20 selection:text-blue-600">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-    <!-- PWA Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js')
-            .then((reg) => console.log('Service Worker Registered successfully', reg.scope))
-            .catch((err) => console.error('Service Worker registration failed', err));
-        });
-      }
-    </script>
-  </body>
+        html,body{
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            background:#f5f7fa;
+        }
+
+        iframe{
+            width:100%;
+            height:100%;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+
+<iframe
+    src="https://edutechnusantaradigital-github-io.ai.studio/login.html"
+    allow="clipboard-read; clipboard-write; camera; microphone; geolocation"
+    loading="eager">
+</iframe>
+
+</body>
 </html>
