@@ -1,0 +1,8 @@
+{
+  "name": "Remix: CRM EduTech Nusantara Digital",
+  "description": "Enterprise CRM application for EduTech Nusantara Digital featuring client management, project boards, order tracking, ticketing, invoicing, and Google Workspace integrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
