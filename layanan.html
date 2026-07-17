@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>Portofolio - Edutech Nusantara Digital</title>
-    <meta name="description" content="Eksplorasi proyek digital Edutech Nusantara Digital. Menampilkan klien portal berita, pendidikan, hukum, dan mitra strategis kami di seluruh Indonesia.">
+    <!-- SEO & Metadata -->
+    <title>Layanan Lengkap - Edutech Nusantara Digital</title>
+    <meta name="description" content="Katalog terlengkap Edutech Nusantara Digital: Website Pendidikan, SIMRS, ERP, Marketplace Multi Vendor, Ojek Online, Startup Apps, dan Layanan SEO.">
     <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
 
-    <!-- Fonts & UI Frameworks -->
+    <!-- Stylesheets & Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -20,7 +20,7 @@
             darkMode: 'class', 
             theme: {
                 extend: {
-                    colors: { primary: '#067cc2', secondary: '#3f8e25', dark: '#0f172a', bgDark: '#020617', cardDark: '#1e293b' },
+                    colors: { primary: '#067cc2', secondary: '#3f8e25', dark: '#020617', bgDark: '#0f172a', cardDark: '#1e293b' },
                     fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Montserrat', 'sans-serif'] }
                 }
             }
@@ -28,224 +28,369 @@
     </script>
 
     <style>
-        body { font-family: 'Montserrat', sans-serif; }
+        body { font-family: 'Montserrat', sans-serif; font-weight: 600; transition: background 0.3s; }
         h1, h2, h3, .font-heading { font-family: 'Poppins', sans-serif; font-weight: 900; }
-        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .dark .glass-nav { background: rgba(2, 6, 23, 0.9); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .portfolio-hidden { display: none !important; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .dark .glass-nav { background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .product-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid transparent; }
+        .product-card:hover { transform: translateY(-8px); border-color: #067cc2; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
         .menu-open { opacity: 1 !important; visibility: visible !important; }
-        .partner-card { grayscale: 100%; opacity: 0.6; transition: all 0.3s ease; }
-        .partner-card:hover { grayscale: 0%; opacity: 1; transform: scale(1.05); }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #067cc2; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased text-dark bg-light dark:bg-bgDark dark:text-gray-100 overflow-x-hidden">
 
-    <!-- Header Navigation -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-[60] glass-nav transition-all h-20">
+    <!-- Top Navigation -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-[60] glass-nav h-20 transition-all">
         <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
             <a href="/" class="flex items-center gap-3">
                 <img class="h-10" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo">
-                <span class="font-heading text-lg"><span class="text-primary">EduTech</span> <span class="text-secondary">Digital</span></span>
+                <span class="font-heading text-lg md:text-xl"><span class="text-primary">EduTech</span> <span class="text-secondary">Digital</span></span>
             </a>
-            <div class="flex items-center gap-4">
-                <button id="theme-btn" class="p-2"><i id="theme-icon" class="ph ph-moon text-2xl"></i></button>
-                <button id="menu-btn" class="p-2"><i id="menu-icon" class="ph ph-list text-3xl"></i></button>
+            <div class="flex items-center gap-2">
+                <!-- Portal CRM -->
+                <a href="/login.html" class="hidden md:inline-flex bg-primary text-white px-5 py-2 rounded-xl text-xs font-bold items-center gap-2 shadow-lg shadow-primary/30">
+                    <i class="ph-bold ph-user-circle-plus"></i> Portal CRM Login
+                </a>
+                <button id="theme-btn" class="w-10 h-10 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"><i id="theme-icon" class="ph ph-moon text-xl"></i></button>
+                <button id="menu-btn" class="w-10 h-10 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"><i id="menu-icon" class="ph ph-list text-3xl"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- Overlay Menu -->
-    <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center text-center gap-8 transition-all">
-        <a href="/" class="font-heading text-4xl text-white">Beranda</a>
-        <a href="/layanan" class="font-heading text-4xl text-white">Layanan</a>
-        <a href="/portofolio" class="font-heading text-4xl text-secondary">Portofolio</a>
-        <a href="/kontak" class="font-heading text-4xl text-white">Kontak</a>
+    <!-- Overlay Navigation -->
+    <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center text-center gap-6 transition-all duration-300">
+        <a href="/" class="font-heading text-4xl text-white hover:text-secondary">Beranda</a>
+        <a href="/layanan" class="font-heading text-4xl text-secondary">Layanan</a>
+        <a href="/portofolio" class="font-heading text-4xl text-white hover:text-secondary">Portofolio</a>
+        <a href="/kontak" class="font-heading text-4xl text-white hover:text-secondary">Kontak</a>
+        <div class="mt-8 flex flex-col gap-4">
+            <a href="https://wa.me/6282341270087" class="bg-secondary text-white px-8 py-3 rounded-full font-bold flex items-center gap-2">
+                <i class="ph-fill ph-whatsapp-logo text-xl"></i> WhatsApp: 0823 4127 0087
+            </a>
+            <a href="/login.html" class="text-white font-bold underline opacity-60">Login System Management</a>
+        </div>
     </div>
 
     <main class="pt-32 pb-20">
-        <!-- SEKSI ATAS: PORTOFOLIO KLIEN -->
-        <section class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-6xl font-heading mb-4">Proyek & <span class="text-primary">Klien Kami</span></h1>
-                <p class="text-dark/60 dark:text-gray-400 max-w-xl mx-auto italic text-sm">Berikut adalah bukti nyata dedikasi kami dalam membantu digitalisasi perusahaan dan institusi di seluruh Nusantara.</p>
+        
+        <!-- Header Section -->
+        <section class="max-w-7xl mx-auto px-4 text-center mb-16" data-aos="fade-down">
+            <div class="inline-block px-4 py-1.5 bg-primary/10 text-primary dark:text-blue-400 text-[10px] font-black rounded-full mb-6 tracking-widest uppercase">Comprehensive Catalog 2026</div>
+            <h1 class="text-4xl md:text-6xl font-heading mb-6 leading-tight">Solusi Digital <br><span class="text-secondary">Pendidikan & Bisnis</span></h1>
+            <p class="max-w-3xl mx-auto text-dark/60 dark:text-gray-400 font-medium italic">Katalog layanan lengkap mulai dari pembuatan website lembaga, source code sistem informasi enterprise, hingga optimasi trafik web secara global.</p>
+        </section>
+
+        <!-- KATEGORI 1: SISTEM INFORMASI ENTERPRISE & SOURCE CODE -->
+        <section class="max-w-7xl mx-auto px-4 py-12">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-right">
+                <div class="h-px bg-gray-200 flex-grow"></div>
+                <h2 class="font-heading text-2xl uppercase tracking-tighter text-primary dark:text-white shrink-0">Enterprise Source Code</h2>
+                <div class="h-px bg-gray-200 flex-grow"></div>
             </div>
 
-            <!-- Filter -->
-            <div class="flex flex-wrap justify-center gap-2 mb-12">
-                <button class="filter-btn active bg-primary text-white px-5 py-2 rounded-full font-bold shadow-md" data-filter="all">Semua</button>
-                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="news">Portal Berita</button>
-                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="edu">Pesantren & Sekolah</button>
-                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="org">Organisasi</button>
-                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="corp">Hukum & Corp</button>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-                <!-- Data Klien (Clients) -->
-                <!-- 1. Maraja Group -->
-                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="corp" data-aos="fade-up">
-                    <div class="aspect-video bg-gray-50 dark:bg-slate-800 flex items-center justify-center p-6">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgP6hmVrGBj5Z3-EZrhSOuqlr9mNkvJyXKto9zQIk5fVuYMWSbD731aF4VbvuKrs93VoFSo-cgUTA0R_c7-IbO5IEVVsBUpbaZXpcu_hVBDUCWfX_v3TDLbnGqNtUGFwYLVExNy6J-7EMvxghsfuMSF_0xF56o6t9gsDfd1gadAaHE6vsgVfjobF5JC6lQ/s320/MARAJA_SAMAWA-removebg-preview.png" class="h-20" alt="Maraja Group">
-                    </div>
-                    <div class="p-6 text-center"><h3 class="font-bold">Maraja Group</h3><p class="text-xs text-primary mb-2">Corporate Profile</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SIMRS -->
+                <div class="product-card bg-white dark:bg-cardDark p-8 rounded-[40px] shadow-sm flex flex-col">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 text-3xl"><i class="ph-fill ph-hospital"></i></div>
+                    <h3 class="text-2xl font-heading mb-4">Source Code SIMRS</h3>
+                    <p class="text-[11px] font-bold text-red-500 mb-6 uppercase italic leading-none tracking-widest">Type A, B, & C Ready</p>
+                    <ul class="text-[11px] font-bold opacity-60 space-y-2 mb-8 flex-grow">
+                        <li class="flex justify-between border-b pb-2">SaaS Type B/C<span>Rp2jt - 3jt/bln</span></li>
+                        <li class="flex justify-between border-b pb-2">Lisensi Lifetime<span>Rp25.000.000</span></li>
+                        <li class="flex justify-between border-b pb-2">Non Lisensi<span>Rp15.000.000</span></li>
+                        <li class="text-red-500 font-black">+ Integrasi SATUSEHAT & BPJS</li>
+                    </ul>
+                    <a href="https://wa.me/6282341270087?text=Tanya%20Source%20Code%20SIMRS" class="bg-dark dark:bg-primary text-white text-center py-4 rounded-2xl font-bold transition-all hover:opacity-90">Cek Demo SIMRS</a>
                 </div>
 
-                <!-- 2. Lombok Fokus -->
-                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="news" data-aos="fade-up">
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-6">
-                        <img src="https://lombokfokus.com/wp-content/uploads/2025/07/1000962317.png" class="h-16" alt="Lombok Fokus">
-                    </div>
-                    <div class="p-6 text-center"><h3 class="font-bold">Lombok Fokus</h3><p class="text-[10px] opacity-50 italic">lombokfokus.com</p></div>
+                <!-- Marketplace -->
+                <div class="product-card bg-white dark:bg-cardDark p-8 rounded-[40px] shadow-sm flex flex-col">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6 text-3xl"><i class="ph-fill ph-storefront"></i></div>
+                    <h3 class="text-2xl font-heading mb-4">Marketplace Multi-Vendor</h3>
+                    <p class="text-[11px] font-bold text-orange-500 mb-6 uppercase tracking-widest leading-none">Shopee/Tokopedia Style</p>
+                    <ul class="text-[11px] font-bold opacity-60 space-y-2 mb-8 flex-grow">
+                        <li class="flex justify-between border-b pb-2">SaaS Cloud<span>Rp1.5jt/bln</span></li>
+                        <li class="flex justify-between border-b pb-2">Lifetime Lisensi<span>Rp12.500.000</span></li>
+                        <li class="flex justify-between border-b pb-2">Non Lisensi<span>Rp7.000.000</span></li>
+                    </ul>
+                    <a href="https://wa.me/6282341270087?text=Tanya%20Source%20Code%20Marketplace" class="bg-secondary text-white text-center py-4 rounded-2xl font-bold">Pesan Sekarang</a>
                 </div>
 
-                <!-- 3. IKA PMII (Ecosystem) -->
-                <div class="portfolio-item bg-dark text-white rounded-3xl overflow-hidden shadow-xl" data-category="org" data-aos="fade-up">
-                    <div class="aspect-video bg-blue-700/10 flex flex-col items-center justify-center text-center p-4">
-                        <i class="ph ph-stack text-5xl text-primary mb-2"></i>
-                        <p class="text-[10px] font-bold italic opacity-40">Tambahkan Link Logo IKA PMII</p>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold">IKA PMII NTB Ecosystem</h3>
-                        <p class="text-[9px] leading-tight opacity-70">7 Portal: Alumni, Donasi, Jurnal, Academy, dll.</p>
-                    </div>
-                </div>
-
-                <!-- 4. Criminal Law Study -->
-                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="corp" data-aos="fade-up">
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-6">
-                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhzg-gvQnpMh5HGReNOKTDGa7QetMv9Pl76DDF-70y0iHMoMZ8geyZZjDJCSWPnr3VCE14sGMHBS3p5s5aW6vT9ye7_4mUv9btnzVvSem1QRwcKMD6aq5xwgQpgEdqghcSzThQiuH3IdFjc5H0fxKWs6MSKV0Dve39CZLnvk-06kCVsAJPhjzjft_nSTk=s311" class="h-20" alt="Criminal Law Study">
-                    </div>
-                    <div class="p-6 text-center"><h3 class="font-bold">Criminal Law Study</h3><p class="text-[10px] opacity-50 italic italic">Kajian Hukum Digital</p></div>
-                </div>
-
-                <!-- 5. Ponpes Al Mushannif -->
-                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border border-green-50" data-category="edu" data-aos="fade-up">
-                    <div class="aspect-video bg-green-50/20 flex flex-col items-center justify-center p-4">
-                        <i class="ph ph-mosque text-5xl text-secondary mb-2"></i>
-                        <p class="text-[10px] font-bold italic opacity-40">Tambahkan Link Logo Al-Mushannif</p>
-                    </div>
-                    <div class="p-6 text-center"><h3 class="font-bold">Ponpes Al Mushannif</h3><p class="text-[10px] text-secondary">almushannif.ponpes.id</p></div>
-                </div>
-
-                <!-- 6. PMI Lombok Barat -->
-                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="org" data-aos="fade-up">
-                    <div class="aspect-video bg-red-50/30 flex flex-col items-center justify-center p-4">
-                        <i class="ph ph-first-aid text-5xl text-red-600 mb-2"></i>
-                        <p class="text-[10px] font-bold italic opacity-40">Tambahkan Link Logo PMI LOBAR</p>
-                    </div>
-                    <div class="p-6 text-center"><h3 class="font-bold">PMI Lombok Barat</h3><p class="text-[10px] text-red-600 uppercase font-black">Portal Kemanusiaan & Donor Darah</p></div>
-                </div>
-
-                <!-- Placeholder for others (Grid Fill) -->
-                <div class="portfolio-item bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 border dark:border-gray-800 border-dashed" data-category="news">
-                    <h3 class="text-sm font-bold opacity-60">Sumbawa Post, Detik NTB, Koran NTB...</h3>
-                    <p class="text-[10px] mt-2 opacity-50 italic">Digital Branding & Management Berita Regional NTB.</p>
+                <!-- ERP Multi-Tenant -->
+                <div class="product-card bg-white dark:bg-cardDark p-8 rounded-[40px] shadow-sm flex flex-col">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-3xl"><i class="ph-fill ph-hard-drives"></i></div>
+                    <h3 class="text-2xl font-heading mb-4">ERP & Inventory System</h3>
+                    <p class="text-[11px] font-bold text-blue-500 mb-6 uppercase leading-none tracking-widest">Multi-Tenant / Multi-Branch</p>
+                    <ul class="text-[11px] font-bold opacity-60 space-y-2 mb-8 flex-grow">
+                        <li class="flex justify-between border-b pb-2">Lisensi Lifetime<span>Rp12.000.000</span></li>
+                        <li class="flex justify-between border-b pb-2">Non Lisensi<span>Rp8.000.000</span></li>
+                        <li class="flex justify-between border-b pb-2">ERP Add-ons<span>Rp2.5jt/modul</span></li>
+                    </ul>
+                    <a href="https://wa.me/6282341270087?text=Tanya%20ERP%20System" class="bg-primary text-white text-center py-4 rounded-2xl font-bold">Detail ERP</a>
                 </div>
             </div>
         </section>
 
-        <!-- SEKSI BAWAH: PARTNER STRATEGIS -->
-        <section class="mt-40 max-w-7xl mx-auto px-4 py-20 bg-gray-50/50 dark:bg-slate-900/20 rounded-[50px]">
-            <div class="text-center mb-16">
-                <span class="px-4 py-1.5 bg-secondary text-white text-[10px] font-bold rounded-full mb-4 inline-block">MITRA STRATEGIS KAMI</span>
-                <h2 class="text-3xl md:text-5xl font-heading mb-4">Kemitraan & <span class="text-secondary">Partner Sinergi</span></h2>
-                <p class="max-w-2xl mx-auto text-dark/60 dark:text-gray-400 text-sm italic leading-relaxed">Keberlanjutan kami tak lepas dari dukungan institusi, lembaga keagamaan, dan partner teknologi tepercaya berikut.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-12">
-                <!-- Partner Cards -->
-                <!-- Bank NTB Syariah -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-bank text-3xl text-secondary mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">Bank NTB Syariah</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
+        <!-- KATEGORI 2: CORE PILLARS PENDIDIKAN & AKREDITASI -->
+        <section class="bg-primary/5 dark:bg-slate-900/30 py-24">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex items-center gap-4 mb-10" data-aos="fade-right">
+                    <div class="h-px bg-primary/20 flex-grow"></div>
+                    <h2 class="font-heading text-2xl uppercase text-primary dark:text-blue-400">Pilar EduTech & Digitalisasi</h2>
+                    <div class="h-px bg-primary/20 flex-grow"></div>
                 </div>
 
-                <!-- Nahdlatul Ulama -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-globe-hemisphere-east text-3xl text-green-700 mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">PW Nahdlatul Ulama NTB</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Website Boarding School -->
+                    <div class="product-card bg-white dark:bg-cardDark p-6 rounded-3xl flex flex-col">
+                        <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center text-xl mb-4"><i class="ph ph-graduation-cap"></i></div>
+                        <h4 class="font-heading mb-2 leading-tight">Web Pesantren & Boarding</h4>
+                        <p class="text-[10px] opacity-60 mb-6">Mulai Rp2.5 Juta (Lifetime Lisensi Up to 15jt)</p>
+                        <ul class="text-[10px] space-y-2 opacity-80 italic flex-grow mb-6">
+                            <li>• Domain .sch.id / .ponpes.id</li>
+                            <li>• Digitalisasi Tabungan Santri</li>
+                            <li>• Manajemen Raport Online</li>
+                        </ul>
+                        <a href="https://wa.me/6282341270087?text=Web%20Sekolah" class="py-2 text-center text-secondary font-black text-[11px] border-b border-secondary">ORDER VIA WA</a>
+                    </div>
 
-                <!-- NW -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-star text-3xl text-green-600 mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">Nahdlatul Wathan</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
-                </div>
+                    <!-- SOP Governance -->
+                    <div class="product-card bg-white dark:bg-cardDark p-6 rounded-3xl flex flex-col">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-xl mb-4"><i class="ph ph-shield-check"></i></div>
+                        <h4 class="font-heading mb-2 leading-tight">SOP & Tata Kelola Lembaga</h4>
+                        <p class="text-[10px] opacity-60 mb-6">Paket Penanganan Kekerasan (TPK), Pengasuhan Santri.</p>
+                        <ul class="text-[10px] space-y-2 opacity-80 italic flex-grow mb-6">
+                            <li>• Dokumen Digital & Fisik</li>
+                            <li>• Penanganan Bullying</li>
+                            <li>• Standard Operasional</li>
+                        </ul>
+                        <a href="https://wa.me/6282341270087" class="py-2 text-center text-primary font-black text-[11px] border-b border-primary uppercase">Minta Detail Paket</a>
+                    </div>
 
-                <!-- NWDI -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-shield-star text-3xl text-green-800 mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">NWDI</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
-                </div>
+                    <!-- OJS Jurnal -->
+                    <div class="product-card bg-white dark:bg-cardDark p-6 rounded-3xl flex flex-col">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-700 rounded-lg flex items-center justify-center text-xl mb-4"><i class="ph ph-books"></i></div>
+                        <h4 class="font-heading mb-2 leading-tight">Open Journal Systems (OJS)</h4>
+                        <p class="text-[10px] opacity-60 mb-6">Pembuatan Jurnal Ilmiah (Rp700rb/tahun)</p>
+                        <ul class="text-[10px] space-y-2 opacity-80 italic flex-grow mb-6">
+                            <li>• Setup Versi 3.5 Terbaru</li>
+                            <li>• Indeksasi Scholar / Garuda</li>
+                            <li>• Manajemen ISSN & Hosting</li>
+                        </ul>
+                        <a href="https://wa.me/6282341270087" class="py-2 text-center text-orange-600 font-black text-[11px] border-b border-orange-600">PESAN OJS</a>
+                    </div>
 
-                <!-- GP ANSOR -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-flag-pennant text-3xl text-green-700 mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">GP ANSOR NTB</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
-                </div>
-
-                <!-- CEIS -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-lightbulb text-3xl text-primary mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">CEIS</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
-                </div>
-
-                <!-- Endris Foundation -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-hand-heart text-3xl text-pink-600 mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">Endris Foundation</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
-                </div>
-
-                <!-- Kasta NTB -->
-                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
-                    <i class="ph-fill ph-users text-3xl text-dark dark:text-white mb-2"></i>
-                    <h4 class="text-[10px] font-bold leading-tight">KASTA NTB</h4>
-                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
+                    <!-- Akreditasi Digital -->
+                    <div class="product-card bg-white dark:bg-cardDark p-6 rounded-3xl flex flex-col">
+                        <div class="w-10 h-10 bg-pink-100 text-pink-700 rounded-lg flex items-center justify-center text-xl mb-4"><i class="ph ph-certificate"></i></div>
+                        <h4 class="font-heading mb-2 leading-tight">Pendampingan Akreditasi</h4>
+                        <p class="text-[10px] opacity-60 mb-6">Akreditasi Madrasah, Sekolah, dan Pondok.</p>
+                        <ul class="text-[10px] space-y-2 opacity-80 italic flex-grow mb-6">
+                            <li>• Penataan Digital Cloud</li>
+                            <li>• Digitalisasi Arsip Berkas</li>
+                            <li>• Bimbingan Wawancara</li>
+                        </ul>
+                        <a href="https://wa.me/6282341270087" class="py-2 text-center text-pink-700 font-black text-[11px] border-b border-pink-700">DAMPINGI KAMI</a>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- KATEGORI 3: STARTUP SOLUTIONS & SPECIAL APPS -->
+        <section class="max-w-7xl mx-auto px-4 py-24">
+             <div class="text-center mb-16" data-aos="zoom-in">
+                <h2 class="text-3xl md:text-5xl font-heading mb-4">Aplikasi & <span class="text-primary">Startup Khusus</span></h2>
+                <p class="opacity-60 text-sm max-w-xl mx-auto italic">Aplikasi berbasis mobile Android/iOS dengan teknologi Flutter & Laravel untuk bisnis masa kini.</p>
+             </div>
+
+             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Ojek Online -->
+                <div class="product-card bg-white dark:bg-cardDark p-8 rounded-[40px] flex flex-col items-center text-center">
+                    <i class="ph-fill ph-moped text-4xl text-secondary mb-4"></i>
+                    <h4 class="font-heading mb-2">App Ojek Online</h4>
+                    <p class="text-[10px] opacity-60 flex-grow mb-6">Lengkap Driver & Penumpang Android App</p>
+                    <b class="text-primary block mb-6">Rp12.500.000 - 20jt</b>
+                    <a href="https://wa.me/6282341270087" class="w-full py-3 border border-secondary rounded-xl text-secondary text-xs font-bold">Ambil Source Code</a>
+                </div>
+
+                <!-- Manajemen Kos IoT -->
+                <div class="product-card bg-white dark:bg-cardDark p-8 rounded-[40px] flex flex-col items-center text-center">
+                    <i class="ph-fill ph-house-line text-4xl text-orange-500 mb-4"></i>
+                    <h4 class="font-heading mb-2">Aplikasi Kos IoT</h4>
+                    <p class="text-[10px] opacity-60 flex-grow mb-6">Gaya Mamikos + Sistem IoT Kunci Kamar</p>
+                    <b class="text-primary block mb-6">Rp14.000.000 - 20jt</b>
+                    <a href="https://wa.me/6282341270087" class="w-full py-3 border border-orange-500 rounded-xl text-orange-500 text-xs font-bold">Detail App Kos</a>
+                </div>
+
+                <!-- Crowdfunding Fintech -->
+                <div class="product-card bg-white dark:bg-cardDark p-8 rounded-[40px] flex flex-col items-center text-center">
+                    <i class="ph-fill ph-currency-circle-dollar text-4xl text-primary mb-4"></i>
+                    <h4 class="font-heading mb-2">Crowdfunding Fintech</h4>
+                    <p class="text-[10px] opacity-60 flex-grow mb-6">Sistem Donasi & Pendanaan Modal Online</p>
+                    <b class="text-primary block mb-6">Rp12.500.000 - 25jt</b>
+                    <a href="https://wa.me/6282341270087" class="w-full py-3 border border-primary rounded-xl text-primary text-xs font-bold">Investasi App</a>
+                </div>
+
+                <!-- Manajemen Ternak Ayam -->
+                <div class="product-card bg-white dark:bg-cardDark p-8 rounded-[40px] flex flex-col items-center text-center">
+                    <i class="ph-fill ph-bird text-4xl text-red-500 mb-4"></i>
+                    <h4 class="font-heading mb-2">Manajemen Peternakan</h4>
+                    <p class="text-[10px] opacity-60 flex-grow mb-6">Smart Chicken Monitoring Mobile Apps</p>
+                    <b class="text-primary block mb-6">Mulai Rp12.500.000</b>
+                    <a href="https://wa.me/6282341270087" class="w-full py-3 border border-red-500 rounded-xl text-red-500 text-xs font-bold">Info Produk</a>
+                </div>
+             </div>
+        </section>
+
+        <!-- KATEGORI 4: DIGITAL PRODUCT LIST (SaaS / Micro-Apps) -->
+        <section class="py-10 bg-dark text-white overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <h3 class="font-heading text-xl md:text-3xl text-center mb-10 text-secondary">Aplikasi Instan & <span class="text-white">Bisnis Spesifik</span></h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 max-h-[500px] overflow-y-auto pr-6 custom-scrollbar">
+                    
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">Hotel MGMT System</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Reservasi & Front Desk</p></div>
+                        <span class="text-secondary font-black">Rp700.000</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">LMS & CBT (Udemy Clone)</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Sistem Ujian Online</p></div>
+                        <span class="text-secondary font-black">Rp700.000</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">PPOB Multi Tenant</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Biller Pulsa, PLN & Tagihan</p></div>
+                        <span class="text-secondary font-black">Mulai Rp250rb/bln</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">Toko Online PWA</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Siap Install di Android/Desktop</p></div>
+                        <span class="text-secondary font-black">Rp300.000</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">Travel & Bus Booking</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Sistem Kursi & Trayek</p></div>
+                        <span class="text-secondary font-black">Rp5.000.000</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">Vehicle Maintenance (VMS)</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Tracking Service Kendaraan</p></div>
+                        <span class="text-secondary font-black">Rp8.000.000</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">Logistik & Cargo System</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Track Paket & Gudang</p></div>
+                        <span class="text-secondary font-black">Rp5.000.000</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">Web Donasi (Filantropi)</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Inc Payment Gateway QRIS</p></div>
+                        <span class="text-secondary font-black">Rp900.000</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-white/10 pb-4">
+                        <div><p class="font-bold">Salon & Barbershop App</p><p class="text-[8px] opacity-50 uppercase tracking-tighter leading-none">Booking Online & CRM</p></div>
+                        <span class="text-secondary font-black">Rp750.000</span>
+                    </div>
+
+                </div>
+                <p class="text-center text-[10px] mt-8 opacity-40 font-bold uppercase tracking-widest italic animate-pulse">Eksplor Ribuan Produk Kami Dengan Menghubungi Admin...</p>
+            </div>
+            <div class="absolute -right-20 bottom-0 opacity-10"><i class="ph-fill ph-archive text-[20rem]"></i></div>
+        </section>
+
+        <!-- KATEGORI 5: LAYANAN SEO & WEB AUTHORITY -->
+        <section class="max-w-7xl mx-auto px-4 py-24">
+             <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <span class="bg-blue-600 text-white px-4 py-1 rounded text-xs font-bold mb-4 inline-block">WEB OTORITAS EXPERT</span>
+                    <h2 class="text-4xl md:text-5xl font-heading mb-6 leading-tight">Optimasi & <br><span class="text-primary">Search Engine Power</span></h2>
+                    <p class="text-dark/60 dark:text-gray-400 mb-8 italic">Gunakan Jasa SEO dan Backlink kami untuk menaikkan otoritas domain lembaga/media Anda di mata Google.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 bg-gray-50 dark:bg-cardDark rounded-3xl border dark:border-gray-800">
+                            <h4 class="font-bold text-xs uppercase mb-2 opacity-50">DA 40+ Increase</h4>
+                            <p class="font-black text-2xl text-primary">Rp600rb</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 dark:bg-cardDark rounded-3xl border dark:border-gray-800">
+                            <h4 class="font-bold text-xs uppercase mb-2 opacity-50">Backlink Advanced</h4>
+                            <p class="font-black text-2xl text-secondary">Rp475rb</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4" data-aos="fade-left">
+                     <!-- WordPress Themes Section -->
+                     <div class="col-span-2 p-8 bg-gradient-to-br from-primary to-primaryDark rounded-[40px] text-white">
+                        <h4 class="text-xl font-heading mb-4">WordPress Theme Premium</h4>
+                        <div class="flex flex-col gap-3 text-sm font-bold opacity-90">
+                            <div class="flex justify-between"><span>Superfast Premium</span><b>Rp130.000</b></div>
+                            <div class="flex justify-between border-t border-white/20 pt-2"><span>WPBerita Optimized</span><b>Rp150.000</b></div>
+                            <div class="flex justify-between border-t border-white/20 pt-2"><span>WPMedia Special</span><b>Rp230.000</b></div>
+                        </div>
+                     </div>
+                </div>
+             </div>
+        </section>
+
     </main>
 
-    <footer class="py-12 border-t dark:border-gray-800 text-center">
-        <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" class="h-10 mx-auto mb-6 grayscale opacity-40">
-        <p class="text-[10px] font-medium opacity-50">&copy; 2026 EduTech Nusantara Digital - Digital Services specialist for Indonesia</p>
+    <!-- CTSection Final -->
+    <section class="max-w-4xl mx-auto px-4 py-10 mb-20 text-center">
+        <div class="bg-primary p-12 md:p-24 rounded-[60px] text-white shadow-2xl relative overflow-hidden" data-aos="zoom-out">
+            <h3 class="text-3xl md:text-5xl font-heading mb-6 relative z-10">Beri Tahu Kebutuhan <span class="text-dark">Sistem Anda!</span></h3>
+            <p class="text-lg opacity-80 mb-10 relative z-10">Konsultasi gratis untuk rancangan sistem kustom ataupun upgrade digitalisasi.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 relative z-10">
+                <a href="https://wa.me/6282341270087" target="_blank" class="px-8 py-4 bg-secondary text-white font-bold rounded-full shadow-lg shadow-black/20 transition-transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i class="ph ph-whatsapp-logo text-xl"></i> Konsultasi Admin
+                </a>
+                <a href="/login.html" class="px-8 py-4 bg-dark text-white font-bold rounded-full shadow-lg shadow-black/20 transition-transform hover:scale-105">Login Portal Client</a>
+            </div>
+            <!-- Decorative circle -->
+            <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t dark:border-gray-800 text-center flex flex-col items-center">
+        <img class="h-10 opacity-30 mb-6 grayscale" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Footer">
+        <p class="text-[9px] uppercase font-black opacity-30 tracking-[.5em] leading-loose">
+            Empowering the Digital Nusantara &copy; 2026<br>
+            Official Website for Digital Services, Software Assets, & Web SEO
+        </p>
     </footer>
 
+    <!-- WhatsApp Floating Floating -->
+    <a href="https://wa.me/6282341270087" target="_blank" class="fixed bottom-6 right-6 z-[65] group">
+        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 hover:-translate-y-2 relative">
+             <i class="ph ph-whatsapp-logo text-3xl"></i>
+             <div class="absolute -inset-2 bg-green-500 rounded-full animate-ping opacity-20"></div>
+        </div>
+    </a>
+
+    <!-- Initial AOS and Nav Trigger -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const themeBtn = document.getElementById('theme-btn'), htmlTag = document.documentElement;
+            const menuBtn = document.getElementById('menu-btn');
+            const menuOverlay = document.getElementById('menu-overlay');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            // Toggle Theme
             themeBtn.addEventListener('click', () => {
-                htmlTag.classList.toggle('dark');
-                document.getElementById('theme-icon').className = htmlTag.classList.contains('dark') ? 'ph ph-sun text-2xl' : 'ph ph-moon text-2xl';
+                document.documentElement.classList.toggle('dark');
+                document.getElementById('theme-icon').className = document.documentElement.classList.contains('dark') ? 'ph ph-sun text-2xl' : 'ph ph-moon text-2xl';
             });
 
-            const filterBtns = document.querySelectorAll('.filter-btn'), portfolioItems = document.querySelectorAll('.portfolio-item');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('bg-white', 'dark:bg-cardDark'); });
-                    btn.classList.add('bg-primary', 'text-white'); btn.classList.remove('bg-white', 'dark:bg-cardDark');
-                    
-                    const filter = btn.getAttribute('data-filter');
-                    portfolioItems.forEach(item => {
-                        (filter === 'all' || item.getAttribute('data-category') === filter) ? item.classList.remove('portfolio-hidden') : item.classList.add('portfolio-hidden');
-                    });
-                });
-            });
-
-            const menuBtn = document.getElementById('menu-btn'), menuOverlay = document.getElementById('menu-overlay');
+            // Toggle Mobile Menu
             menuBtn.addEventListener('click', () => {
                 menuOverlay.classList.toggle('menu-open');
                 document.getElementById('menu-icon').className = menuOverlay.classList.contains('menu-open') ? 'ph ph-x text-3xl' : 'ph ph-list text-3xl';
+                document.body.style.overflow = menuOverlay.classList.contains('menu-open') ? 'hidden' : 'auto';
             });
 
-            setTimeout(() => { AOS.init({ duration: 800, once: true }); }, 500);
+            // Init AOS
+            setTimeout(() => { AOS.init({ duration: 800, once: true }); }, 600);
         });
     </script>
 </body>
