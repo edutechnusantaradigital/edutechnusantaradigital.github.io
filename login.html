@@ -2,17 +2,44 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Redirect...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengalihkan ke Portal CRM - Edutech Nusantara Digital</title>
+    
+    <!-- Meta refresh untuk pengalihan otomatis jika JavaScript mati -->
+    <meta http-equiv="refresh" content="2; url=https://edutechnusantaradigital.com/CRM/">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen">
+
+    <div class="text-center px-4">
+        <!-- Logo Brand -->
+        <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" 
+             alt="Logo Edutech" 
+             class="w-20 h-20 mx-auto mb-6 animate-pulse">
+
+        <h1 class="text-xl font-bold text-slate-800 mb-2">Mengalihkan ke Portal CRM</h1>
+        <p class="text-slate-500 text-sm mb-6">Harap tunggu sebentar, Anda akan diarahkan secara otomatis...</p>
+
+        <!-- Loading Spinner -->
+        <div class="flex justify-center mb-8">
+            <div class="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+
+        <p class="text-xs text-slate-400 italic">
+            Jika halaman tidak berpindah, 
+            <a href="https://edutechnusantaradigital.com/CRM/" class="text-blue-600 font-bold underline">klik di sini</a>.
+        </p>
+    </div>
 
     <script>
-        window.location.replace("/crm/");
+        // Pengalihan menggunakan JavaScript (Lebih cepat dan membersihkan history back-button)
+        setTimeout(function() {
+            window.location.replace("https://edutechnusantaradigital.com/CRM/");
+        }, 1500);
     </script>
-
-    <noscript>
-        <meta http-equiv="refresh" content="0; url=/crm/">
-    </noscript>
-</head>
-<body>
-    Mengalihkan ke CRM...
 </body>
 </html>
