@@ -5,773 +5,247 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Layanan - Edutech Nusantara Digital</title>
-    <meta name="description" content="Layanan terpadu pembuatan website pendidikan, penyusunan SOP pesantren, sistem informasi PPDB, digital branding, dan pendampingan akreditasi.">
-    <meta name="keywords" content="layanan edutech nusantara, harga website pesantren, paket website sekolah, SOP sekolah, sistem PPDB online, akreditasi digital, branding lembaga pendidikan">
-    <meta name="author" content="Edutech Nusantara Digital">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://edutechnusantaradigital.github.io/layanan.html">
-
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://edutechnusantaradigital.github.io/layanan.html">
-    <meta property="og:title" content="Layanan & Paket Digitalisasi - Edutech Nusantara">
-    <meta property="og:description" content="Solusi lengkap digitalisasi institusi: Website, SOP, Sistem Informasi & Akreditasi.">
-    <meta property="og:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Layanan & Paket Digitalisasi - Edutech Nusantara">
-    <meta property="twitter:description" content="Solusi lengkap digitalisasi institusi pendidikan.">
-    <meta property="twitter:image" content="https://edutechnusantaradigital.github.io/assets/images/logo.png">
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Educational Digitalization Consulting",
-      "provider": {
-        "@type": "Organization",
-        "name": "Edutech Nusantara Digital"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Indonesia"
-      }
-    }
-    </script>
-
-    <!-- Favicon & Preload -->
+    <title>Portofolio - Edutech Nusantara Digital</title>
+    <meta name="description" content="Eksplorasi proyek digital Edutech Nusantara Digital. Menampilkan klien portal berita, pendidikan, hukum, dan mitra strategis kami di seluruh Indonesia.">
     <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
-    <link rel="preload" as="image" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts & UI Frameworks -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
-
-    <!-- Icons & Animation -->
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class', 
             theme: {
                 extend: {
-                    colors: { primary: '#067cc2', secondary: '#3f8e25', dark: '#000000', light: '#ffffff', primaryDark: '#045281', secondaryDark: '#285b17', bgDark: '#0f172a', cardDark: '#1e293b' },
-                    fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Montserrat', 'sans-serif'], }
+                    colors: { primary: '#067cc2', secondary: '#3f8e25', dark: '#0f172a', bgDark: '#020617', cardDark: '#1e293b' },
+                    fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Montserrat', 'sans-serif'] }
                 }
             }
         }
     </script>
 
     <style>
-        body { font-family: 'Montserrat', sans-serif; font-weight: 600; transition: background-color 0.3s ease, color 0.3s ease; }
-        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; font-weight: 900; }
-        p, span, li { font-weight: 500; }
-        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .dark .glass-nav { background: rgba(15, 23, 42, 0.85); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .menu-open-header { background: transparent !important; backdrop-filter: none !important; border-bottom: transparent !important; }
-        #menu-overlay { transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s; }
+        body { font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3, .font-heading { font-family: 'Poppins', sans-serif; font-weight: 900; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .dark .glass-nav { background: rgba(2, 6, 23, 0.9); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .portfolio-hidden { display: none !important; }
         .menu-open { opacity: 1 !important; visibility: visible !important; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
-        .floating-element { animation: float 4s ease-in-out infinite; }
-        #preloader { transition: opacity 0.5s ease, visibility 0.5s ease; }
-        .preloader-hidden { opacity: 0; visibility: hidden; }
-        .accordion-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease-out, padding 0.4s ease-out; }
-        .accordion-content > div { overflow: hidden; }
-        .accordion-item.active .accordion-content { grid-template-rows: 1fr; padding-bottom: 1.5rem; padding-top: 0.5rem; }
-        .accordion-item.active .accordion-icon { transform: rotate(180deg); color: #067cc2; }
-        .dark .accordion-item.active .accordion-icon { color: #60a5fa; }
-        .lang-en { display: none; }
-        .lang-active-en .lang-id { display: none; }
-        .lang-active-en .lang-en { display: inline-block; }
-        .lang-active-en p.lang-en, .lang-active-en div.lang-en, .lang-active-en h1.lang-en, .lang-active-en h2.lang-en, .lang-active-en li.lang-en, .lang-active-en h3.lang-en, .lang-active-en span.lang-en { display: inline; }
-        .lang-active-en span.lang-en { display: inline; }
+        .partner-card { grayscale: 100%; opacity: 0.6; transition: all 0.3s ease; }
+        .partner-card:hover { grayscale: 0%; opacity: 1; transform: scale(1.05); }
     </style>
 </head>
 <body class="antialiased text-dark bg-light dark:bg-bgDark dark:text-gray-100 overflow-x-hidden">
 
-    <div id="preloader" class="fixed inset-0 bg-[#ffffff] dark:bg-bgDark z-[9999] flex items-center justify-center">
-        <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" onerror="this.src='https://ui-avatars.com/api/?name=EN&background=067cc2&color=fff&rounded=true'" alt="Loading..." class="w-24 h-24 animate-pulse">
-    </div>
-
-    <header id="main-header" class="fixed top-0 left-0 w-full z-[60] glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="/" class="flex-shrink-0 flex items-center gap-3 group" data-aos="fade-right">
-                    <img class="h-10 w-auto transition-transform group-hover:scale-110 duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara Digital">
-                    <span class="font-heading text-lg md:text-xl tracking-tight transition-colors">
-                        <span class="text-primary dark:text-white">Edutech</span>
-                        <span class="hidden sm:inline text-secondary dark:text-white">Nusantara</span>
-                        <span class="hidden lg:inline text-dark dark:text-white">Digital</span>
-                    </span>
-                </a>
-                <div class="flex items-center gap-2 md:gap-5" data-aos="fade-left">
-                    <a href="/login.html" id="login-btn" class="hidden sm:inline-flex items-center px-4 py-2 bg-white dark:bg-transparent text-dark dark:text-white border border-transparent rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium">
-                        <span class="lang-id">Masuk</span><span class="lang-en">Login</span>
-                    </a>
-                    <button id="lang-btn" aria-label="Ubah Bahasa" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm">ID</button>
-                    <button id="theme-btn" aria-label="Ubah Tema" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-dark dark:text-white"><i id="theme-icon" class="ph ph-moon text-xl"></i></button>
-                    <button id="menu-btn" aria-label="Menu Navigasi" class="w-10 h-10 flex items-center justify-center text-dark dark:text-white hover:text-primary dark:hover:text-primary transition-colors"><i id="menu-icon" class="ph ph-list text-2xl"></i></button>
-                </div>
+    <!-- Header Navigation -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-[60] glass-nav transition-all h-20">
+        <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3">
+                <img class="h-10" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo">
+                <span class="font-heading text-lg"><span class="text-primary">EduTech</span> <span class="text-secondary">Digital</span></span>
+            </a>
+            <div class="flex items-center gap-4">
+                <button id="theme-btn" class="p-2"><i id="theme-icon" class="ph ph-moon text-2xl"></i></button>
+                <button id="menu-btn" class="p-2"><i id="menu-icon" class="ph ph-list text-3xl"></i></button>
             </div>
         </div>
     </header>
 
-    <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center">
-        <nav class="flex flex-col text-center gap-8">
-            <a href="/" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a>
-            <a href="/tentang" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Tentang</span><span class="lang-en">About</span></a>
-            <a href="/layanan" class="menu-link font-heading text-4xl md:text-5xl text-secondary dark:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Layanan</span><span class="lang-en">Services</span></a>
-            <a href="/portofolio" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Portofolio</span><span class="lang-en">Portfolio</span></a>
-            <a href="/kontak" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a>
-            <a href="/login.html" class="menu-link font-heading text-4xl md:text-5xl text-white hover:text-secondary dark:hover:text-primary transition-all hover:scale-110 hover:-translate-y-1"><span class="lang-id">Masuk</span><span class="lang-en">Login</span></a>
-        </nav>
+    <!-- Overlay Menu -->
+    <div id="menu-overlay" class="fixed inset-0 bg-primary/95 dark:bg-bgDark/95 backdrop-blur-md z-[50] opacity-0 invisible flex flex-col items-center justify-center text-center gap-8 transition-all">
+        <a href="/" class="font-heading text-4xl text-white">Beranda</a>
+        <a href="/layanan" class="font-heading text-4xl text-white">Layanan</a>
+        <a href="/portofolio" class="font-heading text-4xl text-secondary">Portofolio</a>
+        <a href="/kontak" class="font-heading text-4xl text-white">Kontak</a>
     </div>
 
-    <main class="pt-28 pb-20 overflow-hidden min-h-screen flex flex-col">
-        <!-- 1. HERO SECTION -->
-        <section class="relative py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in" data-aos="fade-up">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-64 bg-primary/10 dark:bg-primaryDark/20 rounded-full blur-3xl -z-10"></div>
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 dark:bg-primaryDark/30 text-primary dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
-                <i class="ph ph-sparkle"></i> <span class="lang-id">Software House Premium</span><span class="lang-en">Premium Software House</span>
+    <main class="pt-32 pb-20">
+        <!-- SEKSI ATAS: PORTOFOLIO KLIEN -->
+        <section class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-6xl font-heading mb-4">Proyek & <span class="text-primary">Klien Kami</span></h1>
+                <p class="text-dark/60 dark:text-gray-400 max-w-xl mx-auto italic text-sm">Berikut adalah bukti nyata dedikasi kami dalam membantu digitalisasi perusahaan dan institusi di seluruh Nusantara.</p>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                <span class="lang-id">Solusi Digital <span class="text-primary dark:text-blue-400">Terintegrasi & Terlengkap</span></span>
-                <span class="lang-en">Most Complete <span class="text-primary dark:text-blue-400">Integrated Digital Solutions</span></span>
-            </h1>
-            <p class="text-dark/75 dark:text-gray-300 text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
-                <span class="lang-id">Akselerasikan instansi, bisnis, dan institusi pendidikan Anda bersama EduTech Nusantara Digital melalui 15 pilar layanan premium berstandar industri modern.</span>
-                <span class="lang-en">Accelerate your school, business, and educational institution with EduTech Nusantara Digital through our 15 premium industry-standard service pillars.</span>
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#daftar-layanan" class="px-6 py-3 bg-primary text-white font-bold rounded-xl text-sm hover:opacity-95 transition-all shadow-md"><span class="lang-id">Jelajahi Layanan</span><span class="lang-en">Explore Services</span></a>
-                <a href="/login.html" class="px-6 py-3 bg-secondary text-white font-bold rounded-xl text-sm hover:opacity-95 transition-all shadow-md"><span class="lang-id">Konsultasi Gratis</span><span class="lang-en">Free Consultation</span></a>
+
+            <!-- Filter -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button class="filter-btn active bg-primary text-white px-5 py-2 rounded-full font-bold shadow-md" data-filter="all">Semua</button>
+                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="news">Portal Berita</button>
+                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="edu">Pesantren & Sekolah</button>
+                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="org">Organisasi</button>
+                <button class="filter-btn bg-white dark:bg-cardDark text-xs md:text-sm px-5 py-2 rounded-full border dark:border-gray-800" data-filter="corp">Hukum & Corp</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Data Klien (Clients) -->
+                <!-- 1. Maraja Group -->
+                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="corp" data-aos="fade-up">
+                    <div class="aspect-video bg-gray-50 dark:bg-slate-800 flex items-center justify-center p-6">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgP6hmVrGBj5Z3-EZrhSOuqlr9mNkvJyXKto9zQIk5fVuYMWSbD731aF4VbvuKrs93VoFSo-cgUTA0R_c7-IbO5IEVVsBUpbaZXpcu_hVBDUCWfX_v3TDLbnGqNtUGFwYLVExNy6J-7EMvxghsfuMSF_0xF56o6t9gsDfd1gadAaHE6vsgVfjobF5JC6lQ/s320/MARAJA_SAMAWA-removebg-preview.png" class="h-20" alt="Maraja Group">
+                    </div>
+                    <div class="p-6 text-center"><h3 class="font-bold">Maraja Group</h3><p class="text-xs text-primary mb-2">Corporate Profile</p></div>
+                </div>
+
+                <!-- 2. Lombok Fokus -->
+                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="news" data-aos="fade-up">
+                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-6">
+                        <img src="https://lombokfokus.com/wp-content/uploads/2025/07/1000962317.png" class="h-16" alt="Lombok Fokus">
+                    </div>
+                    <div class="p-6 text-center"><h3 class="font-bold">Lombok Fokus</h3><p class="text-[10px] opacity-50 italic">lombokfokus.com</p></div>
+                </div>
+
+                <!-- 3. IKA PMII (Ecosystem) -->
+                <div class="portfolio-item bg-dark text-white rounded-3xl overflow-hidden shadow-xl" data-category="org" data-aos="fade-up">
+                    <div class="aspect-video bg-blue-700/10 flex flex-col items-center justify-center text-center p-4">
+                        <i class="ph ph-stack text-5xl text-primary mb-2"></i>
+                        <p class="text-[10px] font-bold italic opacity-40">Tambahkan Link Logo IKA PMII</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold">IKA PMII NTB Ecosystem</h3>
+                        <p class="text-[9px] leading-tight opacity-70">7 Portal: Alumni, Donasi, Jurnal, Academy, dll.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Criminal Law Study -->
+                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="corp" data-aos="fade-up">
+                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-6">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhzg-gvQnpMh5HGReNOKTDGa7QetMv9Pl76DDF-70y0iHMoMZ8geyZZjDJCSWPnr3VCE14sGMHBS3p5s5aW6vT9ye7_4mUv9btnzVvSem1QRwcKMD6aq5xwgQpgEdqghcSzThQiuH3IdFjc5H0fxKWs6MSKV0Dve39CZLnvk-06kCVsAJPhjzjft_nSTk=s311" class="h-20" alt="Criminal Law Study">
+                    </div>
+                    <div class="p-6 text-center"><h3 class="font-bold">Criminal Law Study</h3><p class="text-[10px] opacity-50 italic italic">Kajian Hukum Digital</p></div>
+                </div>
+
+                <!-- 5. Ponpes Al Mushannif -->
+                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border border-green-50" data-category="edu" data-aos="fade-up">
+                    <div class="aspect-video bg-green-50/20 flex flex-col items-center justify-center p-4">
+                        <i class="ph ph-mosque text-5xl text-secondary mb-2"></i>
+                        <p class="text-[10px] font-bold italic opacity-40">Tambahkan Link Logo Al-Mushannif</p>
+                    </div>
+                    <div class="p-6 text-center"><h3 class="font-bold">Ponpes Al Mushannif</h3><p class="text-[10px] text-secondary">almushannif.ponpes.id</p></div>
+                </div>
+
+                <!-- 6. PMI Lombok Barat -->
+                <div class="portfolio-item bg-white dark:bg-cardDark rounded-3xl overflow-hidden border dark:border-gray-800" data-category="org" data-aos="fade-up">
+                    <div class="aspect-video bg-red-50/30 flex flex-col items-center justify-center p-4">
+                        <i class="ph ph-first-aid text-5xl text-red-600 mb-2"></i>
+                        <p class="text-[10px] font-bold italic opacity-40">Tambahkan Link Logo PMI LOBAR</p>
+                    </div>
+                    <div class="p-6 text-center"><h3 class="font-bold">PMI Lombok Barat</h3><p class="text-[10px] text-red-600 uppercase font-black">Portal Kemanusiaan & Donor Darah</p></div>
+                </div>
+
+                <!-- Placeholder for others (Grid Fill) -->
+                <div class="portfolio-item bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 border dark:border-gray-800 border-dashed" data-category="news">
+                    <h3 class="text-sm font-bold opacity-60">Sumbawa Post, Detik NTB, Koran NTB...</h3>
+                    <p class="text-[10px] mt-2 opacity-50 italic">Digital Branding & Management Berita Regional NTB.</p>
+                </div>
             </div>
         </section>
 
-        <!-- CONTAINER FOR ALL 15 SERVICES -->
-        <div id="daftar-layanan" class="space-y-24 mt-12">
-            <!-- 2. WEBSITE & DIGITAL PUBLISHING -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-globe text-xl"></i></span>
-                        <span>01. <span class="lang-id">Website & Digital Publishing</span><span class="lang-en">Website & Digital Publishing</span></span>
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Card 1 -->
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between group h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp2.5 Juta</span><span class="lang-en">Starts from Rp2.5M</span></span>
-                                <span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Company Profile & Landing Page</span><span class="lang-en">Company Profile & Landing Page</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Representasi digital instansi, yayasan, UMKM, dan landing page konversi penjualan tinggi.</span><span class="lang-en">Digital representation for institutions, foundations, SMBs, and high-conversion landing pages.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Paket</span><span class="lang-en">Order Package</span></a>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between group h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp3.5 Juta</span><span class="lang-en">Starts from Rp3.5M</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Website Sekolah & Pesantren</span><span class="lang-en">School & Boarding School Web</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Portal modern dengan integrasi direktori guru, kurikulum, galeri, agenda, & info PPDB.</span><span class="lang-en">Modern portal with teacher directories, curriculum, galleries, agenda, & PPDB info.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Paket</span><span class="lang-en">Order Package</span></a>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between group h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp4.5 Juta</span><span class="lang-en">Starts from Rp4.5M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Portal Berita & Publikasi</span><span class="lang-en">News Portal & Publication</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Situs media online modern lengkap dengan panel redaksi, jurnalis, editor, & penempatan Google AdSense.</span><span class="lang-en">Modern online media portal with editorial panel, journalists, editors, & Google AdSense slots.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Paket</span><span class="lang-en">Order Package</span></a>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between group h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp700 Ribu</span><span class="lang-en">Starts from Rp700K</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Website OJS (Jurnal Ilmiah)</span><span class="lang-en">OJS (Scientific Journal) Web</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Setup platform Open Journal Systems v3.x, indeksasi Google Scholar, Garuda, SINTA, ISSN, & DOI.</span><span class="lang-en">Open Journal Systems v3.x setup, indexing for Google Scholar, Garuda, SINTA, ISSN, & DOI.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Paket</span><span class="lang-en">Order Package</span></a>
-                    </div>
-                </div>
-            </section>
+        <!-- SEKSI BAWAH: PARTNER STRATEGIS -->
+        <section class="mt-40 max-w-7xl mx-auto px-4 py-20 bg-gray-50/50 dark:bg-slate-900/20 rounded-[50px]">
+            <div class="text-center mb-16">
+                <span class="px-4 py-1.5 bg-secondary text-white text-[10px] font-bold rounded-full mb-4 inline-block">MITRA STRATEGIS KAMI</span>
+                <h2 class="text-3xl md:text-5xl font-heading mb-4">Kemitraan & <span class="text-secondary">Partner Sinergi</span></h2>
+                <p class="max-w-2xl mx-auto text-dark/60 dark:text-gray-400 text-sm italic leading-relaxed">Keberlanjutan kami tak lepas dari dukungan institusi, lembaga keagamaan, dan partner teknologi tepercaya berikut.</p>
+            </div>
 
-            <!-- 3. SOP & DIGITALISASI DOKUMEN -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-certificate text-xl"></i></span>
-                        <span>02. <span class="lang-id">SOP & Digitalisasi Dokumen</span><span class="lang-en">SOP & Document Digitization</span></span>
-                    </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-12">
+                <!-- Partner Cards -->
+                <!-- Bank NTB Syariah -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-bank text-3xl text-secondary mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">Bank NTB Syariah</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp2.5 Juta</span><span class="lang-en">Starts from Rp2.5M</span></span>
-                                <span class="bg-green-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Baru</span><span class="lang-en">New</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">SOP & Akreditasi Sekolah</span><span class="lang-en">School SOP & Accreditation</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Penyusunan standar dokumen mutu kurikulum, sarana, tata kelola, dan instrumen akreditasi digital.</span><span class="lang-en">Quality curriculum, logistics, governance manuals and digital accreditation prep templates.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan SOP</span><span class="lang-en">Order SOP</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp1.5 Juta</span><span class="lang-en">Starts from Rp1.5M</span></span>
-                                <span class="bg-green-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Baru</span><span class="lang-en">New</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">SOP Manajemen Pesantren</span><span class="lang-en">Pesantren SOP & Management</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Tatakelola kedisiplinan santri, keuangan pondok, pengelolaan dapur, dan panduan pengasuhan asrama.</span><span class="lang-en">Santri code of conduct, finance structures, dining operations, and dorm parenting guides.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan SOP</span><span class="lang-en">Order SOP</span></a>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 4. SISTEM INFORMASI PENDIDIKAN -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-graduation-cap text-xl"></i></span>
-                        <span>03. <span class="lang-id">Sistem Informasi Pendidikan</span><span class="lang-en">Education Information Systems</span></span>
-                    </h2>
+                <!-- Nahdlatul Ulama -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-globe-hemisphere-east text-3xl text-green-700 mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">PW Nahdlatul Ulama NTB</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp8.5 Juta</span><span class="lang-en">Starts from Rp8.5M</span></span>
-                                <span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">SIAKAD & PPDB Online</span><span class="lang-en">SIAKAD & Online PPDB</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem administrasi siswa baru, manajemen kelas, billing SPP terpusat, & portal wali murid terpadu.</span><span class="lang-en">Student registration, classroom management, centralized tuition billing, & parent portals.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Selengkapnya</span><span class="lang-en">Read More</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp3.5 Juta</span><span class="lang-en">Starts from Rp3.5M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">LMS & CBT (E-Rapor)</span><span class="lang-en">LMS & CBT (E-Report)</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Pembelajaran daring, bank soal terenkripsi, Computer Based Test (CBT) tangguh, & e-rapor otomatis.</span><span class="lang-en">Online classrooms, encrypted question banks, heavy-load CBT exam engines, & automated e-reports.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Selengkapnya</span><span class="lang-en">Read More</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp10 Juta</span><span class="lang-en">Starts from Rp10M</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Boarding School (Kartu Cashless)</span><span class="lang-en">Boarding School (Cashless Card)</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Smart system asrama, monitoring tahfidz, izin keluar, & kartu jajan santri non-tunai (NFC).</span><span class="lang-en">NFC smart card wallet, tahfidz progress tracking, permits, & parent cashless monitoring.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Selengkapnya</span><span class="lang-en">Read More</span></a>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 5. ERP & ENTERPRISE -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-briefcase text-xl"></i></span>
-                        <span>04. <span class="lang-id">ERP & Solusi Enterprise</span><span class="lang-en">ERP & Enterprise Solutions</span></span>
-                    </h2>
+                <!-- NW -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-star text-3xl text-green-600 mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">Nahdlatul Wathan</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp25 Juta</span><span class="lang-en">Starts from Rp25M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Sistem ERP Multi-Tenant</span><span class="lang-en">Multi-Tenant ERP System</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Manajemen gudang multi-cabang, inventaris barang, HRIS payroll, & modul keuangan terpusat.</span><span class="lang-en">Multi-branch inventory control, HRIS payroll, and dynamic unified ledger modules.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Konsultasi ERP</span><span class="lang-en">ERP Consultation</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp10 Juta</span><span class="lang-en">Starts from Rp10M</span></span>
-                                <span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">CRM & Keanggotaan</span><span class="lang-en">CRM & Membership</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Manajemen leads, komisi referral otomatis, manajemen pelanggan, & log transaksi aman.</span><span class="lang-en">Leads generation pipelines, automated referral tracking, customer records, & secure transaction logs.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Konsultasi CRM</span><span class="lang-en">CRM Consultation</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp5.0 Juta</span><span class="lang-en">Starts from Rp5M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">POS & Kasir Pintar</span><span class="lang-en">Smart POS & Cashier</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Kasir retail modern, struk thermal, scan barcode cepat, & resep bahan baku restoran.</span><span class="lang-en">Modern retail cashier system, thermal slips, barcode scanner, & raw recipes calculations.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Konsultasi POS</span><span class="lang-en">POS Consultation</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp7.5 Juta</span><span class="lang-en">Starts from Rp7.5M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Portal Billing PPOB</span><span class="lang-en">PPOB Billing Portal</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem jual pulsa, paket data, PLN, BPJS, e-wallet, voucher game, & integrasi API PPOB.</span><span class="lang-en">Online topups, data packages, electricity tokens, health bills, & game vouchers via premium API.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan PPOB</span><span class="lang-en">Order PPOB</span></a>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 6. SISTEM INFORMASI KESEHATAN -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-heartbeat text-xl"></i></span>
-                        <span>05. <span class="lang-id">Sistem Informasi Kesehatan (SIMRS)</span><span class="lang-en">Health Information System (SIMRS)</span></span>
-                    </h2>
+                <!-- NWDI -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-shield-star text-3xl text-green-800 mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">NWDI</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp35 Juta</span><span class="lang-en">Starts from Rp35M</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">SIMRS & SIMKlinik</span><span class="lang-en">SIMRS & Clinic Systems</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem Informasi Rumah Sakit & Klinik: rekam medis elektronik (RME), antrean pasien, & farmasi.</span><span class="lang-en">Hospital & Clinic systems: Electronic Medical Records (EMR), patient queues, & pharmacy stocks.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Selengkapnya</span><span class="lang-en">Read More</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp15 Juta</span><span class="lang-en">Starts from Rp15M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">SIMApotek & SIMLab</span><span class="lang-en">SIMApotek & SIMLab Systems</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Modul inventarisasi obat kedaluwarsa, resep otomatis, pencetakan hasil lab, & integrasi BPJS.</span><span class="lang-en">Medicine expiry alerts, e-prescribing, lab results layout designer, & secure BPJS integration.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Selengkapnya</span><span class="lang-en">Read More</span></a>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 7. MARKETPLACE & E-COMMERCE PREMIUM -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-shopping-cart text-xl"></i></span>
-                        <span>06. <span class="lang-id">Marketplace & E-Commerce Premium</span><span class="lang-en">Marketplace & Premium E-Commerce</span></span>
-                    </h2>
+                <!-- GP ANSOR -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-flag-pennant text-3xl text-green-700 mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">GP ANSOR NTB</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp15 Juta</span><span class="lang-en">Starts from Rp15M</span></span>
-                                <span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Multi-Vendor Marketplace</span><span class="lang-en">Multi-Vendor Marketplace</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem e-commerce multi-penjual lengkap dengan wallet saldo, mutasi bank, & komisi admin.</span><span class="lang-en">Multi-seller marketplace with digital wallets, auto bank mutations, and commission routing.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp8.5 Juta</span><span class="lang-en">Starts from Rp8.5M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Toko Online & Dropship</span><span class="lang-en">Online Store & Dropship System</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem e-commerce dengan kalkulasi otomatis ongkos kirim multi-kurir & Payment Gateway Midtrans.</span><span class="lang-en">E-commerce layout integrated with automated multi-courier shipping fees & Midtrans Gateway.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 8. SISTEM INFORMASI PROPERTY -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-house text-xl"></i></span>
-                        <span>07. <span class="lang-id">Sistem Informasi Property</span><span class="lang-en">Property Information System</span></span>
-                    </h2>
+                <!-- CEIS -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-lightbulb text-3xl text-primary mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">CEIS</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp18 Juta</span><span class="lang-en">Starts from Rp18M</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Sistem Booking & Penjualan Unit</span><span class="lang-en">Unit Booking & Sales System</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Peta kavling/perumahan interaktif, kelola berkas konsumen, progress cicilan, & status unit terjual.</span><span class="lang-en">Interactive property lot map, buyer documents folder, installment cycles, & inventory status.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Konsultasi Property</span><span class="lang-en">Property Consultation</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp7.5 Juta</span><span class="lang-en">Starts from Rp7.5M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Sistem Sewa Kost & Villa</span><span class="lang-en">Boarding House & Villa Rent</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Kalender ketersediaan kamar, reminder WhatsApp tagihan bulanan, & laporan pengeluaran operasional.</span><span class="lang-en">Room availability calendar, automated WhatsApp billing alerts, & expense tracking logs.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Konsultasi Property</span><span class="lang-en">Property Consultation</span></a>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 9. GOVERNMENT & E-GOV SOLUTIONS -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-shield text-xl"></i></span>
-                        <span>08. <span class="lang-id">Government & E-Gov Solutions</span><span class="lang-en">Government & E-Gov Solutions</span></span>
-                    </h2>
+                <!-- Endris Foundation -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-hand-heart text-3xl text-pink-600 mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">Endris Foundation</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp15 Juta</span><span class="lang-en">Starts from Rp15M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">E-Kelurahan & E-Kecamatan</span><span class="lang-en">E-Kelurahan & E-Kecamatan</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Platform persuratan digital warga, pengurusan KK/KTP mandiri, & publikasi berita daerah.</span><span class="lang-en">Digital citizen correspondence registry, automated ID templates, and local announcements feed.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp20 Juta</span><span class="lang-en">Starts from Rp20M</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">E-Puskesmas & E-Sip</span><span class="lang-en">E-Puskesmas & E-Sip Systems</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem rekam medis terpadu puskesmas, antrean BPJS, & sistem informasi perizinan dinas daerah.</span><span class="lang-en">Integrated local clinic record logs, public health queue management, & agency license portals.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 10. FINTECH & MICROFINANCE -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-bank text-xl"></i></span>
-                        <span>09. <span class="lang-id">Fintech & Microfinance</span><span class="lang-en">Fintech & Microfinance</span></span>
-                    </h2>
+                <!-- Kasta NTB -->
+                <div class="partner-card bg-white dark:bg-cardDark p-6 rounded-2xl border dark:border-gray-800 flex flex-col items-center text-center">
+                    <i class="ph-fill ph-users text-3xl text-dark dark:text-white mb-2"></i>
+                    <h4 class="text-[10px] font-bold leading-tight">KASTA NTB</h4>
+                    <p class="text-[8px] opacity-40 mt-1">Tambahkan Link Logo</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp30 Juta</span><span class="lang-en">Starts from Rp30M</span></span>
-                                <span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Koperasi Syariah & BMT</span><span class="lang-en">Islamic Koperasi & BMT</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Kelola simpanan wadiah, pembiayaan mudharabah, angsuran nasabah, & bagi hasil otomatis.</span><span class="lang-en">Manage deposits, Mudharabah funding rules, member repayment schedules, & auto revenue division.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Konsultasi Keuangan</span><span class="lang-en">Finance Consultation</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp25 Juta</span><span class="lang-en">Starts from Rp25M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Sistem LPD & Koperasi Umum</span><span class="lang-en">LPD & General Koperasi Web</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem pendaftaran anggota koperasi, mutasi tabungan harian, neraca laba, & cetak buku kas.</span><span class="lang-en">Member registries, daily savings mutations tracking, dynamic ledgers, & receipt printing.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Konsultasi Keuangan</span><span class="lang-en">Finance Consultation</span></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 11. SEO & DIGITAL MARKETING -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-chart-line text-xl"></i></span>
-                        <span>10. <span class="lang-id">SEO & Digital Marketing</span><span class="lang-en">SEO & Digital Marketing</span></span>
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp1.5 Juta</span><span class="lang-en">Starts from Rp1.5M</span></span>
-                                <span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Optimasi SEO On-Page/Off-Page</span><span class="lang-en">On-Page/Off-Page SEO</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Kenaikan peringkat pencarian Google, audit teknis website, optimasi kata kunci potensial, & riset kompetitor.</span><span class="lang-en">Improve Google rankings, deep technical audits, high-intent keyword mapping, & competitor analysis.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan SEO</span><span class="lang-en">Order SEO</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp2.0 Juta</span><span class="lang-en">Starts from Rp2M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Iklan Berbayar Google & Meta Ads</span><span class="lang-en">Google & Meta Paid Advertising</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Manajemen iklan Facebook, Instagram, Google Search & Display Network berorientasi ROI tinggi.</span><span class="lang-en">Ad campaign setup for Facebook, Instagram, & Google Display/Search Networks with positive ROI goals.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Iklan</span><span class="lang-en">Order Ads</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp1.0 Juta</span><span class="lang-en">Starts from Rp1M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Backlink & Content Marketing</span><span class="lang-en">Backlink & Content Marketing</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Layanan optimasi sebaran backlink berkualitas (media nasional) & pembuatan artikel rilis pers korporat.</span><span class="lang-en">Contextual premium backlink placement (national media) & optimized PR marketing articles.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Paket</span><span class="lang-en">Order Package</span></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 12. WORDPRESS PREMIUM -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-layout text-xl"></i></span>
-                        <span>11. <span class="lang-id">WordPress Premium</span><span class="lang-en">WordPress Premium Services</span></span>
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp1.0 Juta</span><span class="lang-en">Starts from Rp1M</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Desain CMS WordPress Berlisensi</span><span class="lang-en">Licensed CMS WordPress Design</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Pembuatan web menggunakan tema premium original berlisensi developer (Bukan Nulled/GPL).</span><span class="lang-en">Elegant websites using original developer licensed themes & plugins (Strictly No Nulled/GPL).</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Order Now</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp500 Ribu</span><span class="lang-en">Starts from Rp500K</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Setup Keamanan & Speed Up WP</span><span class="lang-en">WordPress Security & Speed Optimization</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Percepatan loading page WordPress, setup Cloudflare, pembersihan malware, & audit backup.</span><span class="lang-en">Speed up WordPress assets, configure Cloudflare CDN, clean active malware, & setup database backups.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Order Now</span></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 13. SOURCE CODE APLIKASI PREMIUM -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-code text-xl"></i></span>
-                        <span>12. <span class="lang-id">Source Code Aplikasi Premium</span><span class="lang-en">Premium Application Source Code</span></span>
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp1.5 Juta</span><span class="lang-en">Starts from Rp1.5M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Source Code SIAKAD</span><span class="lang-en">SIAKAD Source Code</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Source code sistem akademik berbasis PHP Laravel/CodeIgniter siap pakai lengkap dengan lisensi.</span><span class="lang-en">Ready-to-run Academic Management PHP Laravel/CodeIgniter codebase with full license.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Beli Source Code</span><span class="lang-en">Buy Source Code</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp2.0 Juta</span><span class="lang-en">Starts from Rp2M</span></span>
-                                <span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Paling Laris</span><span class="lang-en">Best Seller</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Source Code ERP Retail</span><span class="lang-en">Retail ERP Source Code</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Sistem point-of-sale, inventory gudang, & akuntansi keuangan siap dijalankan di server Anda.</span><span class="lang-en">POS cash registers, warehouse inventory, & finance ledger ready to run on your local servers.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Beli Source Code</span><span class="lang-en">Buy Source Code</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp1.0 Juta</span><span class="lang-en">Starts from Rp1M</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white"><span class="lang-id">Source Code E-Commerce</span><span class="lang-en">E-Commerce Source Code</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Source code CMS toko online responsif lengkap dengan gerbang pembayaran & ongkos kirim.</span><span class="lang-en">Responsive online store CMS codebase integrated with payment gateway & shipping fee.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Beli Source Code</span><span class="lang-en">Buy Source Code</span></a>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:border-secondary transition-all flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold text-primary dark:text-blue-400 uppercase tracking-wider"><span class="lang-id">Mulai Rp2.5 Juta</span><span class="lang-en">Starts from Rp2.5M</span></span>
-                                <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"><span class="lang-id">Rekomendasi</span><span class="lang-en">Recommended</span></span>
-                            </div>
-                            <h3 class="text-lg font-bold mb-2 dark:text-white font-heading"><span class="lang-id">Source Code CRM Referral</span><span class="lang-en">CRM Referral Source Code</span></h3>
-                            <p class="text-xs text-dark/70 dark:text-gray-400 mb-4 leading-relaxed"><span class="lang-id">Source code platform pemasaran referral, kalkulasi komisi otomatis, link unik, & QR-Code.</span><span class="lang-en">Ready-to-use codebase for referral marketing, automatic commission tracking, unique links & QR.</span></p>
-                        </div>
-                        <a href="/login.html" class="block w-full py-2 text-center bg-gray-50 dark:bg-black/30 text-dark dark:text-white rounded-lg text-xs font-bold hover:bg-secondary hover:text-white dark:hover:bg-secondary transition-colors"><span class="lang-id">Beli Source Code</span><span class="lang-en">Buy Source Code</span></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 14. MENGAPA MEMILIH KAMI -->
-            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-                <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                        <span class="w-10 h-10 bg-primary/10 dark:bg-primaryDark/20 text-primary dark:text-blue-400 rounded-xl flex items-center justify-center"><i class="ph ph-star text-xl"></i></span>
-                        <span>13. <span class="lang-id">Mengapa Memilih Kami</span><span class="lang-en">Why Choose Us</span></span>
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white dark:bg-cardDark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
-                        <div class="w-10 h-10 bg-secondary text-white rounded-lg flex items-center justify-center mb-4"><i class="ph ph-crown text-xl"></i></div>
-                        <h3 class="font-bold mb-2 dark:text-white"><span class="lang-id">Standar Software House Premium</span><span class="lang-en">Premium Software Standard</span></h3>
-                        <p class="text-xs text-dark/70 dark:text-gray-400 leading-relaxed"><span class="lang-id">Kami memproduksi kode bersih berstandar tinggi, didukung tampilan UI/UX yang memanjakan mata setara industri software house terkemuka.</span><span class="lang-en">We produce clean, high-standard modern code, combined with gorgeous aesthetic UI/UX equivalent to global software giants.</span></p>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
-                        <div class="w-10 h-10 bg-secondary text-white rounded-lg flex items-center justify-center mb-4"><i class="ph ph-clock text-xl"></i></div>
-                        <h3 class="font-bold mb-2 dark:text-white"><span class="lang-id">Pengerjaan Tepat Waktu</span><span class="lang-en">On-Time Execution Delivery</span></h3>
-                        <p class="text-xs text-dark/70 dark:text-gray-400 leading-relaxed"><span class="lang-id">Komitmen target jadwal pengerjaan yang transparan dan andal melalui sistem pelaporan progress mingguan yang jelas.</span><span class="lang-en">Transparent timeline delivery with weekly progress logs so you can monitor features development safely.</span></p>
-                    </div>
-                    <div class="bg-white dark:bg-cardDark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
-                        <div class="w-10 h-10 bg-secondary text-white rounded-lg flex items-center justify-center mb-4"><i class="ph ph-chats text-xl"></i></div>
-                        <h3 class="font-bold mb-2 dark:text-white"><span class="lang-id">Dukungan Teknis Siap Sedia</span><span class="lang-en">Robust Support Ready</span></h3>
-                        <p class="text-xs text-dark/70 dark:text-gray-400 leading-relaxed"><span class="lang-id">Bantuan pasca-pembelian penuh, perbaikan bug gratis, setup hosting cloud gratis, dan panduan dokumentasi terlengkap.</span><span class="lang-en">After-sales full support, free bug fixes, free cloud server setups, and comprehensive step-by-step video guides.</span></p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 15. CTA LAYANAN -->
-            <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in" data-aos="zoom-in">
-                <div class="bg-dark dark:bg-black text-white rounded-3xl p-8 md:p-12 text-center relative overflow-hidden border border-gray-800 shadow-2xl">
-                    <div class="absolute -top-10 -left-10 w-48 h-48 bg-primary/20 rounded-full blur-2xl"></div>
-                    <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary/20 rounded-full blur-2xl"></div>
-                    <div class="relative z-10">
-                        <h2 class="text-2xl md:text-4xl font-bold mb-4">
-                            <span class="lang-id">Siap Melakukan Digitalisasi Bersama Kami?</span>
-                            <span class="lang-en">Ready to Digitise Your Operations With Us?</span>
-                        </h2>
-                        <p class="text-white/70 text-sm max-w-xl mx-auto mb-8">
-                            <span class="lang-id">Pilih paket layanan Anda hari ini atau konsultasikan kebutuhan kustomisasi sistem Anda dengan tim analis teknis kami secara gratis.</span>
-                            <span class="lang-en">Order your preferred service package today or consult your custom application requirements with our technical analysts.</span>
-                        </p>
-                        <div class="flex flex-wrap justify-center gap-4">
-                            <a href="/login.html" class="px-8 py-3 bg-secondary text-white font-bold rounded-xl text-sm hover:opacity-95 transition-all"><span class="lang-id">Mulai Pesan</span><span class="lang-en">Order Now</span></a>
-                            <a href="https://wa.me/628123456789" target="_blank" rel="noopener noreferrer" class="px-8 py-3 bg-white/10 text-white font-bold rounded-xl text-sm border border-white/20 hover:bg-white/20 transition-all flex items-center gap-2">
-                                <i class="ph-fill ph-whatsapp-logo text-lg text-green-400"></i>
-                                <span>WhatsApp CS</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-white dark:bg-bgDark py-10 transition-colors border-t border-gray-100 dark:border-gray-800 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-            <img class="h-16 w-auto mb-4 hover:scale-105 transition-transform duration-300" src="https://edutechnusantaradigital.github.io/assets/images/logo.png" alt="Logo Edutech Nusantara Digital" data-aos="fade-up" loading="lazy">
-            <p class="text-dark/70 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                <span class="lang-id">Mitra teknologi terpercaya dalam membangun ekosistem digital untuk pesantren dan sekolah di seluruh penjuru Nusantara.</span>
-                <span class="lang-en">Trusted technology partner in building digital ecosystems for boarding schools and schools throughout the archipelago.</span>
-            </p>
-            <p class="text-dark/40 dark:text-gray-500 text-xs md:text-sm font-medium tracking-wide" data-aos="fade-up" data-aos-delay="200">© 2026 Edutech Nusantara Digital</p>
-        </div>
+    <footer class="py-12 border-t dark:border-gray-800 text-center">
+        <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" class="h-10 mx-auto mb-6 grayscale opacity-40">
+        <p class="text-[10px] font-medium opacity-50">&copy; 2026 EduTech Nusantara Digital - Digital Services specialist for Indonesia</p>
     </footer>
-
-    <a href="/login.html" aria-label="Masuk untuk Konsultasi" class="fixed bottom-6 right-6 z-[65] floating-element group">
-        <div class="absolute inset-0 bg-secondary dark:bg-secondaryDark rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
-        <div class="bg-secondary dark:bg-secondaryDark text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 border-4 border-white dark:border-gray-800"><i class="ph-fill ph-chat-circle-dots text-4xl"></i></div>
-    </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const htmlTag = document.documentElement;
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) htmlTag.classList.add('dark');
-
-            setTimeout(() => {
-                const preloader = document.getElementById('preloader'); preloader.classList.add('preloader-hidden');
-                setTimeout(() => { AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 }); preloader.style.display = 'none'; }, 500); 
-            }, 1000);
-
-            const menuBtn = document.getElementById('menu-btn'), menuIcon = document.getElementById('menu-icon'), menuOverlay = document.getElementById('menu-overlay'), header = document.getElementById('main-header');
-            let isMenuOpen = false;
-            const toggleMenu = () => {
-                isMenuOpen = !isMenuOpen;
-                if(isMenuOpen) { menuOverlay.classList.add('menu-open'); header.classList.add('menu-open-header'); menuIcon.classList.replace('ph-list', 'ph-x'); document.body.style.overflow = 'hidden'; } 
-                else { menuOverlay.classList.remove('menu-open'); header.classList.remove('menu-open-header'); menuIcon.classList.replace('ph-x', 'ph-list'); document.body.style.overflow = 'auto'; }
-            };
-            menuBtn.addEventListener('click', toggleMenu);
-            document.querySelectorAll('.menu-link').forEach(link => link.addEventListener('click', () => { if(isMenuOpen) toggleMenu(); }));
-
-            const themeBtn = document.getElementById('theme-btn'), themeIcon = document.getElementById('theme-icon');
-            if (htmlTag.classList.contains('dark')) themeIcon.classList.replace('ph-moon', 'ph-sun');
+            const themeBtn = document.getElementById('theme-btn'), htmlTag = document.documentElement;
             themeBtn.addEventListener('click', () => {
                 htmlTag.classList.toggle('dark');
-                if(htmlTag.classList.contains('dark')) themeIcon.classList.replace('ph-moon', 'ph-sun');
-                else themeIcon.classList.replace('ph-sun', 'ph-moon');
+                document.getElementById('theme-icon').className = htmlTag.classList.contains('dark') ? 'ph ph-sun text-2xl' : 'ph ph-moon text-2xl';
             });
 
-            const langBtn = document.getElementById('lang-btn'); let currentLang = 'id';
-            langBtn.addEventListener('click', () => {
-                if(currentLang === 'id') { currentLang = 'en'; langBtn.innerText = 'EN'; document.body.classList.add('lang-active-en'); } 
-                else { currentLang = 'id'; langBtn.innerText = 'ID'; document.body.classList.remove('lang-active-en'); }
-            });
-
-            window.addEventListener('scroll', () => {
-                if(isMenuOpen) return; 
-                if (window.scrollY > 20) { header.classList.add('shadow-sm'); header.classList.replace('py-0', 'py-1'); } 
-                else { header.classList.remove('shadow-sm'); header.classList.replace('py-1', 'py-0'); }
-            });
-
-            const accordionItems = document.querySelectorAll('.accordion-item');
-            accordionItems.forEach(item => {
-                const button = item.querySelector('button');
-                button.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    accordionItems.forEach(otherItem => { 
-                        otherItem.classList.remove('active'); 
-                        otherItem.querySelector('button').setAttribute('aria-expanded', 'false');
+            const filterBtns = document.querySelectorAll('.filter-btn'), portfolioItems = document.querySelectorAll('.portfolio-item');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('bg-white', 'dark:bg-cardDark'); });
+                    btn.classList.add('bg-primary', 'text-white'); btn.classList.remove('bg-white', 'dark:bg-cardDark');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    portfolioItems.forEach(item => {
+                        (filter === 'all' || item.getAttribute('data-category') === filter) ? item.classList.remove('portfolio-hidden') : item.classList.add('portfolio-hidden');
                     });
-                    if (!isActive) { 
-                        item.classList.add('active'); 
-                        button.setAttribute('aria-expanded', 'true');
-                    }
                 });
             });
-            if (accordionItems.length > 0) { 
-                accordionItems[0].classList.add('active'); 
-                accordionItems[0].querySelector('button').setAttribute('aria-expanded', 'true');
-            }
+
+            const menuBtn = document.getElementById('menu-btn'), menuOverlay = document.getElementById('menu-overlay');
+            menuBtn.addEventListener('click', () => {
+                menuOverlay.classList.toggle('menu-open');
+                document.getElementById('menu-icon').className = menuOverlay.classList.contains('menu-open') ? 'ph ph-x text-3xl' : 'ph ph-list text-3xl';
+            });
+
+            setTimeout(() => { AOS.init({ duration: 800, once: true }); }, 500);
         });
     </script>
 </body>
