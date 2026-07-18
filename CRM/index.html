@@ -4,83 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard CRM - Edutech Nusantara Digital</title>
-    <link rel="icon" type="image/png" href="https://edutechnusantaradigital.github.io/assets/images/logo.png">
-    
-    <!-- Tailwind & Icons -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
-
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Mencegah double scrollbar */
-        }
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        /* Loading Spinner */
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
         #loader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: white; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; z-index: 999;
         }
+        iframe { width: 100%; height: 100vh; border: none; }
+        .spinner {
+            border: 4px solid #f3f3f3; border-top: 4px solid #3498db;
+            border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
-<body class="bg-slate-50">
+<body>
 
-    <!-- Tombol Kembali ke Utama -->
-    <div class="fixed top-4 left-4 z-[99]">
-        <a href="/" class="flex items-center gap-2 bg-white/90 backdrop-blur shadow-lg px-4 py-2 rounded-full text-xs font-bold text-slate-800 hover:bg-primary hover:text-white transition-all">
-            <i class="ph-bold ph-arrow-left"></i> Kembali ke Web Utama
-        </a>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Menyambungkan ke CRM...</p>
     </div>
 
-    <!-- Container Utama -->
-    <div class="iframe-container">
-        
-        <!-- Preloader (Hilang saat iframe selesai load) -->
-        <div id="loader">
-            <img src="https://edutechnusantaradigital.github.io/assets/images/logo.png" class="w-16 h-16 animate-pulse" alt="Logo">
-            <div class="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Menyambungkan ke CRM...</p>
-        </div>
-
-        <!-- Pemanggilan CRM external -->
-        <iframe 
-            src="https://crm-end.ai.studio/" 
-            id="crmIframe"
-            allow="camera; microphone; clipboard-read; clipboard-write;"
-            onload="hideLoader()">
-        </iframe>
-    </div>
+    <!-- Iframe CRM -->
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbwy69-ALApMJihTRbDvFqmO-pIcAA70ar9IPfxe1xvgrZI3duVhnfaL24zTiTe5Gsug/exec" 
+        onload="hideLoader()">
+    </iframe>
 
     <script>
         function hideLoader() {
-            // Sembunyikan spinner saat iframe selesai memuat
             document.getElementById('loader').style.display = 'none';
         }
-
-        // Auto Refresh jika koneksi lambat
-        setTimeout(() => {
-            const loader = document.getElementById('loader');
-            if(loader.style.display !== 'none') {
-                console.log("Koneksi lambat, mencoba menyegarkan...");
-            }
-        }, 10000);
     </script>
 </body>
 </html>
