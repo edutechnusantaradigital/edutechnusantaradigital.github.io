@@ -1,42 +1,56 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard CRM - Edutech Nusantara Digital</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
-        #loader {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: white; display: flex; flex-direction: column;
-            justify-content: center; align-items: center; z-index: 999;
-        }
-        iframe { width: 100%; height: 100vh; border: none; }
-        .spinner {
-            border: 4px solid #f3f3f3; border-top: 4px solid #3498db;
-            border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
-</head>
-<body>
+<style>
+/* EduTech CRM Responsive Frame */
+.edutech-crm-frame{
+    position:relative;
+    width:100%;
+    height:calc(100vh - 90px); /* Sesuaikan tinggi header */
+    min-height:700px;
+    border-radius:12px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
 
-    <!-- Loader -->
-    <div id="loader">
-        <div class="spinner"></div>
-        <p>Menyambungkan ke CRM...</p>
-    </div>
+.edutech-crm-frame iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+}
 
-    <!-- Iframe CRM -->
-    <iframe 
-        src="https://script.google.com/macros/s/AKfycbwy69-ALApMJihTRbDvFqmO-pIcAA70ar9IPfxe1xvgrZI3duVhnfaL24zTiTe5Gsug/exec" 
-        onload="hideLoader()">
+/* Tablet */
+@media (max-width:992px){
+    .edutech-crm-frame{
+        height:calc(100vh - 80px);
+        min-height:650px;
+    }
+}
+
+/* Smartphone */
+@media (max-width:768px){
+    .edutech-crm-frame{
+        height:calc(100vh - 65px);
+        min-height:600px;
+        border-radius:0;
+    }
+}
+
+/* HP kecil */
+@media (max-width:480px){
+    .edutech-crm-frame{
+        height:100vh;
+        min-height:100vh;
+    }
+}
+</style>
+
+<div class="edutech-crm-frame">
+    <iframe
+        src="https://remix-crm-edutech-nusantara-digital-4880.ai.studio/"
+        title="CRM EduTech Nusantara Digital"
+        loading="lazy"
+        allow="fullscreen; clipboard-read; clipboard-write"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin">
     </iframe>
-
-    <script>
-        function hideLoader() {
-            document.getElementById('loader').style.display = 'none';
-        }
-    </script>
-</body>
-</html>
+</div>
